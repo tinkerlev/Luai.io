@@ -724,10 +724,6 @@ const Landing = () => {
             muted 
             loop 
             playsInline
-            style={{
-              height: '80%',
-              minHeight: '100vh'
-            }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
             Your browser does not support the video tag.
