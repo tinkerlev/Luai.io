@@ -67,16 +67,15 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-lg' 
+          ? 'bg-slate-900/85 backdrop-blur-md border-b border-slate-700/50 shadow-lg' 
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-1 sm:px-1 lg:px-0">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center group -ml-18"
+            className="flex items-center group -ml-12"
             onClick={handleLinkClick}
           >
             <div className="relative group-hover:scale-105 transition-transform duration-300">
@@ -90,7 +89,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-0">
+          <nav className="hidden md:flex items-center space-x-4">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.hasDropdown ? (
@@ -101,7 +100,7 @@ const Header = () => {
                   >
                     <button
                       onClick={item.action}
-                      className="flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-1 py-2"
+                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
