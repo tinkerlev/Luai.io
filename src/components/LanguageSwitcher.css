@@ -1,15 +1,15 @@
 .language-switcher {
-  display: inline-flex;
-  align-items: center;
+  position: relative;
+  display: inline-block;
 }
 
 .language-toggle {
   display: flex;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
-  padding: 2px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .language-btn {
@@ -17,27 +17,26 @@
   align-items: center;
   gap: 6px;
   padding: 8px 12px;
-  border: none;
   background: transparent;
-  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  color: rgba(203, 213, 225, 0.8);
   cursor: pointer;
-  border-radius: 20px;
   transition: all 0.3s ease;
   font-size: 14px;
   font-weight: 500;
-  min-width: 60px;
-  justify-content: center;
 }
 
 .language-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(59, 130, 246, 0.2);
+  color: rgb(147, 197, 253);
   transform: translateY(-1px);
 }
 
 .language-btn.active {
-  background: rgba(255, 255, 255, 0.9);
-  color: #1a202c;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, rgb(59, 130, 246), rgb(147, 51, 234));
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .flag {
@@ -49,31 +48,32 @@
   letter-spacing: 0.5px;
 }
 
-/* Dark theme adjustments */
-.dark .language-toggle {
-  background: rgba(45, 55, 72, 0.8);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.dark .language-btn {
-  color: #e2e8f0;
-}
-
-.dark .language-btn.active {
-  background: rgba(255, 255, 255, 0.95);
-  color: #1a202c;
-}
-
-/* Responsive design */
+/* Responsive */
 @media (max-width: 768px) {
   .language-btn {
     padding: 6px 10px;
-    min-width: 50px;
+    font-size: 12px;
   }
   
-  .lang-code {
-    display: none;
+  .flag {
+    font-size: 14px;
   }
+}
+
+/* Dark mode support */
+.dark .language-toggle {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+.dark .language-btn {
+  color: rgba(226, 232, 240, 0.8);
+}
+
+.dark .language-btn:hover {
+  background: rgba(59, 130, 246, 0.3);
+  color: rgb(226, 232, 240);
+}
   
   .flag {
     font-size: 18px;

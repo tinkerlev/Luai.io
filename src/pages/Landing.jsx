@@ -17,6 +17,8 @@ import {
   TextArea,
 } from '../components/DesignSystem';
 import '../index.css';
+import { useTranslation } from '../hooks/useTranslation';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 // CountUp Component for animated numbers
 const CountUp = ({ end, duration = 2000, suffix = "" }) => {
@@ -209,6 +211,8 @@ const Landing = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+
+  const { t } = useTranslation();
 
   // Initialize EmailJS
   useEffect(() => {
@@ -992,6 +996,32 @@ const Landing = () => {
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/Logo-Kavak-Deportes.svg" alt="Partner 2" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/bugcrowd-logo-b90c52e691ace97f54db4d459c246639e26907e862b4c58b39173d2fac146fd0.svg" alt="Partner 3" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/Logo-Kavak-Deportes.svg" alt="Partner 2" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/bugcrowd-logo-b90c52e691ace97f54db4d459c246639e26907e862b4c58b39173d2fac146fd0.svg" alt="Partner 3" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                  <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                
+                {/* Fourth Set for Continuous Loop Completion */}
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>

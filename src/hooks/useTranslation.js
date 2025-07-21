@@ -1,12 +1,12 @@
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const useTranslation = () => {
-  const { translate, currentLanguage, isSpanish } = useLanguage();
+  const { translate, currentLanguage } = useLanguage();
 
   return {
     t: translate,
     currentLanguage,
-    isSpanish,
-    isRTL: false // For future RTL languages support
+    isRTL: false
   };
+};
 };

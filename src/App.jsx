@@ -3,25 +3,25 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Landing from './pages/Landing';
-import TermsOfService from './pages/TermsOfService';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import PenetrationTesting from './pages/services/PenetrationTesting';
-import IncidentResponse from './pages/services/IncidentResponse';
-import SecurityAudits from './pages/services/SecurityAudits';
-import VulnerabilityAssessments from './pages/services/VulnerabilityAssessments';
-import RedTeamOperations from './pages/services/RedTeamOperations';
-import ComplianceConsulting from './pages/services/ComplianceConsulting';
-import SecurityTraining from './pages/services/SecurityTraining';
-import NotFound from './pages/NotFound';
+import './index.css';
 
 function App() {
   return (
     <HelmetProvider>
       <LanguageProvider>
         <Router>
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<Landing />} />
+            </Routes>
+          </div>
+        </Router>
+      </LanguageProvider>
+    </HelmetProvider>
+  );
+}
+
+export default App;
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/services/penetration-testing" element={<PenetrationTesting />} />
             <Route path="/services/incident-response" element={<IncidentResponse />} />

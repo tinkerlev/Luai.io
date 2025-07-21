@@ -26,3 +26,60 @@ export const getHrefLangs = (currentPath) => {
     { hrefLang: 'x-default', href: `https://securepulses.com${currentPath}` }
   ];
 };
+
+export const generateMetaTags = (data) => {
+  const {
+    title = 'SecurePulses - Cybersecurity Expert Services',
+    description = 'Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.',
+    keywords = 'cybersecurity, penetration testing, security audit, vulnerability assessment',
+    url = 'https://securepulses.com',
+    image = 'https://securepulses.com/og-image.jpg'
+  } = data;
+
+  return {
+    title,
+    description,
+    keywords,
+    canonical: url,
+    openGraph: {
+      title,
+      description,
+      url,
+      image,
+      type: 'website'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      image
+    }
+  };
+};
+
+export const generateStructuredData = (type = 'Organization') => {
+  const baseData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name: 'SecurePulses',
+    url: 'https://securepulses.com',
+    description: 'Professional cybersecurity consulting services'
+  };
+
+  if (type === 'Organization') {
+    return {
+      ...baseData,
+      founder: {
+        '@type': 'Person',
+        name: 'Eliran Loai Deeb'
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+54-9-11-24828429',
+        email: 'info@securepulses.com'
+      }
+    };
+  }
+
+  return baseData;
+};

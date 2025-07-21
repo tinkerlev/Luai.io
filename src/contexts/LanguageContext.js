@@ -13,7 +13,6 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState(() => {
-    // Get language from localStorage or default to English
     if (typeof window !== 'undefined') {
       return localStorage.getItem('selectedLanguage') || 'en';
     }
@@ -35,6 +34,26 @@ export const LanguageProvider = ({ children }) => {
     currentLanguage,
     changeLanguage,
     translate,
+    availableLanguages: Object.keys(translations)
+  };
+
+  return React.createElement(
+    LanguageContext.Provider,
+    { value },
+    children
+  );
+};
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = currentLanguage;
+    }
+  }, [currentLanguage]);
+
+  const value = {
+    currentLanguage,
+    changeLanguage,
+    translate,
+    isSpanish: currentLanguage === 'es',
     availableLanguages: Object.keys(translations)
   };
 

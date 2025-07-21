@@ -13,7 +13,7 @@ export default defineConfig({
   // Advanced build configuration for security
   build: {
     outDir: 'dist',
-    sourcemap: false,
+    sourcemap: true,
     minify: 'terser',
     rollupOptions: {
       output: {
@@ -45,11 +45,10 @@ export default defineConfig({
   },
 
   server: {
-    port: 5173,
+    port: 3000,
+    open: true,
+    host: true,
     strictPort: true,
-    host: 'localhost',
-    // Remove HTTPS configuration to fix SSL error
-    https: false,
     headers: {
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -115,4 +114,5 @@ export default defineConfig({
     exclude: [
     ]
   }
+})
 })
