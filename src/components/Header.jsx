@@ -11,6 +11,11 @@ const Header = () => {
   const location = useLocation();
   const { t, currentLanguage, changeLanguage } = useTranslation();
 
+  // בדוק את הערכים:
+  console.log('Current language:', currentLanguage);
+  console.log('getStarted translation:', t('getStarted'));
+  console.log('home translation:', t('home'));
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);

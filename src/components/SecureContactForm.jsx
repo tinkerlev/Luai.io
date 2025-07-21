@@ -29,7 +29,7 @@ const SecureContactForm = () => {
 
   const [submission, setSubmission] = useState({
     isSubmitting: false,
-    status: 'idle', // idle | success | error
+    status: 'idle',
     message: '',
     remainingAttempts: 3
   })
