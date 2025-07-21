@@ -13,6 +13,7 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Landing />} />
+              {/* הוסף כאן את כל הראוטים של השירותים שלך */}
             </Routes>
           </div>
         </Router>

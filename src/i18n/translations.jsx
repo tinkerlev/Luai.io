@@ -1,17 +1,20 @@
 export const translations = {
   en: {
-    // Navigation
+    // Navigation & Menu
     home: 'Home',
     about: 'About',
     services: 'Services',
     contact: 'Contact',
+    servicesDropdown: 'Services',
 
     // Hero section
     heroTitle: 'Secure Your Digital Future',
     heroSubtitle: 'Professional cybersecurity solutions for businesses of all sizes',
     heroDescription: 'Protect your business from cyber threats with our comprehensive security services and expert guidance.',
+    protectYourBusiness: 'Protect Your Business Today',
+    trustedByCompanies: 'Trusted by companies worldwide',
 
-    // Services
+    // Services section
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Comprehensive cybersecurity solutions tailored to your needs',
     penetrationTesting: 'Penetration Testing',
@@ -23,6 +26,8 @@ export const translations = {
     redTeamOperations: 'Red Team Operations',
     securityAudits: 'Security Audits',
     complianceConsulting: 'Compliance Consulting',
+    dataProtection: 'Data Protection',
+    networkSecurity: 'Network Security',
 
     // Service descriptions
     penetrationTestingDesc: 'Thorough testing to identify vulnerabilities in your systems.',
@@ -39,6 +44,12 @@ export const translations = {
     aboutTitle: 'About SecurePulses',
     aboutDescription: 'Leading cybersecurity experts protecting businesses worldwide',
     aboutText: 'With years of cybersecurity experience, our team delivers cutting-edge solutions to safeguard your digital assets.',
+    ourMission: 'Our Mission',
+    ourVision: 'Our Vision',
+    whyChooseUs: 'Why Choose Us',
+    expertTeam: 'Expert Team',
+    provenResults: 'Proven Results',
+    support247: '24/7 Support',
 
     // Contact section
     contactTitle: 'Get in Touch',
@@ -46,6 +57,10 @@ export const translations = {
     email: 'Email',
     phone: 'Phone',
     address: 'Address',
+    sendMessage: 'Send Message',
+    yourName: 'Your Name',
+    yourEmail: 'Your Email',
+    message: 'Message',
 
     // Common buttons
     learnMore: 'Learn More',
@@ -53,6 +68,12 @@ export const translations = {
     contactUs: 'Contact Us',
     readMore: 'Read More',
     viewDetails: 'View Details',
+    requestQuote: 'Request Quote',
+    scheduleConsultation: 'Schedule Consultation',
+    freeAssessment: 'Free Assessment',
+    getSecured: 'Get Secured',
+    startAssessment: 'Start Assessment',
+    bookConsultation: 'Book Consultation',
 
     // Footer
     allRightsReserved: 'All rights reserved',
@@ -60,7 +81,7 @@ export const translations = {
     termsOfService: 'Terms of Service',
 
     // Meta descriptions
-    metaDescription: 'Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats.',
+    metaDescription: 'Professional cybersecurity services including penetration testing, security audits, vulnerability assessments, incident response, and compliance consulting. Protect your business from cyber threats.',
 
     // Status messages
     loading: 'Loading...',
@@ -77,18 +98,21 @@ export const translations = {
     backToHome: 'Back to Home'
   },
   es: {
-    // Navigation
+    // Navigation & Menu
     home: 'Inicio',
     about: 'Acerca de',
     services: 'Servicios',
     contact: 'Contacto',
+    servicesDropdown: 'Servicios',
 
     // Hero section
     heroTitle: 'Asegura Tu Futuro Digital',
     heroSubtitle: 'Soluciones profesionales de ciberseguridad para empresas de todos los tamaños',
     heroDescription: 'Protege tu negocio de las amenazas cibernéticas con nuestros servicios integrales de seguridad y orientación experta.',
+    protectYourBusiness: 'Protege Tu Negocio Hoy',
+    trustedByCompanies: 'Confiado por empresas mundialmente',
 
-    // Services
+    // Services section
     servicesTitle: 'Nuestros Servicios',
     servicesSubtitle: 'Soluciones integrales de ciberseguridad adaptadas a sus necesidades',
     penetrationTesting: 'Pruebas de Penetración',
@@ -100,6 +124,8 @@ export const translations = {
     redTeamOperations: 'Operaciones de Equipo Rojo',
     securityAudits: 'Auditorías de Seguridad',
     complianceConsulting: 'Consultoría de Cumplimiento',
+    dataProtection: 'Protección de Datos',
+    networkSecurity: 'Seguridad de Red',
 
     // Service descriptions
     penetrationTestingDesc: 'Pruebas exhaustivas para identificar vulnerabilidades en sus sistemas.',
@@ -116,6 +142,12 @@ export const translations = {
     aboutTitle: 'Acerca de SecurePulses',
     aboutDescription: 'Expertos líderes en ciberseguridad protegiendo empresas mundialmente',
     aboutText: 'Con años de experiencia en ciberseguridad, nuestro equipo proporciona soluciones de vanguardia para proteger sus activos digitales.',
+    ourMission: 'Nuestra Misión',
+    ourVision: 'Nuestra Visión',
+    whyChooseUs: 'Por Qué Elegirnos',
+    expertTeam: 'Equipo Experto',
+    provenResults: 'Resultados Comprobados',
+    support247: 'Soporte 24/7',
 
     // Contact section
     contactTitle: 'Póngase en Contacto',
@@ -123,6 +155,10 @@ export const translations = {
     email: 'Correo Electrónico',
     phone: 'Teléfono',
     address: 'Dirección',
+    sendMessage: 'Enviar Mensaje',
+    yourName: 'Tu Nombre',
+    yourEmail: 'Tu Correo',
+    message: 'Mensaje',
 
     // Common buttons
     learnMore: 'Saber Más',
@@ -130,6 +166,12 @@ export const translations = {
     contactUs: 'Contáctanos',
     readMore: 'Leer Más',
     viewDetails: 'Ver Detalles',
+    requestQuote: 'Solicitar Cotización',
+    scheduleConsultation: 'Agendar Consulta',
+    freeAssessment: 'Evaluación Gratuita',
+    getSecured: 'Asegúrate',
+    startAssessment: 'Comenzar Evaluación',
+    bookConsultation: 'Reservar Consulta',
 
     // Footer
     allRightsReserved: 'Todos los derechos reservados',
@@ -137,7 +179,7 @@ export const translations = {
     termsOfService: 'Términos de Servicio',
 
     // Meta descriptions
-    metaDescription: 'Servicios profesionales de ciberseguridad incluyendo pruebas de penetración, auditorías de seguridad y evaluaciones de vulnerabilidades. Protege tu negocio de amenazas cibernéticas.',
+    metaDescription: 'Servicios profesionales de ciberseguridad incluyendo pruebas de penetración, auditorías de seguridad, evaluaciones de vulnerabilidades, respuesta a incidentes y consultoría de cumplimiento. Protege tu negocio de amenazas cibernéticas.',
 
     // Status messages
     loading: 'Cargando...',
