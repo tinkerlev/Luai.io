@@ -71,25 +71,26 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-1 sm:px-1 lg:px-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center group -ml-12"
+            className="flex items-center group"
             onClick={handleLinkClick}
           >
             <div className="relative group-hover:scale-105 transition-transform duration-300">
               <img 
                 src="/assets/securepulses-logo.png" 
                 alt="SecurePulses Logo" 
-                className="h-16 w-auto object-contain max-w-[250px]"
+                className="h-12 w-auto object-contain max-w-[200px]"
                 style={{ filter: 'brightness(1.1)' }}
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-6">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.hasDropdown ? (
@@ -137,7 +138,7 @@ const Header = () => {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-4 mr-4"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
             >
               Get Started
             </button>
