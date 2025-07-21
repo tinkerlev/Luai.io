@@ -724,6 +724,10 @@ const Landing = () => {
             muted 
             loop 
             playsInline
+            style={{
+              transform: 'scale(0.7)',
+              transformOrigin: 'center center'
+            }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
             Your browser does not support the video tag.
