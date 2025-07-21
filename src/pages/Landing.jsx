@@ -720,7 +720,7 @@ const Landing = () => {
           </div>
         </section>
         <div className="relative overflow-hidden">
-          <video 
+          {/* <video 
             className="absolute inset-0 w-full h-full object-fit z-0"
             autoPlay 
             muted 
@@ -732,7 +732,7 @@ const Landing = () => {
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
           
           {/* Dark Overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
@@ -963,8 +963,6 @@ const Landing = () => {
               </div>
             </div>
           </section>
-
-          {/* OUR PARTNERS */}
           <section id="partners" className="w-full py-20 relative z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
               <SectionTitle>They Trusted Me With Their Security</SectionTitle>
@@ -977,8 +975,6 @@ const Landing = () => {
                 <br /><br />
                 <strong className="text-red-400">Now they sleep peacefully knowing their business is protected.</strong>
               </SectionSubtext>
-              
-              {/* Success stories callout */}
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-6 mb-8 border border-green-500/20 max-w-4xl mx-auto">
                 <h3 className="text-xl font-bold text-white mb-4">Real Results, Real Peace of Mind</h3>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -997,11 +993,8 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Scrolling Partners Container - Full Width */}
             <div className="w-full overflow-hidden">
               <div className="flex animate-scroll-right space-x-20 items-center">
-                {/* Partner Logos - First Set (4 logos) */}
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -1014,8 +1007,6 @@ const Landing = () => {
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
-                {/* Partner Logos - Duplicate Set for Continuous Loop */}
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
@@ -1028,8 +1019,6 @@ const Landing = () => {
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
-                {/* Third Set for Ultimate Smoothness */}
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
