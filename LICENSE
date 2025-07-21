@@ -1,0 +1,310 @@
+# PROPRIETARY SOFTWARE LICENSE AGREEMENT
+
+**SecurePulses Platform and Associated Intellectual Property**
+
+---
+
+## COPYRIGHT NOTICE
+
+Copyright © 2025 Eliran Loai Deeb. All Rights Reserved.
+
+This software, documentation, and all associated materials (collectively, the "Software") are proprietary and confidential to Eliran Loai Deeb ("Licensor") and are protected by copyright, trademark, trade secret, patent, and other intellectual property laws worldwide, including but not limited to the Digital Services Act (DSA), AI Act (EU), and updated international copyright frameworks as of July 2025.
+
+---
+
+## DEFINITIONS
+
+**"Licensed Materials"** means the source code, design patterns, CSS stylesheets, component architectures, TypeScript definitions, animation libraries, and technical implementations contained within this repository, excluding all Restricted Elements as defined herein.
+
+**"Restricted Elements"** means and includes, without limitation:
+- The "SecurePulses" name, trademark, service marks, and all variations, translations, or phonetic equivalents thereof
+- The SecurePulses domain name (securepulses.com) and all associated subdomains, redirects, and variations
+- The SecurePulses logo, brand identity system, color schemes, and all visual branding materials
+- All cybersecurity service descriptions, AI-powered security methodologies, quantum-resistant protocols, and proprietary business processes
+- All proprietary algorithms, machine learning models, security frameworks, and operational procedures
+- All content, text, images, videos, multimedia materials, and documentation specific to SecurePulses business operations
+- All client data, testimonials, case studies, and business intelligence information
+- All API endpoints, database schemas, and technical infrastructure implementations
+
+**"AI-Generated Content"** means any content, code, or materials created using artificial intelligence systems that incorporate or derive from the Licensed Materials.
+
+**"Permitted Use"** means the limited rights granted herein strictly for educational study, non-commercial learning, and design reference purposes only.
+
+---
+
+## GRANT OF LIMITED LICENSE
+
+Subject to the terms and conditions of this Agreement, Licensor hereby grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to:
+
+### PERMITTED ACTIVITIES
+1. **Educational Study**: Examine the Licensed Materials solely for personal educational purposes and technical learning in cybersecurity or web development fields
+2. **Design Inspiration**: Utilize general design patterns, layout concepts, and styling approaches as inspiration for your own original, non-competing works
+3. **Technical Implementation**: Adapt general coding techniques, component structures, and architectural patterns for use in wholly separate, unrelated, and non-competing projects
+
+### MANDATORY ATTRIBUTION REQUIREMENT
+Any use of Licensed Materials, including AI-generated derivatives, must include the following attribution prominently displayed:
+```
+"Design patterns adapted from SecurePulses platform. Original work © 2025 Eliran Loai Deeb. 
+Licensed under strict proprietary terms. See: https://securepulses.com/license"
+```
+
+---
+
+## STRICT PROHIBITIONS AND RESTRICTIONS
+
+You are expressly prohibited from, and agree that you will not:
+
+### BUSINESS AND COMMERCIAL RESTRICTIONS
+1. **Commercial Exploitation**: Use, reproduce, distribute, monetize, or commercialize the Software or any portion thereof for any commercial purpose whatsoever, including but not limited to SaaS platforms, consulting services, or digital products
+2. **Competitive Services**: Develop, operate, maintain, or offer any cybersecurity consultancy, penetration testing services, security assessment business, AI-powered security tools, or quantum-resistant security solutions
+3. **Service Replication**: Offer, advertise, market, or provide any services substantially similar to or competing with those offered by SecurePulses
+4. **Platform Development**: Create any competing cybersecurity platform, security assessment tool, or professional services website
+
+### BRAND AND IDENTITY RESTRICTIONS
+5. **Trademark Infringement**: Use, reproduce, display, register, or claim any rights in the SecurePulses name, logo, branding, or any confusingly similar variations, translations, or derivatives
+6. **Domain Registration**: Register, use, purchase, or claim any domain name incorporating "SecurePulses," "Secure Pulses," phonetic equivalents, or any confusingly similar variations across all top-level domains
+7. **Brand Confusion**: Create, develop, or distribute any work product, service, or business that could reasonably cause consumer confusion, dilution, or association with SecurePulses brand or services
+8. **Social Media**: Use SecurePulses branding, name, or similar variations in social media handles, business names, or marketing materials
+
+### TECHNICAL AND CONTENT RESTRICTIONS
+9. **Direct Copying**: Copy, reproduce, distribute, or redistribute the complete Software, substantial portions thereof, or any proprietary algorithms
+10. **Content Appropriation**: Use, copy, or adapt any specific textual content, service descriptions, pricing models, business methodologies, or proprietary frameworks
+11. **Reverse Engineering**: Reverse engineer, decompile, disassemble, or attempt to extract proprietary business logic, security implementations, or trade secrets
+12. **API Exploitation**: Access, use, or replicate any API endpoints, database structures, or backend implementations
+13. **AI Training**: Use the Software or any portions thereof to train artificial intelligence models, machine learning systems, or automated code generation tools
+
+### EMERGING TECHNOLOGY RESTRICTIONS (2025)
+14. **Quantum Computing**: Develop quantum-resistant security solutions based on or derived from the Software
+15. **Blockchain Integration**: Create blockchain-based security platforms or decentralized security services
+16. **Metaverse/VR Security**: Develop virtual reality or metaverse security solutions using Licensed Materials
+17. **IoT Security Platforms**: Create Internet of Things security assessment or monitoring platforms
+
+---
+
+## INTELLECTUAL PROPERTY RIGHTS
+
+### COMPREHENSIVE RESERVED RIGHTS
+Licensor expressly reserves all rights, title, and interest in and to:
+- All trademarks, service marks, trade names, and brand identities (registered and unregistered)
+- All copyrightable works, expressions, and creative content
+- All trade secrets, proprietary methodologies, and confidential business information
+- All patent rights, inventions, and technological innovations
+- All moral rights, attribution rights, and personality rights
+- All database rights and sui generis rights
+- All rights in artificial intelligence models and machine learning algorithms
+- All rights under emerging intellectual property frameworks and regulations
+
+### NO TRANSFER OR IMPLIED LICENSES
+This Agreement does not constitute a sale, assignment, or transfer of any intellectual property rights. No rights are granted by implication, estoppel, or otherwise. All rights not expressly granted herein are strictly reserved to Licensor.
+
+---
+
+## COMPLIANCE AND REGULATORY REQUIREMENTS
+
+### 2025 LEGAL COMPLIANCE
+This Agreement is subject to and incorporates:
+- **EU AI Act** compliance requirements for AI-powered security systems
+- **Digital Services Act (DSA)** obligations for digital platforms
+- **GDPR and enhanced privacy regulations** for data protection
+- **Quantum-safe cryptography standards** as established by NIST and international bodies
+- **Cross-border data transfer regulations** updated as of July 2025
+- **Cybersecurity certification requirements** under international standards
+
+### EXPORT CONTROL AND SANCTIONS
+The Software may be subject to export control laws and regulations. You agree to comply with all applicable export control laws and not to export, re-export, or transfer the Software to prohibited countries, entities, or individuals.
+
+---
+
+## TERMINATION AND CONSEQUENCES
+
+### AUTOMATIC TERMINATION EVENTS
+This license terminates immediately and automatically upon:
+- Any breach of these terms or conditions
+- Any attempt to circumvent or violate the restrictions herein
+- Any commercial use or competitive activity
+- Any unauthorized use of Restricted Elements
+- Filing of bankruptcy or insolvency proceedings
+- Change of control that may affect compliance with this Agreement
+
+### POST-TERMINATION OBLIGATIONS
+Upon termination, you must immediately:
+- Cease all use of Licensed Materials and Restricted Elements
+- Destroy all copies, derivatives, and related materials in your possession or control
+- Remove any attribution or references from public repositories or platforms
+- Provide written certification of compliance with destruction obligations
+
+### SURVIVAL OF TERMS
+The following provisions survive termination indefinitely: Intellectual Property Rights, Warranty Disclaimers, Limitation of Liability, Indemnification, Governing Law, and all restrictions on Restricted Elements.
+
+---
+
+## WARRANTIES AND DISCLAIMERS
+
+### COMPREHENSIVE DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. LICENSOR DISCLAIMS ALL WARRANTIES INCLUDING, BUT NOT LIMITED TO:
+- MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+- NON-INFRINGEMENT OF THIRD-PARTY RIGHTS
+- ACCURACY, COMPLETENESS, OR RELIABILITY
+- SECURITY, PRIVACY, OR DATA PROTECTION
+- COMPATIBILITY WITH EMERGING TECHNOLOGIES
+- COMPLIANCE WITH FUTURE REGULATORY REQUIREMENTS
+
+### TECHNOLOGY RISKS
+You acknowledge that the Software may contain emerging technologies including AI systems, quantum-resistant cryptography implementations, and advanced security measures that carry inherent risks and uncertainties.
+
+---
+
+## LIMITATION OF LIABILITY AND DAMAGES
+
+### COMPREHENSIVE LIABILITY LIMITATION
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER DAMAGES ARISING OUT OF OR RELATING TO:
+- This Agreement or the use of the Software
+- Loss of profits, revenue, data, or business opportunities
+- Business interruption or system failures
+- Security breaches or privacy violations
+- Regulatory compliance failures
+- Third-party claims or intellectual property disputes
+- Emerging technology risks or failures
+
+### MAXIMUM LIABILITY CAP
+Licensor's total liability under this Agreement shall not exceed USD $100, regardless of the theory of liability.
+
+---
+
+## INDEMNIFICATION
+
+### COMPREHENSIVE INDEMNIFICATION
+You agree to indemnify, defend, and hold harmless Licensor, its officers, directors, employees, agents, licensors, and affiliates from and against any and all:
+- Claims, demands, suits, or proceedings
+- Losses, damages, liabilities, costs, and expenses (including reasonable attorneys' fees)
+- Arising out of or relating to your breach of this Agreement
+- Your use or misuse of the Software
+- Your violation of any third-party rights
+- Your non-compliance with applicable laws or regulations
+- Any AI-generated content or derivative works you create
+
+---
+
+## ENFORCEMENT AND REMEDIES
+
+### INJUNCTIVE RELIEF AND EQUITABLE REMEDIES
+You acknowledge that any breach of this Agreement would cause irreparable harm to Licensor for which monetary damages would be inadequate. Therefore, Licensor shall be entitled to:
+- Immediate injunctive relief without posting bond
+- Specific performance and other equitable remedies
+- Temporary and permanent restraining orders
+- Seizure and destruction of infringing materials
+
+### ATTORNEY'S FEES AND COSTS
+In any legal proceeding arising from this Agreement, the prevailing party shall be entitled to recover:
+- Reasonable attorney's fees and costs
+- Expert witness fees and litigation expenses
+- Court costs and administrative expenses
+- Enforcement and collection costs
+
+### CUMULATIVE REMEDIES
+All remedies available to Licensor are cumulative and may be exercised concurrently or separately.
+
+---
+
+## DISPUTE RESOLUTION
+
+### MANDATORY ARBITRATION (2025 STANDARDS)
+Any dispute arising out of or relating to this Agreement shall be resolved through binding arbitration administered by the International Chamber of Commerce (ICC) under its 2025 Arbitration Rules, with the following provisions:
+- Seat of arbitration: Buenos Aires, Argentina
+- Language: English and Spanish
+- Number of arbitrators: One (1) for claims under USD $100,000; Three (3) for claims exceeding USD $100,000
+- Applicable law: Argentine law with international cybersecurity standards
+- Expedited procedures for claims under USD $50,000
+
+### EMERGENCY RELIEF
+Notwithstanding the arbitration requirement, Licensor may seek emergency relief in any court of competent jurisdiction for injunctive relief, intellectual property violations, or other urgent matters.
+
+---
+
+## GOVERNING LAW AND JURISDICTION
+
+### APPLICABLE LAW
+This Agreement shall be governed by and construed in accordance with:
+- The laws of Argentina
+- International intellectual property treaties and conventions
+- Applicable cybersecurity regulations and standards as of July 2025
+- Without regard to conflict of law principles
+
+### JURISDICTION AND VENUE
+Subject to the arbitration provisions, any court proceedings shall be subject to the exclusive jurisdiction of the courts of Buenos Aires, Argentina.
+
+---
+
+## MISCELLANEOUS PROVISIONS
+
+### SEVERABILITY AND REFORMATION
+If any provision of this Agreement is held to be unenforceable, invalid, or illegal:
+- The remainder shall continue in full force and effect
+- The unenforceable provision shall be reformed to the maximum extent possible to effectuate the original intent
+- No such invalidity shall affect the enforceability of any other provision
+
+### ENTIRE AGREEMENT AND INTEGRATION
+This Agreement constitutes the entire agreement between the parties and supersedes all prior understandings, agreements, representations, and warranties, whether written or oral, relating to the subject matter hereof.
+
+### AMENDMENT AND MODIFICATION
+This Agreement may only be modified by:
+- Written agreement signed by Licensor
+- Updated terms posted at https://securepulses.com/license with 30 days' notice
+- Licensor reserves the right to modify terms to ensure compliance with evolving legal requirements
+
+### ASSIGNMENT AND DELEGATION
+- You may not assign, transfer, or delegate your rights or obligations under this Agreement without prior written consent of Licensor
+- Licensor may assign this Agreement without restriction
+- Any attempted unauthorized assignment shall be void and constitute a material breach
+
+### FORCE MAJEURE
+Neither party shall be liable for delays or failures in performance resulting from acts beyond reasonable control, including but not limited to natural disasters, cyberattacks, regulatory changes, or other force majeure events.
+
+### NOTICES
+All notices shall be delivered to:
+- Licensor: legal@securepulses.com
+- You: The email address associated with your access to the Software
+
+### WAIVER
+No waiver of any provision shall be effective unless in writing and signed by the waiving party. No waiver shall constitute a continuing waiver or waiver of any other provision.
+
+### LANGUAGE AND INTERPRETATION
+- This Agreement is executed in English
+- In case of conflicts between translations, the English version shall prevail
+- Headings are for convenience only and do not affect interpretation
+
+---
+
+## ACKNOWLEDGMENT AND ACCEPTANCE
+
+**BY ACCESSING, DOWNLOADING, COPYING, USING, OR OTHERWISE INTERACTING WITH THE SOFTWARE IN ANY MANNER, YOU ACKNOWLEDGE THAT:**
+
+1. You have read and understood this Agreement in its entirety
+2. You agree to be legally bound by all terms and conditions
+3. You have the legal capacity and authority to enter into this Agreement
+4. You understand the restrictions on Restricted Elements and agree to comply
+5. You acknowledge the proprietary nature of the Software and Licensor's rights
+6. You understand the consequences of breach and potential legal remedies
+
+---
+
+## CONTACT INFORMATION
+
+**Licensor:** Eliran Loai Deeb  
+**Business Name:** SecurePulses Cybersecurity Services  
+**Legal Address:** Buenos Aires, Argentina  
+**Legal Email:** legal@securepulses.com  
+**Business Website:** https://securepulses.com  
+**License Information:** https://securepulses.com/license  
+
+---
+
+**EFFECTIVE DATE:** July 1, 2025  
+**LAST UPDATED:** July 1, 2025  
+**VERSION:** 2.0 (2025 Enhanced Edition)  
+
+---
+
+**© 2025 Eliran Loai Deeb. All Rights Reserved Worldwide.**
+
+**This license incorporates the latest legal standards and regulatory requirements as of July 2025, including AI Act compliance, quantum-safe cryptography regulations, and enhanced
