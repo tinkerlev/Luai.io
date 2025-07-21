@@ -299,10 +299,7 @@ const Landing = () => {
       limitedValue = value.substring(0, 200);
     }
     
-    // Update form data with the limited value
-    setFormData({ ...formData, [name]: limitedValue });
-    
-    // Clear any existing errors for this field
+    setFormData({ ...formData, [name]: limitedValue });   
     if (errors[name]) {
       setErrors({ ...errors, [name]: '' });
     }
@@ -366,7 +363,6 @@ const Landing = () => {
     }
   };
 
-  // Button click handlers
   const handleGetEvaluation = () => {
     console.log('Get Evaluation clicked!');
     const contactSection = document.getElementById('contact');
@@ -531,6 +527,13 @@ const Landing = () => {
             muted 
             loop 
             playsInline
+            style={{
+              height: '100%',
+              minHeight: '100vh',
+              transform: 'scale(0.7)', // הוסף את זה כדי להקטין את הזום
+              objectFit: 'cover',
+              transformOrigin: 'center center' // מרכז את הוידאו
+            }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -730,7 +733,10 @@ const Landing = () => {
             playsInline
             style={{
               height: '100%',
-              minHeight: '100vh'
+              minHeight: '100vh',
+              transform: 'scale(0.7)',
+              objectFit: 'cover',
+              transformOrigin: 'center center'
             }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
