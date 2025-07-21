@@ -23,7 +23,7 @@ export const Colors = {
 // Typography components
 export const GradientHeading = ({ children }) => (
   <h2
-    className="text-4xl font-bold bg-gradient-to-r from-red-500 to-purple-600 text-transparent bg-clip-text drop-shadow-md"
+    className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-red-500 to-purple-600 text-transparent bg-clip-text drop-shadow-md"
   >
     {children}
   </h2>

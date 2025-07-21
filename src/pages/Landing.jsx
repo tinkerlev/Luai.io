@@ -720,21 +720,6 @@ const Landing = () => {
           </div>
         </section>
         <div className="relative overflow-hidden">
-          {/* <video 
-            className="absolute inset-0 w-full h-full object-fit z-0"
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            style={{
-              objectPosition: 'center center'
-            }}
-          >
-            <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
-          
-          {/* Dark Overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
           {/* SERVICES */}
