@@ -90,7 +90,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4">
+          <nav className="hidden md:flex items-center space-x-0">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.hasDropdown ? (
@@ -101,7 +101,7 @@ const Header = () => {
                   >
                     <button
                       onClick={item.action}
-                      className="flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
+                      className="flex items-center space-x-1 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-1 py-2"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -127,7 +127,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={item.action}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-1 py-2"
                   >
                     {item.name}
                   </button>
@@ -138,7 +138,7 @@ const Header = () => {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-4 mr-4"
             >
               Get Started
             </button>

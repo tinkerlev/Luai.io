@@ -4,18 +4,17 @@ import slowDown from 'express-slow-down';
 
 // Rate limiting configuration
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // limit each IP to 5 requests per windowMs
-  message: 'יותר מדי בקשות מכתובת IP זו, נסה שוב מאוחר יותר',
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  message: 'I dont like it',
   standardHeaders: true,
   legacyHeaders: false,
 });
 
-// Speed limiting configuration
 const speedLimiter = slowDown({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  delayAfter: 2, // allow 2 requests per 15 minutes at full speed
-  delayMs: 500, // slow down subsequent requests by 500ms per request
+  windowMs: 15 * 60 * 1000,
+  delayAfter: 2,
+  delayMs: 500,
 });
 
 interface ContactFormData {
@@ -41,11 +40,11 @@ class SecurityValidator {
   ];
 
   private static suspiciousPatterns = [
-    /http[s]?:\/\//gi, // URLs
-    /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g, // Credit card patterns
-    /(.)\1{5,}/g, // Repeated characters (6 or more)
-    /[A-Z]{8,}/g, // Too many consecutive uppercase
-    /\b\w*\d+\w*@\w*\d+\w*\.\w+/g, // Suspicious email patterns
+    /http[s]?:\/\//gi,
+    /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g,
+    /(.)\1{5,}/g,
+    /[A-Z]{8,}/g,
+    /\b\w*\d+\w*@\w*\d+\w*\.\w+/g,
   ];
 
   static sanitizeInput(input: string): string {
@@ -58,7 +57,7 @@ class SecurityValidator {
       .replace(/on\w+=/gi, '')
       .replace(/data:/gi, '')
       .trim()
-      .slice(0, 1000); // Limit length
+      .slice(0, 1000);
   }
 
   static validateEmail(email: string): boolean {
@@ -67,7 +66,7 @@ class SecurityValidator {
   }
 
   static validatePhone(phone: string): boolean {
-    if (!phone) return true; // Phone is optional
+    if (!phone) return true;
     const phoneRegex = /^[0-9+\-\s()]{10,15}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
   }
@@ -75,24 +74,19 @@ class SecurityValidator {
   static detectSpam(data: ContactFormData): boolean {
     const allText = `${data.name} ${data.email} ${data.message} ${data.company}`.toLowerCase();
 
-    // Check for spam keywords
     const hasSpamKeywords = this.spamKeywords.some(keyword => 
       allText.includes(keyword.toLowerCase())
     );
 
-    // Check for suspicious patterns
     const hasSuspiciousPatterns = this.suspiciousPatterns.some(pattern => 
       pattern.test(allText)
     );
 
-    // Check for suspicious metadata
     const { metadata } = data;
     const timeDiff = metadata.submitTime - metadata.formLoadTime;
     
-    // Too fast submission (less than 3 seconds)
     if (timeDiff < 3000) return true;
     
-    // Check for bot-like behavior
     if (metadata.userAgent.includes('bot') || 
         metadata.userAgent.includes('crawler') ||
         metadata.userAgent.includes('spider')) {
@@ -103,30 +97,25 @@ class SecurityValidator {
   }
 
   static validateFormIntegrity(data: ContactFormData): string | null {
-    // Basic field validation
-    if (!data.name?.trim()) return 'שם מלא נדרש';
-    if (!data.email?.trim()) return 'כתובת מייל נדרשת';
-    if (!data.message?.trim()) return 'הודעה נדרשת';
+    if (!data.name?.trim()) return 'Full name is required';
+    if (!data.email?.trim()) return 'Email address is required';
+    if (!data.message?.trim()) return 'Message is required';
 
-    // Email validation
     if (!this.validateEmail(data.email)) {
-      return 'כתובת מייל לא תקינה';
+      return 'Invalid email address';
     }
 
-    // Phone validation
     if (!this.validatePhone(data.phone)) {
-      return 'מספר טלפון לא תקין';
+      return 'Invalid phone number';
     }
 
-    // Length validation
-    if (data.name.length > 100) return 'שם ארוך מדי';
-    if (data.email.length > 100) return 'כתובת מייל ארוכה מדי';
-    if (data.company.length > 200) return 'שם חברה ארוך מדי';
-    if (data.message.length > 2000) return 'הודעה ארוכה מדי';
+    if (data.name.length > 100) return 'Name is too long';
+    if (data.email.length > 100) return 'Email address is too long';
+    if (data.company.length > 200) return 'Company name is too long';
+    if (data.message.length > 2000) return 'Message is too long';
 
-    // Spam detection
     if (this.detectSpam(data)) {
-      return 'התוכן זוהה כחשוד';
+      return 'Content detected as suspicious';
     }
 
     return null;
@@ -177,7 +166,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const userAgent = req.headers['user-agent'] || '';
 
-    // Log security event (in production, log to security monitoring system)
     console.log('Contact form submission:', {
       ip: clientIP,
       userAgent,
@@ -190,31 +178,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       metadata: sanitizedData.metadata
     });
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Log the submission
-    
-    // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     res.status(200).json({ 
       success: true, 
-      message: 'הודעה נשלחה בהצלחה' 
+      message: 'Message sent successfully' 
     });
 
   } catch (error) {
     console.error('Contact form error:', error);
     
-    // Rate limiting error
     if (error instanceof Error && error.message.includes('Too many requests')) {
       return res.status(429).json({ 
-        error: 'יותר מדי בקשות. אנא המתן לפני שליחה חוזרת' 
+        error: 'Too many requests. Please wait before sending again' 
       });
     }
 
     res.status(500).json({ 
-      error: 'שגיאת שרת פנימית. אנא נסה שוב מאוחר יותר' 
+      error: 'Internal server error. Please try again later' 
     });
   }
 }
