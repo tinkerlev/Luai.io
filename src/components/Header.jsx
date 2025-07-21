@@ -81,7 +81,6 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link 
             to="/" 
             className="flex items-center group"
@@ -96,8 +95,6 @@ const Header = () => {
               />
             </div>
           </Link>
-
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navigationItems.map((item, index) => (
               <div key={index} className="relative group">
@@ -114,8 +111,6 @@ const Header = () => {
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
-                    
-                    {/* Dropdown Menu */}
                     <div className={`absolute top-full left-0 mt-2 w-56 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-xl transition-all duration-300 ${
                       isServicesOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
                     }`}>
@@ -142,8 +137,6 @@ const Header = () => {
                 )}
               </div>
             ))}
-
-            {/* Language Selector */}
             <div 
               className="relative group"
               onMouseEnter={() => setIsLanguageOpen(true)}
@@ -184,8 +177,6 @@ const Header = () => {
                 </div>
               </div>
             </div>
-
-            {/* CTA Button */}
             <button
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
@@ -193,8 +184,6 @@ const Header = () => {
               {t('getStarted')}
             </button>
           </nav>
-
-          {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-white transition-colors duration-300"
@@ -202,8 +191,6 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
@@ -217,10 +204,7 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
-            
             <hr className="border-slate-700/50 mx-4" />
-            
-            {/* Mobile Language Selector */}
             <div className="px-4 py-2">
               <div className="flex space-x-2">
                 <button
