@@ -527,13 +527,6 @@ const Landing = () => {
             muted 
             loop 
             playsInline
-            style={{
-              height: '100%',
-              minHeight: '100vh',
-              transform: 'scale(0.7)', // הוסף את זה כדי להקטין את הזום
-              objectFit: 'cover',
-              transformOrigin: 'center center' // מרכז את הוידאו
-            }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -732,11 +725,8 @@ const Landing = () => {
             loop 
             playsInline
             style={{
-              height: '100%',
-              minHeight: '100vh',
-              transform: 'scale(0.7)',
-              objectFit: 'cover',
-              transformOrigin: 'center center'
+              height: '80%',
+              minHeight: '100vh'
             }}
           >
             <source src="/assets/0_Abstract_Design_Data_Visualization_3840x2160.mp4" type="video/mp4" />
