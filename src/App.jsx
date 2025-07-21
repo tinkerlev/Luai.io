@@ -3,6 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Landing from './pages/Landing';
+import VulnerabilityAssessments from './pages/services/VulnerabilityAssessments';
+import PenetrationTesting from './pages/services/PenetrationTesting';
+import RedTeamOperations from './pages/services/RedTeamOperations';
+import IncidentResponse from './pages/services/IncidentResponse';
+import SecurityAudits from './pages/services/SecurityAudits';
+import ComplianceConsulting from './pages/services/ComplianceConsulting';
+import SecurityTraining from './pages/services/SecurityTraining';
 import './index.css';
 
 function App() {
@@ -13,7 +20,13 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Landing />} />
-              {/* הוסף כאן את כל הראוטים של השירותים שלך */}
+              <Route path="/services/vulnerability-assessments" element={<VulnerabilityAssessments />} />
+              <Route path="/services/penetration-testing" element={<PenetrationTesting />} />
+              <Route path="/services/red-team-operations" element={<RedTeamOperations />} />
+              <Route path="/services/incident-response" element={<IncidentResponse />} />
+              <Route path="/services/security-audits" element={<SecurityAudits />} />
+              <Route path="/services/compliance-consulting" element={<ComplianceConsulting />} />
+              <Route path="/services/security-training" element={<SecurityTraining />} />
             </Routes>
           </div>
         </Router>
