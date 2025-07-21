@@ -299,7 +299,7 @@ The project is configured for seamless Vercel deployment with [`vercel.json`](ve
 ### 👨‍💼 **Eliran Loai Deeb**
 *Founder & Lead Security Consultant*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/eliran-loai-deeb)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/loai-deeb)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@securepulses.com)
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://securepulses.com)
 
@@ -325,6 +325,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-![Footer Banner](https://via.placeholder.com/800x100/0F172A/60A5FA?text=SecurePulses%20-%20Professional%20Cybersecurity%20Platform)
+![Footer Banner](public/securepulses-logo.svg)
 
 </div>
