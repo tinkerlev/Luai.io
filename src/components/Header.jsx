@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Globe } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Header = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const location = useLocation();
   const { t, currentLanguage } = useTranslation();
-  const { changeLanguage } = require('../contexts/LanguageContext').useLanguage();
+  const { changeLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
