@@ -303,7 +303,7 @@ The project is configured for seamless Vercel deployment with [`vercel.json`](ve
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@securepulses.com)
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://securepulses.com)
 
-📍 **Based in Israel** | 🌍 **Serving Globally**
+📍 **Based in Argentina** | 🌍 **Serving Globally**
 
 </div>
 
