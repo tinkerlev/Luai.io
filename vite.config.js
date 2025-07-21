@@ -13,15 +13,14 @@ export default defineConfig({
   // Advanced build configuration for security
   build: {
     outDir: 'dist',
-    sourcemap: false, // Disable sourcemaps in production for security
+    sourcemap: false,
     minify: 'terser',
     rollupOptions: {
       output: {
-        // Obfuscate chunk names
+
         chunkFileNames: 'assets/[hash].js',
         entryFileNames: 'assets/[hash].js',
         assetFileNames: 'assets/[hash].[ext]',
-        // Remove comments and console logs
         banner: '/* SecurePulses - Protected by Advanced Security */',
         manualChunks: {
           vendor: ['react', 'react-dom'],
@@ -32,20 +31,19 @@ export default defineConfig({
     },
     terserOptions: {
       compress: {
-        drop_console: true, // Remove all console.* calls
-        drop_debugger: true, // Remove debugger statements
+        drop_console: true,
+        drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
       },
       mangle: {
         safari10: true
       },
       format: {
-        comments: false // Remove all comments
+        comments: false
       }
     }
   },
 
-  // Development server security
   server: {
     port: 5173,
     strictPort: true,
@@ -55,7 +53,6 @@ export default defineConfig({
       cert: './certs/localhost.pem'
     } : false,
     headers: {
-      // Security headers for development
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
@@ -64,13 +61,11 @@ export default defineConfig({
     }
   },
 
-  // Preview server security (production testing)
   preview: {
     port: 4173,
     strictPort: true,
     host: 'localhost',
     headers: {
-      // Production-like security headers
       'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
       'Content-Security-Policy': [
         "default-src 'self'",
@@ -94,7 +89,6 @@ export default defineConfig({
     }
   },
 
-  // Path resolution for secure imports
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -106,15 +100,12 @@ export default defineConfig({
     }
   },
 
-  // Environment variables security
   define: {
-    // Only expose safe environment variables
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.VITE_APP_NAME': JSON.stringify(process.env.VITE_APP_NAME || 'SecurePulses'),
     'process.env.VITE_APP_VERSION': JSON.stringify(process.env.VITE_APP_VERSION || '1.0.0')
   },
 
-  // Dependency optimization for security
   optimizeDeps: {
     include: [
       'react',
@@ -124,7 +115,6 @@ export default defineConfig({
       'lucide-react'
     ],
     exclude: [
-      // Exclude potentially vulnerable dependencies
     ]
   }
 })

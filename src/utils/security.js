@@ -1,10 +1,5 @@
 import CryptoJS from 'crypto-js'
 
-/**
- * Advanced Security Utilities for SecurePulses Platform
- * Implements multiple layers of protection against common web vulnerabilities
- */
-
 class SecurityManager {
   constructor() {
     this.sessionKey = this.generateSecureKey()

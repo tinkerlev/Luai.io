@@ -9,7 +9,7 @@ const SecureContactForm = () => {
     email: '',
     company: '',
     message: '',
-    honeypot: '', // Hidden field for bot detection
+    honeypot: '',
     timestamp: Date.now()
   })
 
