@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { translations } from '../i18n/translations';
 
 const LanguageContext = createContext();
@@ -14,15 +14,20 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('selectedLanguage') || 'en';
+      const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+      // Validate that the saved language exists in translations
+      return translations[savedLang] ? savedLang : 'en';
     }
     return 'en';
   });
 
   const changeLanguage = (lang) => {
-    setCurrentLanguage(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('selectedLanguage', lang);
+    // Validate language exists before setting
+    if (translations[lang]) {
+      setCurrentLanguage(lang);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('selectedLanguage', lang);
+      }
     }
   };
 
@@ -30,19 +35,6 @@ export const LanguageProvider = ({ children }) => {
     return translations[currentLanguage]?.[key] || key;
   };
 
-  const value = {
-    currentLanguage,
-    changeLanguage,
-    translate,
-    availableLanguages: Object.keys(translations)
-  };
-
-  return React.createElement(
-    LanguageContext.Provider,
-    { value },
-    children
-  );
-};
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.documentElement.lang = currentLanguage;
@@ -54,12 +46,13 @@ export const LanguageProvider = ({ children }) => {
     changeLanguage,
     translate,
     isSpanish: currentLanguage === 'es',
-    availableLanguages: Object.keys(translations)
+    availableLanguages: Object.keys(translations || {})
   };
 
-  return React.createElement(
-    LanguageContext.Provider,
-    { value },
-    children
+  // This Provider makes 'value' available to all child components
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
   );
 };

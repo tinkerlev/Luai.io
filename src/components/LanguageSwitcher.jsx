@@ -27,7 +27,3 @@ const LanguageSwitcher = () => {
 };
 
 export default LanguageSwitcher;
-  );
-};
-
-export default LanguageSwitcher;

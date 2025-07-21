@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Globe } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +9,8 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const location = useLocation();
-  const { language, t, changeLanguage } = useLanguage();
+  const { t, currentLanguage } = useTranslation();
+  const { changeLanguage } = require('../contexts/LanguageContext').useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,32 +36,32 @@ const Header = () => {
 
   const navigationItems = [
     {
-      name: t('navHome'),
+      name: t('home'),
       action: () => scrollToSection('home'),
       isSection: true
     },
     {
-      name: t('navServices'),
+      name: t('services'),
       action: () => scrollToSection('services'),
       isSection: true,
       hasDropdown: true,
       dropdownItems: [
-        { name: t('servicesPenTesting'), action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
-        { name: t('servicesAudits'), action: () => { window.location.href = '/services/security-audits'; handleLinkClick(); } },
-        { name: t('servicesVulnAssess'), action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
+        { name: t('penetrationTesting'), action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
+        { name: 'Security Audits', action: () => { window.location.href = '/services/security-audits'; handleLinkClick(); } },
+        { name: t('vulnerabilityAssessment'), action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
         { name: 'Red Team Operations', action: () => { window.location.href = '/services/red-team-operations'; handleLinkClick(); } },
         { name: 'Compliance Consulting', action: () => { window.location.href = '/services/compliance-consulting'; handleLinkClick(); } },
-        { name: 'Incident Response', action: () => { window.location.href = '/services/incident-response'; handleLinkClick(); } },
-        { name: 'Security Training', action: () => { window.location.href = '/services/security-training'; handleLinkClick(); } }
+        { name: t('incidentResponse'), action: () => { window.location.href = '/services/incident-response'; handleLinkClick(); } },
+        { name: t('securityTraining'), action: () => { window.location.href = '/services/security-training'; handleLinkClick(); } }
       ]
     },
     {
-      name: t('navAbout'),
+      name: t('about'),
       action: () => scrollToSection('about'),
       isSection: true
     },
     {
-      name: t('navContact'),
+      name: t('contact'),
       action: () => scrollToSection('contact'),
       isSection: true
     }
@@ -153,7 +154,7 @@ const Header = () => {
                 className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
               >
                 <Globe className="w-4 h-4" />
-                <span>{languageNames[language]}</span>
+                <span>{languageNames[currentLanguage]}</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -164,7 +165,7 @@ const Header = () => {
                   <button
                     onClick={() => changeLanguage('en')}
                     className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
-                      language === 'en' 
+                      currentLanguage === 'en' 
                         ? 'text-blue-400 bg-slate-700/50' 
                         : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
                     }`}
@@ -174,7 +175,7 @@ const Header = () => {
                   <button
                     onClick={() => changeLanguage('es')}
                     className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
-                      language === 'es' 
+                      currentLanguage === 'es' 
                         ? 'text-blue-400 bg-slate-700/50' 
                         : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
                     }`}
@@ -190,7 +191,7 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
             >
-              {language === 'es' ? 'Comenzar' : 'Get Started'}
+              {t('getStarted')}
             </button>
           </nav>
 
@@ -226,7 +227,7 @@ const Header = () => {
                 <button
                   onClick={() => changeLanguage('en')}
                   className={`flex-1 py-2 text-center rounded transition-colors ${
-                    language === 'en' 
+                    currentLanguage === 'en' 
                       ? 'bg-blue-600 text-white' 
                       : 'bg-slate-700/50 text-gray-300'
                   }`}
@@ -236,7 +237,7 @@ const Header = () => {
                 <button
                   onClick={() => changeLanguage('es')}
                   className={`flex-1 py-2 text-center rounded transition-colors ${
-                    language === 'es' 
+                    currentLanguage === 'es' 
                       ? 'bg-blue-600 text-white' 
                       : 'bg-slate-700/50 text-gray-300'
                   }`}
@@ -266,7 +267,7 @@ const Header = () => {
                 onClick={() => scrollToSection('contact')}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
-                Get Started
+                {t('getStarted')}
               </button>
             </div>
           </div>
