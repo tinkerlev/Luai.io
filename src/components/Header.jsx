@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Shield, ChevronDown } from 'lucide-react';
+import { Menu, X, Shield, ChevronDown, Globe } from 'lucide-react';
+import { useLanguage } from '../hooks/useLanguage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const location = useLocation();
+  const { language, t, changeLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,19 +35,19 @@ const Header = () => {
 
   const navigationItems = [
     {
-      name: 'Home',
+      name: t('navHome'),
       action: () => scrollToSection('home'),
       isSection: true
     },
     {
-      name: 'Services',
+      name: t('navServices'),
       action: () => scrollToSection('services'),
       isSection: true,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Penetration Testing', action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
-        { name: 'Security Audits', action: () => { window.location.href = '/services/security-audits'; handleLinkClick(); } },
-        { name: 'Vulnerability Assessments', action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
+        { name: t('servicesPenTesting'), action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
+        { name: t('servicesAudits'), action: () => { window.location.href = '/services/security-audits'; handleLinkClick(); } },
+        { name: t('servicesVulnAssess'), action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
         { name: 'Red Team Operations', action: () => { window.location.href = '/services/red-team-operations'; handleLinkClick(); } },
         { name: 'Compliance Consulting', action: () => { window.location.href = '/services/compliance-consulting'; handleLinkClick(); } },
         { name: 'Incident Response', action: () => { window.location.href = '/services/incident-response'; handleLinkClick(); } },
@@ -52,16 +55,21 @@ const Header = () => {
       ]
     },
     {
-      name: 'About',
+      name: t('navAbout'),
       action: () => scrollToSection('about'),
       isSection: true
     },
     {
-      name: 'Contact',
+      name: t('navContact'),
       action: () => scrollToSection('contact'),
       isSection: true
     }
   ];
+
+  const languageNames = {
+    en: 'English',
+    es: 'Español'
+  };
 
   return (
     <header 
@@ -135,12 +143,54 @@ const Header = () => {
               </div>
             ))}
 
+            {/* Language Selector */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsLanguageOpen(true)}
+              onMouseLeave={() => setIsLanguageOpen(false)}
+            >
+              <button
+                className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
+              >
+                <Globe className="w-4 h-4" />
+                <span>{languageNames[language]}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isLanguageOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <div className={`absolute top-full right-0 mt-2 w-32 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-xl transition-all duration-300 ${
+                isLanguageOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <div className="py-2">
+                  <button
+                    onClick={() => changeLanguage('en')}
+                    className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
+                      language === 'en' 
+                        ? 'text-blue-400 bg-slate-700/50' 
+                        : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => changeLanguage('es')}
+                    className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
+                      language === 'es' 
+                        ? 'text-blue-400 bg-slate-700/50' 
+                        : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
+            </div>
+
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
             >
-              Get Started
+              {language === 'es' ? 'Comenzar' : 'Get Started'}
             </button>
           </nav>
 
@@ -169,6 +219,32 @@ const Header = () => {
             ))}
             
             <hr className="border-slate-700/50 mx-4" />
+            
+            {/* Mobile Language Selector */}
+            <div className="px-4 py-2">
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => changeLanguage('en')}
+                  className={`flex-1 py-2 text-center rounded transition-colors ${
+                    language === 'en' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-slate-700/50 text-gray-300'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => changeLanguage('es')}
+                  className={`flex-1 py-2 text-center rounded transition-colors ${
+                    language === 'es' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-slate-700/50 text-gray-300'
+                  }`}
+                >
+                  ES
+                </button>
+              </div>
+            </div>
             
             <Link
               to="/terms-of-service"

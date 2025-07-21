@@ -48,10 +48,8 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     host: 'localhost',
-    https: process.env.NODE_ENV === 'development' ? {
-      key: './certs/localhost-key.pem',
-      cert: './certs/localhost.pem'
-    } : false,
+    // Remove HTTPS configuration to fix SSL error
+    https: false,
     headers: {
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -116,5 +114,7 @@ export default defineConfig({
     ],
     exclude: [
     ]
+  }
+})
   }
 })
