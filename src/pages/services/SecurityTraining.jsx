@@ -20,7 +20,7 @@ const SecurityTraining = () => {
 
       <Header />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden pt-16">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden pt-16">
         <video 
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
           autoPlay 

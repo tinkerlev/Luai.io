@@ -20,7 +20,7 @@ const RedTeamOperations = () => {
 
       <Header />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-black relative overflow-hidden pt-16">
+      <div className="min-h-screen bg-gradient-to-br from-black via-red-900 to-black relative overflow-hidden pt-16">
         <video 
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
           autoPlay 
