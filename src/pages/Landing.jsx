@@ -719,7 +719,6 @@ const Landing = () => {
             </div>
           </div>
         </section>
-        
         <div className="relative overflow-hidden">
           <video 
             className="absolute inset-0 w-full h-full object-fit z-0"
