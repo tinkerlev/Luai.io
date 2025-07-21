@@ -71,16 +71,16 @@
 ### Advanced Libraries & Tools
 ```json
 {
-  "react-helmet-async": "^2.1.0",      // Advanced SEO & Meta Management
-  "framer-motion": "^12.0.0",          // Physics-Based Animations
-  "lucide-react": "^0.400.0",          // Modern Icon Library
-  "@tanstack/react-query": "^5.50.0",  // Server State Management
-  "zustand": "^4.5.4",                 // Client State Management
-  "@radix-ui/react-*": "^1.1.0",       // Headless UI Components
-  "next-themes": "^0.4.0",             // Advanced Theme System
-  "react-hot-toast": "^2.5.0",         // Modern Notifications
-  "@vercel/analytics": "^1.3.0",       // Performance Analytics
-  "sharp": "^0.33.0"                   // Next-Gen Image Optimization
+  "react-helmet-async": "^2.1.0",
+  "framer-motion": "^12.0.0",
+  "lucide-react": "^0.400.0",
+  "@tanstack/react-query": "^5.50.0",
+  "zustand": "^4.5.4",
+  "@radix-ui/react-*": "^1.1.0",
+  "next-themes": "^0.4.0",
+  "react-hot-toast": "^2.5.0",
+  "@vercel/analytics": "^1.3.0",
+  "sharp": "^0.33.0"
 }
 ```
 
