@@ -31,18 +31,14 @@ class SecurityManager {
     this.setupConsoleWarning()
   }
 
-  // Content Security Policy violation reporting
   setupCSPReporting() {
     if (typeof window !== 'undefined') {
-      // CSP reporting setup
       console.log('CSP reporting initialized');
     }
   }
 
-  // Runtime integrity checking
   setupIntegrityChecking() {
     if (typeof window !== 'undefined') {
-      // Integrity checking setup
       console.log('Integrity checking initialized');
     }
   }

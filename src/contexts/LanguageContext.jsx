@@ -3,14 +3,6 @@ import { translations } from '../i18n/translations';
 
 const LanguageContext = createContext();
 
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
-
 export const LanguageProvider = ({ children }) => {
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -23,7 +15,7 @@ export const LanguageProvider = ({ children }) => {
     return 'en';
   });
 
-  const changeLanguage = (lang) => {
+  const setLanguage = (lang) => {
     if (translations[lang]) {
       setCurrentLanguage(lang);
       if (typeof window !== 'undefined') {
@@ -35,9 +27,7 @@ export const LanguageProvider = ({ children }) => {
     }
   };
 
-  const translate = (key) => {
-    return translations[currentLanguage]?.[key] || translations.en[key] || key;
-  };
+  const translate = (key) => translations[currentLanguage][key] || key;
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -45,17 +35,11 @@ export const LanguageProvider = ({ children }) => {
     }
   }, [currentLanguage]);
 
-  const value = {
-    currentLanguage,
-    changeLanguage,
-    translate,
-    isSpanish: currentLanguage === 'es',
-    availableLanguages: Object.keys(translations || {})
-  };
-
   return (
-    <LanguageContext.Provider value={value}>
+    <LanguageContext.Provider value={{ currentLanguage, setLanguage, translate }}>
       {children}
     </LanguageContext.Provider>
   );
 };
+
+export const useLanguage = () => useContext(LanguageContext);

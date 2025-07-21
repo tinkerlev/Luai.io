@@ -1,20 +1,15 @@
 export const translations = {
   en: {
-    // Navigation & Menu
     home: 'Home',
     about: 'About',
     services: 'Services',
     contact: 'Contact',
     servicesDropdown: 'Services',
-
-    // Hero section
     heroTitle: 'Secure Your Digital Future',
     heroSubtitle: 'Professional cybersecurity solutions for businesses of all sizes',
     heroDescription: 'Protect your business from cyber threats with our comprehensive security services and expert guidance.',
     protectYourBusiness: 'Protect Your Business Today',
     trustedByCompanies: 'Trusted by companies worldwide',
-
-    // Services section
     servicesTitle: 'Our Services',
     servicesSubtitle: 'Comprehensive cybersecurity solutions tailored to your needs',
     penetrationTesting: 'Penetration Testing',
@@ -28,8 +23,6 @@ export const translations = {
     complianceConsulting: 'Compliance Consulting',
     dataProtection: 'Data Protection',
     networkSecurity: 'Network Security',
-
-    // Service descriptions
     penetrationTestingDesc: 'Thorough testing to identify vulnerabilities in your systems.',
     vulnerabilityAssessmentDesc: 'Systematic evaluation of security weaknesses in your infrastructure.',
     securityConsultingDesc: 'Expert advice on security strategy and implementation.',
@@ -39,8 +32,6 @@ export const translations = {
     redTeamOperationsDesc: 'Advanced adversary simulation to test your security defenses.',
     securityAuditsDesc: 'Comprehensive review of your security policies and implementations.',
     complianceConsultingDesc: 'Expert guidance to meet regulatory and standards requirements.',
-
-    // About section
     aboutTitle: 'About SecurePulses',
     aboutDescription: 'Leading cybersecurity experts protecting businesses worldwide',
     aboutText: 'With years of cybersecurity experience, our team delivers cutting-edge solutions to safeguard your digital assets.',
@@ -50,8 +41,6 @@ export const translations = {
     expertTeam: 'Expert Team',
     provenResults: 'Proven Results',
     support247: '24/7 Support',
-
-    // Contact section
     contactTitle: 'Get in Touch',
     contactDescription: 'Ready to secure your business? Contact us today',
     email: 'Email',
@@ -61,8 +50,6 @@ export const translations = {
     yourName: 'Your Name',
     yourEmail: 'Your Email',
     message: 'Message',
-
-    // Common buttons
     learnMore: 'Learn More',
     getStarted: 'Get Started',
     contactUs: 'Contact Us',
@@ -74,45 +61,30 @@ export const translations = {
     getSecured: 'Get Secured',
     startAssessment: 'Start Assessment',
     bookConsultation: 'Book Consultation',
-
-    // Footer
     allRightsReserved: 'All rights reserved',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-
-    // Meta descriptions
     metaDescription: 'Professional cybersecurity services including penetration testing, security audits, vulnerability assessments, incident response, and compliance consulting. Protect your business from cyber threats.',
-
-    // Status messages
     loading: 'Loading...',
     error: 'Error',
     success: 'Success',
-
-    // Form validation
     required: 'This field is required',
     invalidEmail: 'Please enter a valid email address',
-
-    // Page titles
     notFoundTitle: 'Page Not Found',
     notFoundMessage: 'The page you are looking for does not exist.',
     backToHome: 'Back to Home'
   },
   es: {
-    // Navigation & Menu
     home: 'Inicio',
     about: 'Acerca de',
     services: 'Servicios',
     contact: 'Contacto',
     servicesDropdown: 'Servicios',
-
-    // Hero section
     heroTitle: 'Asegura Tu Futuro Digital',
     heroSubtitle: 'Soluciones profesionales de ciberseguridad para empresas de todos los tamaños',
     heroDescription: 'Protege tu negocio de las amenazas cibernéticas con nuestros servicios integrales de seguridad y orientación experta.',
     protectYourBusiness: 'Protege Tu Negocio Hoy',
     trustedByCompanies: 'Confiado por empresas mundialmente',
-
-    // Services section
     servicesTitle: 'Nuestros Servicios',
     servicesSubtitle: 'Soluciones integrales de ciberseguridad adaptadas a sus necesidades',
     penetrationTesting: 'Pruebas de Penetración',
@@ -126,8 +98,6 @@ export const translations = {
     complianceConsulting: 'Consultoría de Cumplimiento',
     dataProtection: 'Protección de Datos',
     networkSecurity: 'Seguridad de Red',
-
-    // Service descriptions
     penetrationTestingDesc: 'Pruebas exhaustivas para identificar vulnerabilidades en sus sistemas.',
     vulnerabilityAssessmentDesc: 'Evaluación sistemática de debilidades de seguridad en su infraestructura.',
     securityConsultingDesc: 'Asesoramiento experto en estrategia de seguridad e implementación.',
@@ -137,8 +107,6 @@ export const translations = {
     redTeamOperationsDesc: 'Simulación avanzada de adversarios para probar sus defensas de seguridad.',
     securityAuditsDesc: 'Examen exhaustivo de sus políticas e implementaciones de seguridad.',
     complianceConsultingDesc: 'Orientación experta para cumplir con requisitos regulatorios y estándares.',
-
-    // About section
     aboutTitle: 'Acerca de SecurePulses',
     aboutDescription: 'Expertos líderes en ciberseguridad protegiendo empresas mundialmente',
     aboutText: 'Con años de experiencia en ciberseguridad, nuestro equipo proporciona soluciones de vanguardia para proteger sus activos digitales.',
@@ -148,8 +116,6 @@ export const translations = {
     expertTeam: 'Equipo Experto',
     provenResults: 'Resultados Comprobados',
     support247: 'Soporte 24/7',
-
-    // Contact section
     contactTitle: 'Póngase en Contacto',
     contactDescription: '¿Listo para asegurar su negocio? Contáctenos hoy',
     email: 'Correo Electrónico',
@@ -159,8 +125,6 @@ export const translations = {
     yourName: 'Tu Nombre',
     yourEmail: 'Tu Correo',
     message: 'Mensaje',
-
-    // Common buttons
     learnMore: 'Saber Más',
     getStarted: 'Comenzar',
     contactUs: 'Contáctanos',
@@ -172,25 +136,15 @@ export const translations = {
     getSecured: 'Asegúrate',
     startAssessment: 'Comenzar Evaluación',
     bookConsultation: 'Reservar Consulta',
-
-    // Footer
     allRightsReserved: 'Todos los derechos reservados',
     privacyPolicy: 'Política de Privacidad',
     termsOfService: 'Términos de Servicio',
-
-    // Meta descriptions
     metaDescription: 'Servicios profesionales de ciberseguridad incluyendo pruebas de penetración, auditorías de seguridad, evaluaciones de vulnerabilidades, respuesta a incidentes y consultoría de cumplimiento. Protege tu negocio de amenazas cibernéticas.',
-
-    // Status messages
     loading: 'Cargando...',
     error: 'Error',
     success: 'Éxito',
-
-    // Form validation
     required: 'Este campo es obligatorio',
     invalidEmail: 'Por favor ingresa un correo electrónico válido',
-
-    // Page titles
     notFoundTitle: 'Página No Encontrada',
     notFoundMessage: 'La página que buscas no existe.',
     backToHome: 'Volver al Inicio'
