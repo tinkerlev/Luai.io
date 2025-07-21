@@ -722,7 +722,7 @@ const Landing = () => {
         
         <div className="relative overflow-hidden">
           <video 
-            className="absolute inset-0 w-full h-full object-cover z-0"
+            className="absolute inset-0 w-full h-full object-fit z-0"
             autoPlay 
             muted 
             loop 
