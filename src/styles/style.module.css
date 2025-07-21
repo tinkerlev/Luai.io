@@ -1,0 +1,29 @@
+/* Custom reusable styles (Tailwind-based) */
+
+.centered-container {
+  @apply container mx-auto px-6;
+}
+
+.section-title {
+  @apply text-4xl font-bold mb-6 text-center;
+}
+
+.section-subtitle {
+  @apply text-xl text-slate-300 mb-12 text-center;
+}
+
+.card {
+  @apply bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-800/70 transition-transform duration-300 hover:scale-105;
+}
+
+.button-primary {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition-all;
+}
+
+.button-secondary {
+  @apply border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:border-blue-400 outline-none;
+}

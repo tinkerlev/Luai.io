@@ -1,0 +1,174 @@
+/* Option 1: Google Font - Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/* Option 2: Google Font - JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Option 3: Google Font - IBM Plex Mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-900 text-white;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+.codefont {
+  font-family: 'Fira Code', monospace ;
+}
+.codefont2 {
+  font-family: 'Source Code Pro', monospace;
+}
+.codefont3 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@layer components {
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #60A5FA, 0 0 20px #60A5FA, 0 0 30px #60A5FA;
+  }
+  to {
+    box-shadow: 0 0 20px #818CF8, 0 0 30px #818CF8, 0 0 40px #818CF8;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Partners scrolling animation */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Certifications continuous scrolling animation */
+@keyframes scroll-continuous {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-continuous {
+  animation: scroll-continuous 25s linear infinite;
+}
+
+.animate-scroll-right:hover,
+.animate-scroll-continuous:hover {
+  animation-play-state: paused;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f172a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* הסרת CSS כללי שביטל את העיצוב של כל הכפתורים */
+/* button {
+  border-radius: 0px !important;
+  border: none !important;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  background: transparent !important;
+  box-shadow: none !important;
+} */
+
+/* רק כפתורי ניווט ללא רקע כהה */
+nav > * button:not(.bg-gradient-to-r),
+nav > * a:not(.bg-gradient-to-r),
+header nav button:not(.bg-gradient-to-r),
+header nav a:not(.bg-gradient-to-r) {
+  background: transparent !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ביטול hover effects רק לכפתורי הניווט */
+nav > * button:not(.bg-gradient-to-r):hover,
+nav > * a:not(.bg-gradient-to-r):hover,
+header nav button:not(.bg-gradient-to-r):hover,
+header nav a:not(.bg-gradient-to-r):hover {
+  background: transparent !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
