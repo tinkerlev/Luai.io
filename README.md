@@ -334,8 +334,8 @@ This project is protected under a **strict proprietary license**. Please read th
 *Founder & Principal Security Architect*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/loai-deeb)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@securepulses.com)
-[![Website](https://img.shields.io/badge/SecurePulses-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://securepulses.com)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@securepulses.com)
+[![Website](https://img.shields.io/badge/SecurePulses-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://securepulses.vercel.app/)
 
 🏢 **Cybersecurity Consultancy** | 🌎 **Global Services** | 🇦🇷 **Based in Argentina**
 
