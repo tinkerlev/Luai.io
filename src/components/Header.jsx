@@ -142,7 +142,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <div 
+            {/* <div 
               className="relative group"
               onMouseEnter={() => setIsLanguageOpen(true)}
               onMouseLeave={() => setIsLanguageOpen(false)}
@@ -159,7 +159,7 @@ const Header = () => {
                 isLanguageOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
-                  <button
+                  {/* <button
                     onClick={() => changeLanguage('en')}
                     className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
                       currentLanguage === 'en' 
@@ -178,10 +178,10 @@ const Header = () => {
                     }`}
                   >
                     Español
-                  </button>
+                  </button> */}
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <button
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
@@ -210,7 +210,7 @@ const Header = () => {
               </button>
             ))}
             <hr className="border-slate-700/50 mx-4" />
-            <div className="px-4 py-2">
+            {/* <div className="px-4 py-2">
               <div className="flex space-x-2">
                 <button
                   onClick={() => changeLanguage('en')}
@@ -233,7 +233,7 @@ const Header = () => {
                   ES
                 </button>
               </div>
-            </div>
+            </div> */}
             
             <Link
               to="/terms-of-service"
@@ -266,5 +266,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
