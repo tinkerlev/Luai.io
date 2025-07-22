@@ -142,46 +142,6 @@ const Header = () => {
                 )}
               </div>
             ))}
-            {/* <div 
-              className="relative group"
-              onMouseEnter={() => setIsLanguageOpen(true)}
-              onMouseLeave={() => setIsLanguageOpen(false)}
-            >
-              <button
-                className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 font-medium px-3 py-2"
-              >
-                <Globe className="w-4 h-4" />
-                <span>{languageNames[currentLanguage]}</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isLanguageOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <div className={`absolute top-full right-0 mt-2 w-32 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-xl transition-all duration-300 ${
-                isLanguageOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-              }`}>
-                <div className="py-2">
-                  {/* <button
-                    onClick={() => changeLanguage('en')}
-                    className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
-                      currentLanguage === 'en' 
-                        ? 'text-blue-400 bg-slate-700/50' 
-                        : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
-                    }`}
-                  >
-                    English
-                  </button>
-                  <button
-                    onClick={() => changeLanguage('es')}
-                    className={`w-full text-left px-4 py-2 transition-colors duration-300 ${
-                      currentLanguage === 'es' 
-                        ? 'text-blue-400 bg-slate-700/50' 
-                        : 'text-gray-300 hover:text-blue-400 hover:bg-slate-700/50'
-                    }`}
-                  >
-                    Español
-                  </button> */}
-                </div>
-              </div> */}
-            {/* </div> */}
             <button
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
@@ -210,31 +170,6 @@ const Header = () => {
               </button>
             ))}
             <hr className="border-slate-700/50 mx-4" />
-            {/* <div className="px-4 py-2">
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => changeLanguage('en')}
-                  className={`flex-1 py-2 text-center rounded transition-colors ${
-                    currentLanguage === 'en' 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-slate-700/50 text-gray-300'
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => changeLanguage('es')}
-                  className={`flex-1 py-2 text-center rounded transition-colors ${
-                    currentLanguage === 'es' 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-slate-700/50 text-gray-300'
-                  }`}
-                >
-                  ES
-                </button>
-              </div>
-            </div> */}
-            
             <Link
               to="/terms-of-service"
               className="block px-4 py-2 text-gray-400 hover:text-gray-300 transition-colors duration-300 text-sm"

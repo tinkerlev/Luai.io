@@ -48,8 +48,8 @@ const PrivacyPolicy = () => {
             
             <div className="mt-6 text-gray-400 space-y-1">
               <p><strong>Last Updated:</strong> December 2024</p>
-              <p><strong>Effective Date:</strong> December 2025</p>
-              <p><strong>Data Controller:</strong> SecurePulses Ltd.</p>
+              <p><strong>Effective Date:</strong> December 2027</p>
+              <p><strong>Data Controller:</strong> SecurePulses Ltd</p>
             </div>
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 shadow-2xl">

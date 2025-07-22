@@ -4,10 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [
-    react({
-      // Enable React DevTools only in development
-      jsxImportSource: process.env.NODE_ENV === 'development' ? '@emotion/react' : 'react',
-    })
+    react()
   ],
   
   // Advanced build configuration for security
