@@ -474,7 +474,7 @@ const Landing = () => {
             "@type": "Organization",
             "name": "SecurePulses",
             "url": "https://securepulses.luai.io",
-            "logo": "https://securepulses.luai.io/logo.png",
+            "logo": "https://securepulses.luai.io/assets/securepulses-logo.png",
             "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
             "founder": {
               "@type": "Person",
