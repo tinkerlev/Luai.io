@@ -21,9 +21,9 @@ export const getSEOContent = (language) => {
 
 export const getHrefLangs = (currentPath) => {
   return [
-    { hrefLang: 'en', href: `https://securepulses.com${currentPath}?lang=en` },
-    { hrefLang: 'es', href: `https://securepulses.com${currentPath}?lang=es` },
-    { hrefLang: 'x-default', href: `https://securepulses.com${currentPath}` }
+    { hrefLang: 'en', href: `https://securepulses.luai.io${currentPath}?lang=en` },
+    { hrefLang: 'es', href: `https://securepulses.luai.io${currentPath}?lang=es` },
+    { hrefLang: 'x-default', href: `https://securepulses.luai.io${currentPath}` }
   ];
 };
 
@@ -32,8 +32,8 @@ export const generateMetaTags = (data) => {
     title = 'SecurePulses - Cybersecurity Expert Services',
     description = 'Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.',
     keywords = 'cybersecurity, penetration testing, security audit, vulnerability assessment',
-    url = 'https://securepulses.com',
-    image = 'https://securepulses.com/og-image.jpg'
+    url = 'https://securepulses.luai.io',
+    image = 'https://securepulses.luai.io/og-image.jpg'
   } = data;
 
   return {
@@ -62,7 +62,7 @@ export const generateStructuredData = (type = 'Organization') => {
     '@context': 'https://schema.org',
     '@type': type,
     name: 'SecurePulses',
-    url: 'https://securepulses.com',
+    url: 'https://securepulses.luai.io',
     description: 'Professional cybersecurity consulting services'
   };
 

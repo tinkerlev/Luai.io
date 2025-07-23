@@ -11,7 +11,7 @@ const PenetrationTesting = () => {
         <title>Penetration Testing Services - Professional Ethical Hacking | SecurePulses</title>
         <meta name="description" content="Professional penetration testing services by certified ethical hackers. Comprehensive security testing to find vulnerabilities before attackers do. OWASP, NIST compliant." />
         <meta name="keywords" content="penetration testing, ethical hacking, pentest, security testing, vulnerability testing, OWASP testing, web app security" />
-        <link rel="canonical" href="https://securepulses.com/services/penetration-testing" />
+        <link rel="canonical" href="https://securepulses.luai.io/services/penetration-testing" />
       </Helmet>
 
       <Header />

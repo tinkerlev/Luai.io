@@ -14,7 +14,7 @@
 
 *Advanced Cybersecurity Solutions for the Modern Digital Landscape*
 
-[🔴 **Live Platform**](https://securepulses.com) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
+[🔴 **Live Platform**](https://securepulses.luai.io) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
 
 </div>
 

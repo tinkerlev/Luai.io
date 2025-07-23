@@ -452,8 +452,8 @@ const Landing = () => {
         <meta property="og:title" content="SecurePulses - Professional Cybersecurity Services" />
         <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://securepulses.com" />
-        <meta property="og:image" content="https://securepulses.com/og-image.jpg" />
+        <meta property="og:url" content="https://securepulses.luai.io" />
+        <meta property="og:image" content="https://securepulses.luai.io/og-image.jpg" />
         <meta property="og:site_name" content="SecurePulses" />
         <meta property="og:locale" content="en_US" />
         
@@ -461,20 +461,9 @@ const Landing = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="SecurePulses - Cybersecurity Expert Services" />
         <meta name="twitter:description" content="Professional penetration testing and security consulting services. Protect your business from cyber threats." />
-        <meta name="twitter:image" content="https://securepulses.com/twitter-image.jpg" />
-        <meta name="twitter:site" content="@securepulses" />
-        
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </script>
-        
+        <meta name="twitter:image" content="https://securepulses.luai.io/twitter-image.jpg" />
+        <meta name="twitter:site" content="@luai" />
+                
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_CODE" />
         
@@ -484,8 +473,8 @@ const Landing = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "SecurePulses",
-            "url": "https://securepulses.com",
-            "logo": "https://securepulses.com/logo.png",
+            "url": "https://securepulses.luai.io",
+            "logo": "https://securepulses.luai.io/logo.png",
             "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
             "founder": {
               "@type": "Person",
@@ -511,7 +500,7 @@ const Landing = () => {
         <meta name="ICBM" content="31.0461, 34.8516" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://securepulses.com" />
+        <link rel="canonical" href="https://securepulses.luai.io" />
         
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

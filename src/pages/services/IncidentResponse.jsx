@@ -28,7 +28,7 @@ const IncidentResponse = () => {
         <title>24/7 Cybersecurity Incident Response Services | SecurePulses</title>
         <meta name="description" content="Emergency cybersecurity incident response services. 24/7 breach response, malware removal, ransomware recovery. Immediate expert assistance when you're under attack." />
         <meta name="keywords" content="incident response, cyber attack response, ransomware recovery, breach response, emergency cybersecurity, malware removal" />
-        <link rel="canonical" href="https://securepulses.com/services/incident-response" />
+        <link rel="canonical" href="https://securepulses.luai.io/services/incident-response" />
       </Helmet>
 
       <Header />

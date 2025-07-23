@@ -12,7 +12,7 @@ const TermsOfService = () => {
         <meta name="description" content="Comprehensive Terms of Service for SecurePulses cybersecurity consulting services. GDPR compliant, Israeli Privacy Law compliant, and US privacy regulations compliant." />
         <meta name="keywords" content="terms of service, cybersecurity, privacy policy, GDPR, Israeli privacy law, legal terms, penetration testing" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://securepulses.com/terms-of-service" />
+        <link rel="canonical" href="https://securepulses.luai.io/terms-of-service" />
       </Helmet>
 
       <Header />

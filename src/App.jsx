@@ -12,6 +12,7 @@ import ComplianceConsulting from './pages/services/ComplianceConsulting';
 import SecurityTraining from './pages/services/SecurityTraining';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import NotFound from './pages/NotFound';
 import './index.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <Route path="/services/security-training" element={<SecurityTraining />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </Router>

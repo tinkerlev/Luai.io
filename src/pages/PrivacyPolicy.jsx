@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
         <meta name="description" content="Comprehensive Privacy Policy for SecurePulses. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards." />
         <meta name="keywords" content="privacy policy, GDPR compliance, data protection, Israeli privacy law, CCPA, cybersecurity privacy, data processing" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://securepulses.com/privacy-policy" />
+        <link rel="canonical" href="https://securepulses.luai.io/privacy-policy" />
       </Helmet>
 
       <Header />

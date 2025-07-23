@@ -21,7 +21,7 @@ const NotFound = () => {
         <title>Page Not Found - SecurePulses Cybersecurity</title>
         <meta name="description" content="The page you're looking for doesn't exist. Get back to SecurePulses cybersecurity services and protect your business from cyber threats." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://securepulses.com/404" />
+        <link rel="canonical" href="https://securepulses.luai.io/404" />
       </Helmet>
 
       <Header />
