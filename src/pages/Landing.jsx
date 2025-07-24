@@ -453,7 +453,7 @@ const Landing = () => {
         <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://securepulses.luai.io" />
-        <meta property="og:image" content="https://securepulses.luai.io/og-image.jpg" />
+        <meta property="og:image" content="https://securepulses.luai.io/assets/securepulses-logo.png" />
         <meta property="og:site_name" content="SecurePulses" />
         <meta property="og:locale" content="en_US" />
         
