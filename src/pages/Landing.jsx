@@ -18,9 +18,7 @@ import {
 } from '../components/DesignSystem';
 import '../index.css';
 import { useTranslation } from '../hooks/useTranslation';
-import LanguageSwitcher from '../components/LanguageSwitcher';
 
-// CountUp Component for animated numbers
 const CountUp = ({ end, duration = 2000, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -72,13 +70,11 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
   );
 };
 
-// Enhanced Warning Icon with Lucide
 const AnimatedWarningIcon = () => (
   <div className="animate-pulse">
     <AlertTriangle className="w-5 h-5 text-red-400" />
   </div>
 );
-
 // Custom Animated Icons
 const AnimatedGlobeIcon = () => (
   <div className="relative w-8 h-8 group">
@@ -1074,7 +1070,6 @@ const Landing = () => {
                   <strong className="text-red-400">The call you make today could save everything you've worked for.</strong>
                 </SectionSubtext>
 
-                {/* Urgency section */}
                 <div className="bg-gradient-to-r from-red-500/15 to-orange-500/15 rounded-2xl p-6 mb-12 border border-red-500/30">
                   <h3 className="text-2xl font-bold text-white mb-4">🚨 Limited Availability Alert</h3>
                   <p className="text-xl text-gray-300 mb-4">
