@@ -355,8 +355,8 @@ const Landing = () => {
 
     try {
       const templateParams = {
-        from_name: sanitizedData.name,
-        from_email: sanitizedData.email,
+        name: sanitizedData.name,
+        email: sanitizedData.email,
         company: sanitizedData.company,
         message: sanitizedData.message,
         to_email: 'info@securepulses.com',

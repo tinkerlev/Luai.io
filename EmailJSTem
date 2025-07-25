@@ -29,11 +29,11 @@
 
       <div style="margin-bottom:32px;">
         <h3 style="color:#60a5fa; font-size:20px; font-weight:bold; margin:0 0 16px 0;">
-          Here's What Happens Next:
+          What Happens Next?
         </h3>
         <div>
           <p style="color:#e2e8f0; font-size:16px; margin:0 0 12px;">
-            <span style="font-size:18px; color:#10b981; margin-right:8px;">📋</span><strong>Within 3 business days:</strong> You'll receive a detailed response from our security team.
+            <span style="font-size:18px; color:#10b981; margin-right:8px;">📋</span><strong>Within 3 business days:</strong> You'll receive a detailed Email from our security team.
           </p>
           <p style="color:#e2e8f0; font-size:16px; margin:0 0 12px;">
             <span style="font-size:18px; color:#10b981; margin-right:8px;">🔍</span><strong>Initial Analysis:</strong> We'll review your company's security profile.
@@ -66,11 +66,11 @@
         <p style="margin:0 0 8px 0; color:#e2e8f0; font-size:14px;">
           <strong>Emergency Email:</strong> <a href="mailto:info@securepulses.com" style="color:#10b981; text-decoration:none;">info@securepulses.com</a>
         </p>
+
         <p style="margin:0; color:#f87171; font-size:12px; font-style:italic;">
           If you suspect a breach or attack – call immediately, any time.
         </p>
       </div>
-
       <div style="border-top:1px solid rgba(100,116,139,0.3); padding-top:24px;">
         <p style="margin:0 0 16px 0; color:#e2e8f0; font-style:italic;">
           "Thank you for trusting me with your business security. I take every request personally because I know how much {{company}} means to you."
