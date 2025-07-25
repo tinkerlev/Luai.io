@@ -58,7 +58,7 @@
 
       <div style="background:rgba(220,38,38,0.1); border:1px solid rgba(220,38,38,0.3); border-radius:12px; padding:20px; margin-bottom:32px;">
         <h4 style="margin:0 0 12px 0; color:#f87171; font-size:16px; font-weight:bold;">
-          🚨 Security Emergency? Don't Wait 3 Days:
+          🚨 Security Emergency in {{company}}? Don't Wait 3 Days:
         </h4>
         <p style="margin:0 0 8px 0; color:#e2e8f0; font-size:14px;">
           <strong>Immediate Response:</strong> <a href="tel:+5491124828429" style="color:#10b981; text-decoration:none;">+54 9 (11) 24828429</a>
@@ -73,7 +73,7 @@
 
       <div style="border-top:1px solid rgba(100,116,139,0.3); padding-top:24px;">
         <p style="margin:0 0 16px 0; color:#e2e8f0; font-style:italic;">
-          "Thank you for trusting me with your business security. I take every request personally because I know how much your business means to you."
+          "Thank you for trusting me with your business security. I take every request personally because I know how much {{company}} means to you."
         </p>
   <div style="display: flex; align-items: center; margin-top: 24px; border-top: 1px solid #475569; padding-top: 24px;">
     <img src="https://securepulses.luai.io/eliran-photo.jpg" alt="Eliran Loai Deeb" style="width: 48px; height: 48px; border-radius: 50%; border: 2px solid #60a5fa; margin-right: 12px;" />

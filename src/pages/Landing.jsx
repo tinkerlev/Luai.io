@@ -19,6 +19,23 @@ import {
 import '../index.css';
 import { useTranslation } from '../hooks/useTranslation';
 
+function sanitizeInput(value, fieldType) {
+  const temp = String(value)
+    .replace(/[<>]/g, '')
+    .replace(/["']/g, '')
+    .replace(/&/g, '&amp;')
+    .replace(/\\/g, '');
+  if (fieldType === 'email') {
+    return temp.replace(/[^\w@.-]/g, '');
+  } else if (fieldType === 'name' || fieldType === 'company') {
+    return temp.replace(/[^a-zA-Z0-9 \-.,]/g, '');
+  } else if (fieldType === 'message') {
+    return temp.slice(0, 1000);
+  }
+
+  return temp;
+}
+
 const CountUp = ({ end, duration = 2000, suffix = "" }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -75,7 +92,7 @@ const AnimatedWarningIcon = () => (
     <AlertTriangle className="w-5 h-5 text-red-400" />
   </div>
 );
-// Custom Animated Icons
+
 const AnimatedGlobeIcon = () => (
   <div className="relative w-8 h-8 group">
     <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 rounded-full shadow-xl shadow-blue-500/50 group-hover:shadow-2xl group-hover:shadow-blue-500/70 transition-all duration-300"></div>
@@ -222,10 +239,9 @@ const Landing = () => {
     if (name.length < 2) return 'Name must be at least 2 characters';
     if (name.length > 50) return 'Name cannot exceed 50 characters';
     const suspiciousPatterns = ['test', 'fake', 'spam', '123', 'aaa', 'xxx'];
-    if (suspiciousPatterns.some(pattern => company.toLowerCase().includes(pattern))) {
-      return 'Please enter a valid company name';
+    if (suspiciousPatterns.some(pattern => name.toLowerCase().includes(pattern))) {
+      return 'Please enter a valid name';
     }
-  
     return '';
   };
   
@@ -242,6 +258,10 @@ const Landing = () => {
     if (!company.trim()) return 'Company name is required';
     if (!companyRegex.test(company)) return 'Company name can only contain letters, spaces, &, ., and -';
     if (company.length > 15) return 'Company name cannot exceed 15 characters';
+    const suspiciousPatterns = ['test', 'fake', 'spam', '123', 'aaa', 'xxx'];
+    if (suspiciousPatterns.some(pattern => company.toLowerCase().includes(pattern))) {
+      return 'Please enter a valid company name';
+    }
     return '';
   };
 
