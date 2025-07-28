@@ -12,7 +12,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:10000", "https://Luai.luai.io"])
+CORS(app, origins=["http://localhost:10000", "https://luai.io", "https://luai-io.onrender.com"])
 limiter = Limiter(get_remote_address, app=app, default_limits=["5 per minute"])
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 
