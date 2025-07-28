@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
-                src="/assets/whiteBgColor.png" 
+                src="/assets/logo-luaiNoColor.png" 
                 alt="Luai Logo" 
                 className="object-contain"
                 style={{ width: '290px', height: '290px' }}

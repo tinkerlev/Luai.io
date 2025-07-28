@@ -96,7 +96,7 @@ Luai/
 │   ├── 🎥 assets/               # Optimized media (AVIF, WebP, MP4)
 │   │   ├── hero-video.mp4       # Compressed with AV1 codec
 │   │   └── team-photo.avif      # Next-gen image format
-│   ├── 🖼️ Luai-logo.svg
+│   ├── 🖼️ logo-luaiNoColor.png
 │   ├── 🤖 robots.txt            # SEO optimization
 │   └── 📄 sitemap.xml           # Search engine indexing
 ├── 📁 src/                      # TypeScript Source Code
