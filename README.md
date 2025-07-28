@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ SecurePulses
+# 🛡️ Luai
 
 ### Professional Cybersecurity Services Platform
 
@@ -10,11 +10,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![License](https://img.shields.io/badge/License-PROPRIETARY-red.svg?style=for-the-badge)](LICENSE)
 
-<img src="public/securepulses-logo.svg" alt="SecurePulses Logo" width="200"/>
+<img src="public/logo-luaiNoColor.png" alt="Luai Logo" width="200"/>
 
 *Advanced Cybersecurity Solutions for the Modern Digital Landscape*
 
-[🔴 **Live Platform**](https://securepulses.luai.io) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
+[🔴 **Live Platform**](https://Luai.luai.io) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
 
 </div>
 
@@ -22,7 +22,7 @@
 
 ## 🎯 **Project Overview**
 
-**SecurePulses** is a state-of-the-art cybersecurity platform engineered with cutting-edge web technologies circa July 2025. This platform showcases enterprise-grade penetration testing, security auditing, and compliance services with a focus on modern threat landscapes including AI-powered attacks, quantum-resistant cryptography, and zero-trust architecture implementations.
+**Luai** is a state-of-the-art cybersecurity platform engineered with cutting-edge web technologies circa July 2025. This platform showcases enterprise-grade penetration testing, security auditing, and compliance services with a focus on modern threat landscapes including AI-powered attacks, quantum-resistant cryptography, and zero-trust architecture implementations.
 
 ### 🌟 **Key Features**
 
@@ -91,12 +91,12 @@
 ## 📁 **Project Structure (2025 Architecture)**
 
 ```
-SecurePulses/
+Luai/
 ├── 📁 public/                    # Static & Media Assets
 │   ├── 🎥 assets/               # Optimized media (AVIF, WebP, MP4)
 │   │   ├── hero-video.mp4       # Compressed with AV1 codec
 │   │   └── team-photo.avif      # Next-gen image format
-│   ├── 🖼️ securepulses-logo.svg
+│   ├── 🖼️ Luai-logo.svg
 │   ├── 🤖 robots.txt            # SEO optimization
 │   └── 📄 sitemap.xml           # Search engine indexing
 ├── 📁 src/                      # TypeScript Source Code
@@ -245,7 +245,7 @@ npm install
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "CybersecurityCompany",
-  "name": "SecurePulses",
+  "name": "Luai",
   "aiCapabilities": ["ThreatDetection", "VulnerabilityAssessment"],
   "quantumReady": true,
   "certifications": ["ISO27001:2022", "SOC2TypeII", "NIST2.0"]
@@ -299,10 +299,10 @@ This project is protected under a **strict proprietary license**. Please read th
 
 #### ❌ **STRICTLY PROHIBITED:**
 - Commercial use of any kind
-- Using the SecurePulses name, logo, or branding
+- Using the Luai name, logo, or branding
 - Copying substantial portions of the code
 - Offering competing cybersecurity services
-- Domain registration with "SecurePulses" or variants
+- Domain registration with "Luai" or variants
 
 **Violation of these terms may result in legal action.**
 
@@ -334,8 +334,8 @@ This project is protected under a **strict proprietary license**. Please read th
 *Founder & Principal Security Architect*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/loai-deeb)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@securepulses.com)
-[![Website](https://img.shields.io/badge/SecurePulses-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://securepulses.vercel.app/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@Luai.com)
+[![Website](https://img.shields.io/badge/Luai-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://Luai.vercel.app/)
 
 🏢 **Cybersecurity Consultancy** | 🌎 **Global Services** | 🇦🇷 **Based in Argentina**
 
@@ -365,11 +365,11 @@ This project is protected under **PROPRIETARY LICENSE** - see the [LICENSE](LICE
 
 *Leveraging AI, Quantum-Resistant Security, and Zero-Trust Architecture*
 
-**Design patterns adapted from SecurePulses platform. Original work © 2025 Eliran Loai Deeb**
+**Design patterns adapted from Luai platform. Original work © 2025 Eliran Loai Deeb**
 
 ---
 
-![Footer Banner](public/securepulses-logo.svg)
+![Footer Banner](public/Luai-logo.svg)
 
 **Last Updated: July 2025**
 

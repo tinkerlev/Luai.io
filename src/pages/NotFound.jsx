@@ -18,10 +18,10 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found - SecurePulses Cybersecurity</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Get back to SecurePulses cybersecurity services and protect your business from cyber threats." />
+        <title>Page Not Found - Luai Cybersecurity</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Get back to Luai cybersecurity services and protect your business from cyber threats." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://securepulses.luai.io/404" />
+        <link rel="canonical" href="https://Luai.luai.io/404" />
       </Helmet>
 
       <Header />
@@ -173,7 +173,7 @@ const NotFound = () => {
                   📞 Call Emergency Line
                 </a>
                 <a 
-                  href="mailto:info@securepulses.com"
+                  href="mailto:info@Luai.com"
                   className="inline-flex items-center justify-center px-6 py-3 text-lg font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition-colors"
                 >
                   📧 Email Immediately

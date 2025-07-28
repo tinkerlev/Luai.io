@@ -24,12 +24,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">SecurePulses</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Luai</h3>
             <p className="text-gray-400 leading-relaxed mb-4">
               Professional cybersecurity consulting services. Protecting businesses with advanced penetration testing and security assessments.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>📧 info@securepulses.com</p>
+              <p>📧 info@Luai.com</p>
               <p>📱 +54 9 (11) 24828429</p>
               <p>🌍 Serving clients globally</p>
             </div>
@@ -100,7 +100,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-center lg:text-left">
               <p className="text-gray-400 text-sm">
-                © 2024 SecurePulses Ltd. All rights reserved. 
+                © 2024 Luai Ltd. All rights reserved. 
               </p>
               <p className="text-gray-400 text-xs mt-1">
                 Registered cybersecurity consulting firm • Licensed penetration testing services

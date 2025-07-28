@@ -8,11 +8,11 @@ const TermsOfService = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - SecurePulses Cybersecurity Services</title>
-        <meta name="description" content="Comprehensive Terms of Service for SecurePulses cybersecurity consulting services. GDPR compliant, Israeli Privacy Law compliant, and US privacy regulations compliant." />
+        <title>Terms of Service - Luai Cybersecurity Services</title>
+        <meta name="description" content="Comprehensive Terms of Service for Luai cybersecurity consulting services. GDPR compliant, Israeli Privacy Law compliant, and US privacy regulations compliant." />
         <meta name="keywords" content="terms of service, cybersecurity, privacy policy, GDPR, Israeli privacy law, legal terms, penetration testing" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://securepulses.luai.io/terms-of-service" />
+        <link rel="canonical" href="https://Luai.luai.io/terms-of-service" />
       </Helmet>
 
       <Header />
@@ -64,11 +64,11 @@ const TermsOfService = () => {
               
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "Customer," or "you") and SecurePulses, a cybersecurity consulting firm established under Israeli law ("Company," "we," "us," or "our"). These Terms govern your access to and use of our cybersecurity consulting services, penetration testing, security assessments, and related professional services (collectively, the "Services").
+                  These Terms of Service ("Terms") constitute a legally binding agreement between you ("Client," "Customer," or "you") and Luai, a cybersecurity consulting firm established under Israeli law ("Company," "we," "us," or "our"). These Terms govern your access to and use of our cybersecurity consulting services, penetration testing, security assessments, and related professional services (collectively, the "Services").
                 </p>
                 
                 <p>
-                  By engaging our Services, accessing our website, or entering into any service agreement with SecurePulses, you acknowledge that you have read, understood, and agree to be bound by these Terms, along with our Privacy Policy, which is incorporated herein by reference. If you do not agree to these Terms, you must not use our Services.
+                  By engaging our Services, accessing our website, or entering into any service agreement with Luai, you acknowledge that you have read, understood, and agree to be bound by these Terms, along with our Privacy Policy, which is incorporated herein by reference. If you do not agree to these Terms, you must not use our Services.
                 </p>
                 
                 <p>
@@ -124,7 +124,7 @@ const TermsOfService = () => {
               
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  SecurePulses provides professional cybersecurity consulting services, including but not limited to:
+                  Luai provides professional cybersecurity consulting services, including but not limited to:
                 </p>
                 
                 <div className="grid gap-3 pl-6">
@@ -198,7 +198,7 @@ const TermsOfService = () => {
                 </p>
                 
                 <p>
-                  <strong className="text-red-400">5.5 Data Subject Rights:</strong> Where applicable under GDPR or other privacy laws, individuals have the right to access, rectify, erase, restrict processing, data portability, and object to processing of their Personal Data. Requests should be directed to our Data Protection Officer at privacy@securepulses.com.
+                  <strong className="text-red-400">5.5 Data Subject Rights:</strong> Where applicable under GDPR or other privacy laws, individuals have the right to access, rectify, erase, restrict processing, data portability, and object to processing of their Personal Data. Requests should be directed to our Data Protection Officer at privacy@Luai.com.
                 </p>
               </div>
             </section>
@@ -264,9 +264,9 @@ const TermsOfService = () => {
               
               <div className="bg-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="space-y-3 text-gray-300">
-                  <p><strong>SecurePulses Ltd.</strong></p>
-                  <p>Email: legal@securepulses.com</p>
-                  <p>Privacy Officer: privacy@securepulses.com</p>
+                  <p><strong>Luai Ltd.</strong></p>
+                  <p>Email: legal@Luai.com</p>
+                  <p>Privacy Officer: privacy@Luai.com</p>
                   <p>Phone: +54 9 (11) 24828429</p>
                   <p>For legal notices and formal communications, please use certified mail or email with delivery confirmation.</p>
                 </div>

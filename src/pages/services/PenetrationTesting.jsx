@@ -8,10 +8,10 @@ const PenetrationTesting = () => {
   return (
     <>
       <Helmet>
-        <title>Penetration Testing Services - Professional Ethical Hacking | SecurePulses</title>
+        <title>Penetration Testing Services - Professional Ethical Hacking | Luai</title>
         <meta name="description" content="Professional penetration testing services by certified ethical hackers. Comprehensive security testing to find vulnerabilities before attackers do. OWASP, NIST compliant." />
         <meta name="keywords" content="penetration testing, ethical hacking, pentest, security testing, vulnerability testing, OWASP testing, web app security" />
-        <link rel="canonical" href="https://securepulses.luai.io/services/penetration-testing" />
+        <link rel="canonical" href="https://Luai.luai.io/services/penetration-testing" />
       </Helmet>
 
       <Header />

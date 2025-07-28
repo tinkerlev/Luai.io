@@ -12,7 +12,7 @@ LOG_FILE = os.path.join(LOG_DIR, "app.log")
 # Ensure log directory exists
 os.makedirs(LOG_DIR, exist_ok=True)
 
-logger = logging.getLogger("SecurePulsesLogger")
+logger = logging.getLogger("LuaiLogger")
 logger.setLevel(getattr(logging, LOG_LEVEL, logging.INFO))
 
 # Prevent duplicate log entries

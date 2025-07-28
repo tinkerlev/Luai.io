@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
             <Link to="/" className="flex items-center space-x-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
                 src="/assets/whiteBgColor.png" 
-                alt="SecurePulses Logo" 
+                alt="Luai Logo" 
                 className="object-contain"
                 style={{ width: '290px', height: '290px' }}
               />
@@ -112,7 +112,7 @@ const Layout = ({ children }) => {
       {/* Footer */}
       <footer className="w-full bg-slate-900/80 backdrop-blur-sm border-t border-slate-800/50 py-6 z-20">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} SecurePulses. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Luai. All rights reserved.</p>
         </div>
       </footer>
     </div>

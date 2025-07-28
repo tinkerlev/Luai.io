@@ -120,7 +120,7 @@ const SecureContactForm = () => {
       const ctx = canvas.getContext('2d')
       ctx.textBaseline = 'top'
       ctx.font = '14px Arial'
-      ctx.fillText('SecurePulses Fingerprint', 2, 2)
+      ctx.fillText('Luai Fingerprint', 2, 2)
       components.push(canvas.toDataURL())
     } catch (e) {
       components.push('canvas-error')

@@ -12,7 +12,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "https://securepulses.luai.io"])
+CORS(app, origins=["http://localhost:10000", "https://Luai.luai.io"])
 limiter = Limiter(get_remote_address, app=app, default_limits=["5 per minute"])
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 
@@ -60,4 +60,4 @@ def handle_contact():
         return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT", 5000)))
+    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT", 10000)))

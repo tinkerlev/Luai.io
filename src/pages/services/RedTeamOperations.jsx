@@ -12,10 +12,10 @@ const RedTeamOperations = () => {
   return (
     <>
       <Helmet>
-        <title>Red Team Operations - Advanced Adversary Simulation | SecurePulses</title>
+        <title>Red Team Operations - Advanced Adversary Simulation | Luai</title>
         <meta name="description" content="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses. Military-grade adversary simulation services." />
         <meta name="keywords" content="red team operations, adversary simulation, APT simulation, advanced persistent threat, red team exercise, purple team" />
-        <link rel="canonical" href="https://securepulses.luai.io/services/red-team-operations" />
+        <link rel="canonical" href="https://Luai.luai.io/services/red-team-operations" />
       </Helmet>
 
       <Header />

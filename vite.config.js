@@ -18,7 +18,7 @@ export default defineConfig({
         chunkFileNames: 'assets/[hash].js',
         entryFileNames: 'assets/[hash].js',
         assetFileNames: 'assets/[hash].[ext]',
-        banner: '/* SecurePulses - Protected by Advanced Security */',
+        banner: '/* Luai - Protected by Advanced Security */',
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
@@ -42,7 +42,7 @@ export default defineConfig({
   },
 
   server: {
-    port: 3000,
+    port: 10000,
     open: true,
     host: true,
     strictPort: true,
@@ -96,7 +96,7 @@ export default defineConfig({
 
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    'process.env.VITE_APP_NAME': JSON.stringify(process.env.VITE_APP_NAME || 'SecurePulses'),
+    'process.env.VITE_APP_NAME': JSON.stringify(process.env.VITE_APP_NAME || 'Luai'),
     'process.env.VITE_APP_VERSION': JSON.stringify(process.env.VITE_APP_VERSION || '1.0.0')
   },
 

@@ -93,8 +93,8 @@ const Header = () => {
           >
             <div className="relative group-hover:scale-105 transition-transform duration-300">
               <img 
-                src="/assets/securepulses-logo.png" 
-                alt="SecurePulses Logo" 
+                src="/assets/Luai-logo.png" 
+                alt="Luai Logo" 
                 className="h-12 w-auto object-contain max-w-[200px]"
                 style={{ filter: 'brightness(1.1)' }}
               />

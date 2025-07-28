@@ -18,7 +18,7 @@ NOREPLY_SMTP_USER = os.getenv("NOREPLY_SMTP_USER")
 NOREPLY_SMTP_PASS = os.getenv("NOREPLY_SMTP_PASS")
 ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", SMTP_USER)
 NOREPLY_EMAIL = os.getenv("NOREPLY_EMAIL", f"no-reply@{SMTP_USER.split('@')[-1]}")
-SENDER_NAME = os.getenv("SENDER_NAME", "SecurePulses")
+SENDER_NAME = os.getenv("SENDER_NAME", "Luai")
 
 
 # =======================
@@ -47,7 +47,7 @@ def send_admin_notification(name: str, email: str, company: str, message: str):
 # =======================
 
 def send_user_confirmation(name: str, user_email: str, company: str, message: str):
-    subject = "Thanks for contacting SecurePulses"
+    subject = "Thanks for contacting Luai"
     try:
         with open("templates/email.html", "r", encoding="utf-8") as f:
             html_template = f.read()

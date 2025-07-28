@@ -8,11 +8,11 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - SecurePulses GDPR & Multi-Jurisdictional Compliance</title>
-        <meta name="description" content="Comprehensive Privacy Policy for SecurePulses. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards." />
+        <title>Privacy Policy - Luai GDPR & Multi-Jurisdictional Compliance</title>
+        <meta name="description" content="Comprehensive Privacy Policy for Luai. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards." />
         <meta name="keywords" content="privacy policy, GDPR compliance, data protection, Israeli privacy law, CCPA, cybersecurity privacy, data processing" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://securepulses.luai.io/privacy-policy" />
+        <link rel="canonical" href="https://Luai.luai.io/privacy-policy" />
       </Helmet>
 
       <Header />
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
             <div className="mt-6 text-gray-400 space-y-1">
               <p><strong>Last Updated:</strong> December 2024</p>
               <p><strong>Effective Date:</strong> December 2027</p>
-              <p><strong>Data Controller:</strong> SecurePulses Ltd</p>
+              <p><strong>Data Controller:</strong> Luai Ltd</p>
             </div>
           </div>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 shadow-2xl">
@@ -60,10 +60,10 @@ const PrivacyPolicy = () => {
               </div>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  SecurePulses Ltd. ("Company," "we," "us," or "our") is committed to protecting the privacy and security of personal information. This Privacy Policy describes how we collect, use, process, store, and protect personal data in connection with our cybersecurity consulting services.
+                  Luai Ltd. ("Company," "we," "us," or "our") is committed to protecting the privacy and security of personal information. This Privacy Policy describes how we collect, use, process, store, and protect personal data in connection with our cybersecurity consulting services.
                 </p>
                 <p>
-                  This Privacy Policy applies to all personal data processed by SecurePulses, whether collected through our website, during service delivery, or through other business interactions. We process personal data in compliance with:
+                  This Privacy Policy applies to all personal data processed by Luai, whether collected through our website, during service delivery, or through other business interactions. We process personal data in compliance with:
                 </p>
                 <div className="grid gap-2 pl-6">
                   <div>• European Union General Data Protection Regulation (GDPR) 2016/679</div>
@@ -85,12 +85,12 @@ const PrivacyPolicy = () => {
               </div>
               <div className="bg-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="space-y-3 text-gray-300">
-                  <p><strong className="text-blue-400">Data Controller:</strong> SecurePulses Ltd.</p>
+                  <p><strong className="text-blue-400">Data Controller:</strong> Luai Ltd.</p>
                   <p><strong className="text-blue-400">Business Registration:</strong> Israeli Company Registry</p>
-                  <p><strong className="text-blue-400">Primary Contact:</strong> privacy@securepulses.com</p>
+                  <p><strong className="text-blue-400">Primary Contact:</strong> privacy@Luai.com</p>
                   <p><strong className="text-blue-400">Data Protection Officer:</strong> Eliran Loai Deeb</p>
                   <p><strong className="text-blue-400">Physical Address:</strong> Available upon request for data subject rights</p>
-                  <p><strong className="text-blue-400">EU Representative:</strong> Contact privacy@securepulses.com for EU representation details</p>
+                  <p><strong className="text-blue-400">EU Representative:</strong> Contact privacy@Luai.com for EU representation details</p>
                 </div>
               </div>
             </section>
@@ -192,7 +192,7 @@ const PrivacyPolicy = () => {
                   </div>
                 </div>
                 <p>
-                  <strong>To exercise your rights:</strong> Contact our Data Protection Officer at privacy@securepulses.com. We will respond within one month (or two months for complex requests) as required by law.
+                  <strong>To exercise your rights:</strong> Contact our Data Protection Officer at privacy@Luai.com. We will respond within one month (or two months for complex requests) as required by law.
                 </p>
               </div>
             </section>
@@ -289,8 +289,8 @@ const PrivacyPolicy = () => {
                 <div className="text-gray-300">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">Contact Us:</h3>
                   <div className="space-y-2">
-                    <p><strong>Data Protection Officer:</strong> privacy@securepulses.com</p>
-                    <p><strong>General Privacy Inquiries:</strong> info@securepulses.com</p>
+                    <p><strong>Data Protection Officer:</strong> privacy@Luai.com</p>
+                    <p><strong>General Privacy Inquiries:</strong> info@Luai.com</p>
                     <p><strong>Phone:</strong> +54 9 (11) 24828429</p>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 # PROPRIETARY SOFTWARE LICENSE AGREEMENT
 
-**SecurePulses Platform and Associated Intellectual Property**
+**Luai Platform and Associated Intellectual Property**
 
 ---
 
@@ -17,12 +17,12 @@ This software, documentation, and all associated materials (collectively, the "S
 **"Licensed Materials"** means the source code, design patterns, CSS stylesheets, component architectures, TypeScript definitions, animation libraries, and technical implementations contained within this repository, excluding all Restricted Elements as defined herein.
 
 **"Restricted Elements"** means and includes, without limitation:
-- The "SecurePulses" name, trademark, service marks, and all variations, translations, or phonetic equivalents thereof
-- The SecurePulses domain name (securepulses.com) and all associated subdomains, redirects, and variations
-- The SecurePulses logo, brand identity system, color schemes, and all visual branding materials
+- The "Luai" name, trademark, service marks, and all variations, translations, or phonetic equivalents thereof
+- The Luai domain name (Luai.com) and all associated subdomains, redirects, and variations
+- The Luai logo, brand identity system, color schemes, and all visual branding materials
 - All cybersecurity service descriptions, AI-powered security methodologies, quantum-resistant protocols, and proprietary business processes
 - All proprietary algorithms, machine learning models, security frameworks, and operational procedures
-- All content, text, images, videos, multimedia materials, and documentation specific to SecurePulses business operations
+- All content, text, images, videos, multimedia materials, and documentation specific to Luai business operations
 - All client data, testimonials, case studies, and business intelligence information
 - All API endpoints, database schemas, and technical infrastructure implementations
 
@@ -44,8 +44,8 @@ Subject to the terms and conditions of this Agreement, Licensor hereby grants yo
 ### MANDATORY ATTRIBUTION REQUIREMENT
 Any use of Licensed Materials, including AI-generated derivatives, must include the following attribution prominently displayed:
 ```
-"Design patterns adapted from SecurePulses platform. Original work © 2025 Eliran Loai Deeb. 
-Licensed under strict proprietary terms. See: https://securepulses.luai.io/license"
+"Design patterns adapted from Luai platform. Original work © 2025 Eliran Loai Deeb. 
+Licensed under strict proprietary terms. See: https://Luai.luai.io/license"
 ```
 
 ---
@@ -57,14 +57,14 @@ You are expressly prohibited from, and agree that you will not:
 ### BUSINESS AND COMMERCIAL RESTRICTIONS
 1. **Commercial Exploitation**: Use, reproduce, distribute, monetize, or commercialize the Software or any portion thereof for any commercial purpose whatsoever, including but not limited to SaaS platforms, consulting services, or digital products
 2. **Competitive Services**: Develop, operate, maintain, or offer any cybersecurity consultancy, penetration testing services, security assessment business, AI-powered security tools, or quantum-resistant security solutions
-3. **Service Replication**: Offer, advertise, market, or provide any services substantially similar to or competing with those offered by SecurePulses
+3. **Service Replication**: Offer, advertise, market, or provide any services substantially similar to or competing with those offered by Luai
 4. **Platform Development**: Create any competing cybersecurity platform, security assessment tool, or professional services website
 
 ### BRAND AND IDENTITY RESTRICTIONS
-5. **Trademark Infringement**: Use, reproduce, display, register, or claim any rights in the SecurePulses name, logo, branding, or any confusingly similar variations, translations, or derivatives
-6. **Domain Registration**: Register, use, purchase, or claim any domain name incorporating "SecurePulses," "Secure Pulses," phonetic equivalents, or any confusingly similar variations across all top-level domains
-7. **Brand Confusion**: Create, develop, or distribute any work product, service, or business that could reasonably cause consumer confusion, dilution, or association with SecurePulses brand or services
-8. **Social Media**: Use SecurePulses branding, name, or similar variations in social media handles, business names, or marketing materials
+5. **Trademark Infringement**: Use, reproduce, display, register, or claim any rights in the Luai name, logo, branding, or any confusingly similar variations, translations, or derivatives
+6. **Domain Registration**: Register, use, purchase, or claim any domain name incorporating "Luai," "Luai," phonetic equivalents, or any confusingly similar variations across all top-level domains
+7. **Brand Confusion**: Create, develop, or distribute any work product, service, or business that could reasonably cause consumer confusion, dilution, or association with Luai brand or services
+8. **Social Media**: Use Luai branding, name, or similar variations in social media handles, business names, or marketing materials
 
 ### TECHNICAL AND CONTENT RESTRICTIONS
 9. **Direct Copying**: Copy, reproduce, distribute, or redistribute the complete Software, substantial portions thereof, or any proprietary algorithms
@@ -249,7 +249,7 @@ This Agreement constitutes the entire agreement between the parties and supersed
 ### AMENDMENT AND MODIFICATION
 This Agreement may only be modified by:
 - Written agreement signed by Licensor
-- Updated terms posted at https://securepulses.luai.io/license with 30 days' notice
+- Updated terms posted at https://Luai.luai.io/license with 30 days' notice
 - Licensor reserves the right to modify terms to ensure compliance with evolving legal requirements
 
 ### ASSIGNMENT AND DELEGATION
@@ -262,7 +262,7 @@ Neither party shall be liable for delays or failures in performance resulting fr
 
 ### NOTICES
 All notices shall be delivered to:
-- Licensor: legal@securepulses.com
+- Licensor: legal@Luai.com
 - You: The email address associated with your access to the Software
 
 ### WAIVER
@@ -291,11 +291,11 @@ No waiver of any provision shall be effective unless in writing and signed by th
 ## CONTACT INFORMATION
 
 **Licensor:** Eliran Loai Deeb  
-**Business Name:** SecurePulses Cybersecurity Services  
+**Business Name:** Luai Cybersecurity Services  
 **Legal Address:** Buenos Aires, Argentina  
-**Legal Email:** legal@securepulses.com  
-**Business Website:** https://securepulses.luai.io  
-**License Information:** https://securepulses.luai.io/license  
+**Legal Email:** legal@Luai.com  
+**Business Website:** https://Luai.luai.io  
+**License Information:** https://Luai.luai.io/license  
 
 ---
 

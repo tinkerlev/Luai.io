@@ -385,7 +385,7 @@ const Landing = () => {
   };
 
   const handleEmailClick = async () => {
-    const emailTemplate = ` info@securepulses.com
+    const emailTemplate = ` info@Luai.com
   Security Evaluation Request
   Hello,
 
@@ -398,7 +398,7 @@ const Landing = () => {
     } catch (err) {
       const subject = encodeURIComponent('Security Evaluation Request');
       const body = encodeURIComponent('Hello,\n\nI would like to request a security evaluation for my company.\n\nBest regards');
-      window.location.href = `mailto:info@securepulses.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@Luai.com?subject=${subject}&body=${body}`;
     }
   };
   const handlePhoneClick = () => {
@@ -431,7 +431,7 @@ const Landing = () => {
 
   const certifications = [
     {
-      title: "founder of Secure Pulses",
+      title: "founder of Luai",
       issuer: "Eliran Loai Deeb is a leading cybersecurity expert, ethical hacker, and international lecturer. Certified by Cisco, ISO/IEC security standards, and trained in Offensive Security through a specialized Israeli Ministry of Defense program. Eliran helps companies uncover hidden vulnerabilities before attackers do and teaches the same techniques in live workshops and training sessions for professionals, universities, and high tech teams ",
       image: "/assets/IMG_9710.jpg"
     }
@@ -441,28 +441,28 @@ const Landing = () => {
     <>
       <Helmet>
         {/* Basic SEO Meta Tags */}
-        <title>SecurePulses - Cybersecurity Expert & Penetration Testing Services</title>
-        <meta name="description" content="Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats with SecurePulses." />
+        <title>Luai - Cybersecurity Expert & Penetration Testing Services</title>
+        <meta name="description" content="Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats with Luai." />
         <meta name="keywords" content="cybersecurity, penetration testing, security audit, vulnerability assessment, ethical hacking, web security, API security, OWASP, NIST, ISO 27001" />
-        <meta name="author" content="Eliran Loai Deeb - SecurePulses" />
+        <meta name="author" content="Eliran Loai Deeb - Luai" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="en" />
         <meta name="revisit-after" content="7 days" />
         
         {/* Open Graph Meta Tags for Social Media */}
-        <meta property="og:title" content="SecurePulses - Professional Cybersecurity Services" />
+        <meta property="og:title" content="Luai - Professional Cybersecurity Services" />
         <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://securepulses.luai.io" />
-        <meta property="og:image" content="https://securepulses.luai.io/assets/securepulses-logo.png" />
-        <meta property="og:site_name" content="SecurePulses" />
+        <meta property="og:url" content="https://Luai.luai.io" />
+        <meta property="og:image" content="https://Luai.luai.io/assets/Luai-logo.png" />
+        <meta property="og:site_name" content="Luai" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SecurePulses - Cybersecurity Expert Services" />
+        <meta name="twitter:title" content="Luai - Cybersecurity Expert Services" />
         <meta name="twitter:description" content="Professional penetration testing and security consulting services. Protect your business from cyber threats." />
-        <meta name="twitter:image" content="https://securepulses.luai.io/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://Luai.luai.io/twitter-image.jpg" />
         <meta name="twitter:site" content="@luai" />
                 
         {/* Google Search Console Verification */}
@@ -473,9 +473,9 @@ const Landing = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "SecurePulses",
-            "url": "https://securepulses.luai.io",
-            "logo": "https://securepulses.luai.io/assets/securepulses-logo.png",
+            "name": "Luai",
+            "url": "https://Luai.luai.io",
+            "logo": "https://Luai.luai.io/assets/Luai-logo.png",
             "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
             "founder": {
               "@type": "Person",
@@ -485,11 +485,11 @@ const Landing = () => {
               "@type": "ContactPoint",
               "telephone": "+54-9-11-24828429",
               "contactType": "Customer Service",
-              "email": "info@securepulses.com"
+              "email": "info@Luai.com"
             },
             "sameAs": [
-              "https://www.linkedin.com/company/securepulses",
-              "https://twitter.com/securepulses"
+              "https://www.linkedin.com/company/Luai",
+              "https://twitter.com/Luai"
             ]
           })}
         </script>
@@ -501,7 +501,7 @@ const Landing = () => {
         <meta name="ICBM" content="31.0461, 34.8516" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://securepulses.luai.io" />
+        <link rel="canonical" href="https://Luai.luai.io" />
         
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -887,7 +887,7 @@ const Landing = () => {
                   <div className="flex items-center gap-8 bg-slate-800/70 backdrop-blur-sm border border-slate-700/50 p-8 rounded-2xl shadow-2xl">
                     <img 
                       src="/assets/IMG_9710.jpg" 
-                      alt="Eliran Loai Deeb - Founder of SecurePulses" 
+                      alt="Eliran Loai Deeb - Founder of Luai" 
                       className="w-40 h-40 rounded-full object-cover border-4 border-blue-500 shadow-2xl flex-shrink-0"
                     />
                     <div className="text-left">
@@ -1108,7 +1108,7 @@ const Landing = () => {
                           >
                             <AnimatedMailIcon />
                             <div className="text-left">
-                              <p className="text-lg font-semibold text-white">info@securepulses.com</p>
+                              <p className="text-lg font-semibold text-white">info@Luai.com</p>
                               <p className="text-sm text-gray-400">Response within 2 hours</p>
                             </div>
                           </div>
@@ -1397,12 +1397,12 @@ const Landing = () => {
               <div className="grid md:grid-cols-4 gap-8 mb-8">
                 {/* Company Info */}
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">SecurePulses</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Luai</h3>
                   <p className="text-gray-400 leading-relaxed mb-4">
                     Professional cybersecurity consulting services. Protecting businesses with advanced penetration testing and security assessments.
                   </p>
                   <div className="space-y-2 text-sm text-gray-400">
-                    <p>📧 info@securepulses.com</p>
+                    <p>📧 info@Luai.com</p>
                     <p>📱 +54 9 (11) 24828429</p>
                     <p>🌍 Serving clients globally</p>
                   </div>
@@ -1467,7 +1467,7 @@ const Landing = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
                   <div className="text-center lg:text-left">
                     <p className="text-gray-400 text-sm">
-                      © 2024 SecurePulses Ltd. All rights reserved. 
+                      © 2024 Luai Ltd. All rights reserved. 
                     </p>
                     <p className="text-gray-400 text-xs mt-1">
                       Registered cybersecurity consulting firm • Licensed penetration testing services

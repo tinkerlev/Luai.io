@@ -26,7 +26,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2">
             <Shield className="h-8 w-8 text-blue-600" />
             <span className="font-bold text-xl text-gray-900 dark:text-white">
-              SecurePulses
+              Luai
             </span>
           </Link>
 

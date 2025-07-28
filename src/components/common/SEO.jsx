@@ -12,7 +12,7 @@ const SEO = ({
 }) => {
   const { t, currentLanguage } = useTranslation();
 
-  const siteTitle = 'SecurePulses';
+  const siteTitle = 'Luai';
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const metaDescription = description || t('metaDescription');
 
