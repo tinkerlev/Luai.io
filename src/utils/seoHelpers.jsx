@@ -76,7 +76,7 @@ export const generateStructuredData = (type = 'Organization') => {
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+54-9-11-24828429',
-        email: 'info@Luai.com'
+        email: 'info@Luai.io'
       }
     };
   }

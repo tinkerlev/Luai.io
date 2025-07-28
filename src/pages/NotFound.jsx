@@ -173,7 +173,7 @@ const NotFound = () => {
                   📞 Call Emergency Line
                 </a>
                 <a 
-                  href="mailto:info@Luai.com"
+                  href="mailto:info@Luai.io"
                   className="inline-flex items-center justify-center px-6 py-3 text-lg font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition-colors"
                 >
                   📧 Email Immediately

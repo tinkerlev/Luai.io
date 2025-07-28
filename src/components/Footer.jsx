@@ -29,7 +29,7 @@ const Footer = () => {
               Professional cybersecurity consulting services. Protecting businesses with advanced penetration testing and security assessments.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>📧 info@Luai.com</p>
+              <p>📧 info@Luai.io</p>
               <p>📱 +54 9 (11) 24828429</p>
               <p>🌍 Serving clients globally</p>
             </div>

@@ -385,7 +385,7 @@ const Landing = () => {
   };
 
   const handleEmailClick = async () => {
-    const emailTemplate = ` info@Luai.com
+    const emailTemplate = ` info@Luai.io
   Security Evaluation Request
   Hello,
 
@@ -398,7 +398,7 @@ const Landing = () => {
     } catch (err) {
       const subject = encodeURIComponent('Security Evaluation Request');
       const body = encodeURIComponent('Hello,\n\nI would like to request a security evaluation for my company.\n\nBest regards');
-      window.location.href = `mailto:info@Luai.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@Luai.io?subject=${subject}&body=${body}`;
     }
   };
   const handlePhoneClick = () => {
@@ -485,7 +485,7 @@ const Landing = () => {
               "@type": "ContactPoint",
               "telephone": "+54-9-11-24828429",
               "contactType": "Customer Service",
-              "email": "info@Luai.com"
+              "email": "info@Luai.io"
             },
             "sameAs": [
               "https://www.linkedin.com/company/Luai",
@@ -1108,7 +1108,7 @@ const Landing = () => {
                           >
                             <AnimatedMailIcon />
                             <div className="text-left">
-                              <p className="text-lg font-semibold text-white">info@Luai.com</p>
+                              <p className="text-lg font-semibold text-white">info@Luai.io</p>
                               <p className="text-sm text-gray-400">Response within 2 hours</p>
                             </div>
                           </div>
@@ -1402,7 +1402,7 @@ const Landing = () => {
                     Professional cybersecurity consulting services. Protecting businesses with advanced penetration testing and security assessments.
                   </p>
                   <div className="space-y-2 text-sm text-gray-400">
-                    <p>📧 info@Luai.com</p>
+                    <p>📧 info@Luai.io</p>
                     <p>📱 +54 9 (11) 24828429</p>
                     <p>🌍 Serving clients globally</p>
                   </div>

@@ -198,7 +198,7 @@ const TermsOfService = () => {
                 </p>
                 
                 <p>
-                  <strong className="text-red-400">5.5 Data Subject Rights:</strong> Where applicable under GDPR or other privacy laws, individuals have the right to access, rectify, erase, restrict processing, data portability, and object to processing of their Personal Data. Requests should be directed to our Data Protection Officer at privacy@Luai.com.
+                  <strong className="text-red-400">5.5 Data Subject Rights:</strong> Where applicable under GDPR or other privacy laws, individuals have the right to access, rectify, erase, restrict processing, data portability, and object to processing of their Personal Data. Requests should be directed to our Data Protection Officer at privacy@Luai.io.
                 </p>
               </div>
             </section>
@@ -265,8 +265,8 @@ const TermsOfService = () => {
               <div className="bg-slate-700/50 rounded-xl p-6 border border-slate-600/50">
                 <div className="space-y-3 text-gray-300">
                   <p><strong>Luai Ltd.</strong></p>
-                  <p>Email: legal@Luai.com</p>
-                  <p>Privacy Officer: privacy@Luai.com</p>
+                  <p>Email: legal@Luai.io</p>
+                  <p>Privacy Officer: privacy@Luai.io</p>
                   <p>Phone: +54 9 (11) 24828429</p>
                   <p>For legal notices and formal communications, please use certified mail or email with delivery confirmation.</p>
                 </div>

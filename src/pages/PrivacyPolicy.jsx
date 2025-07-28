@@ -87,10 +87,10 @@ const PrivacyPolicy = () => {
                 <div className="space-y-3 text-gray-300">
                   <p><strong className="text-blue-400">Data Controller:</strong> Luai Ltd.</p>
                   <p><strong className="text-blue-400">Business Registration:</strong> Israeli Company Registry</p>
-                  <p><strong className="text-blue-400">Primary Contact:</strong> privacy@Luai.com</p>
+                  <p><strong className="text-blue-400">Primary Contact:</strong> privacy@Luai.io</p>
                   <p><strong className="text-blue-400">Data Protection Officer:</strong> Eliran Loai Deeb</p>
                   <p><strong className="text-blue-400">Physical Address:</strong> Available upon request for data subject rights</p>
-                  <p><strong className="text-blue-400">EU Representative:</strong> Contact privacy@Luai.com for EU representation details</p>
+                  <p><strong className="text-blue-400">EU Representative:</strong> Contact privacy@Luai.io for EU representation details</p>
                 </div>
               </div>
             </section>
@@ -192,7 +192,7 @@ const PrivacyPolicy = () => {
                   </div>
                 </div>
                 <p>
-                  <strong>To exercise your rights:</strong> Contact our Data Protection Officer at privacy@Luai.com. We will respond within one month (or two months for complex requests) as required by law.
+                  <strong>To exercise your rights:</strong> Contact our Data Protection Officer at privacy@Luai.io. We will respond within one month (or two months for complex requests) as required by law.
                 </p>
               </div>
             </section>
@@ -289,8 +289,8 @@ const PrivacyPolicy = () => {
                 <div className="text-gray-300">
                   <h3 className="text-lg font-semibold text-blue-400 mb-3">Contact Us:</h3>
                   <div className="space-y-2">
-                    <p><strong>Data Protection Officer:</strong> privacy@Luai.com</p>
-                    <p><strong>General Privacy Inquiries:</strong> info@Luai.com</p>
+                    <p><strong>Data Protection Officer:</strong> privacy@Luai.io</p>
+                    <p><strong>General Privacy Inquiries:</strong> info@Luai.io</p>
                     <p><strong>Phone:</strong> +54 9 (11) 24828429</p>
                   </div>
                 </div>
