@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, AlertTriangle, TrendingUp } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -224,14 +223,7 @@ const Landing = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
-
   const { t } = useTranslation();
-
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
-
   const validateName = (name) => {
     const nameRegex = /^[a-zA-Z\u0590-\u05FF\s]+$/;
     if (!name.trim()) return 'Name is required';
@@ -327,61 +319,54 @@ const Landing = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const sanitizedData = {
       name: sanitizeInput(formData.name, 'name'),
       email: sanitizeInput(formData.email, 'email'),
       company: sanitizeInput(formData.company, 'company'),
       message: sanitizeInput(formData.message, 'message')
     };
-    
+
     const newErrors = {
       name: validateName(sanitizedData.name),
       email: validateEmail(sanitizedData.email),
       company: validateCompany(sanitizedData.company),
       message: validateMessage(sanitizedData.message)
     };
-    
+
     const hasErrors = Object.values(newErrors).some(error => error !== '');
-    
+
     if (hasErrors) {
       setErrors(newErrors);
       setFormData(sanitizedData);
       return;
     }
-    
+
     setIsSubmitting(true);
     setSubmitStatus('');
 
     try {
-      const templateParams = {
-        name: sanitizedData.name,
-        email: sanitizedData.email,
-        company: sanitizedData.company,
-        message: sanitizedData.message,
-        to_email: 'info@securepulses.com',
-        reply_to: sanitizedData.email
-      };
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sanitizedData),
+      });
 
-      const result = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      if (!res.ok) throw new Error('Failed to send');
 
-      console.log('Email sent successfully:', result);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });
       setErrors({});
-      
     } catch (error) {
-      console.error('Email send failed:', error);
+      console.error('Error sending message:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   const handleGetEvaluation = () => {
     console.log('Get Evaluation clicked!');
