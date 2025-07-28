@@ -42,7 +42,11 @@ EMAIL_REGEX = re.compile(r"^[\w\.-]+@[\w\.-]+\.\w{2,}$")
 @limiter.limit("2 per minute")
 def handle_contact():
     if request.method == "OPTIONS":
+        origin = request.headers.get("Origin", "")
         response = jsonify({"ok": True})
+        if origin in ALLOWED_ORIGINS:
+            response.headers["Access-Control-Allow-Origin"] = origin
+            response.headers["Vary"] = "Origin"
         response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
         response.headers["Access-Control-Allow-Headers"] = "Content-Type"
         return response, 200
