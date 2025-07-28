@@ -28,7 +28,7 @@ def set_security_headers(response):
         response.headers["Access-Control-Allow-Origin"] = origin
         response.headers["Vary"] = "Origin"
 
-    response.headers["Content-Security-Policy"] = "default-src 'none'; connect-src 'self' https://luai.io https://luai-io.onrender.com; img-src 'self'; style-src 'self';"
+    # response.headers["Content-Security-Policy"] = "default-src 'none'; connect-src 'self' https://luai.io https://luai-io.onrender.com; img-src 'self'; style-src 'self';"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["Referrer-Policy"] = "no-referrer"
