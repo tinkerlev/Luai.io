@@ -2,7 +2,6 @@ import React from 'react';
 import { Analytics } from "@vercel/analytics/next"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { LanguageProvider } from './contexts/LanguageContext';
 import Landing from './pages/Landing';
 import VulnerabilityAssessments from './pages/services/VulnerabilityAssessments';
 import PenetrationTesting from './pages/services/PenetrationTesting';

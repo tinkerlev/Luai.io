@@ -6,10 +6,7 @@ import Footer from '../../components/Footer';
 
 const IncidentResponse = () => {
   const handleGetEvaluation = () => {
-    // Navigate to home page with hash for contact section
     window.location.href = '/#contact';
-    
-    // Wait a bit for page load and then scroll to contact
     setTimeout(() => {
       const contactElement = document.getElementById('contact');
       if (contactElement) {

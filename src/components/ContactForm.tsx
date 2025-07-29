@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Shield, Send, AlertTriangle, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 // Add device memory API type definition
 interface NavigatorWithDeviceMemory extends Navigator {
@@ -77,23 +78,23 @@ export default function ContactForm() {
   const validateInput = (name: string, value: string): string | null => {
     switch (name) {
       case 'name':
-        if (value.length < 2) return 'שם חייב להיות באורך של לפחות 2 תווים';
-        if (value.length > 100) return 'שם קצר מדי';
-        if (!/^[a-zA-Z\u0590-\u05FF\s'-]+$/.test(value)) return 'שם מכיל תווים לא חוקיים';
+        if (value.length < 2) return 'Name must be at least 2 characters long';
+        if (value.length > 100) return 'Name is too long';
+        if (!/^[a-zA-Z\u0590-\u05FF\s'-]+$/.test(value)) return 'Name contains invalid characters';
         break;
       case 'email':
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) return 'פורמט כתובת המייל אינו תקין';
-        if (value.length > 254) return 'המייל ארוך מדי';
+        if (!emailRegex.test(value)) return 'Invalid email address format';
+        if (value.length > 254) return 'Email is too long';
         break;
       case 'phone':
         if (value && !/^[\+]?[1-9][\d\s\-\(\)]{6,15}$/.test(value)) {
-          return 'פורמט מספר הטלפון אינו תקין';
+          return 'Invalid phone number format';
         }
         break;
       case 'message':
-        if (value.length < 10) return 'ההודעה חייבת להיות באורך של לפחות 10 תווים';
-        if (value.length > 2000) return 'ההודעה ארוכה מדי';
+        if (value.length < 10) return 'Message must be at least 10 characters long';
+        if (value.length > 2000) return 'Message is too long';
         break;
     }
     return null;
@@ -198,22 +199,22 @@ export default function ContactForm() {
   const validateForm = (): string | null => {
     // Honeypot check
     if (formData.honeypot) {
-      return 'בקשה נדחתה - זוהתה פעילות חשודה';
+      return 'Request rejected - suspicious activity detected';
     }
 
     // Rate limiting check
     if (!checkRateLimit()) {
-      return 'יותר מדי בקשות. אנא המתן לפני שליחה חוזרת';
+      return 'Too many requests. Please wait before submitting again';
     }
 
     // Speed validation
     if (!validateFormSpeed(formLoadTime, Date.now())) {
-      return 'הטופס נשלח מהר מדי. אנא מלא את הטופס בזהירות';
+      return 'The form was submitted too quickly. Please fill out the form carefully';
     }
 
     // Spam detection
     if (detectSpamPatterns(formData)) {
-      return 'התוכן שנשלח זוהה כחשוד. אנא בדוק את הפרטים ונסה שוב';
+      return 'The submitted content was detected as suspicious. Please check your details and try again';
     }
 
     // Enhanced validation for each field
@@ -238,6 +239,27 @@ export default function ContactForm() {
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       fingerprint
     };
+  };
+
+  const sendEmailJS = async (data: FormData) => {
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone,
+          company: data.company,
+          message: data.message,
+          reply_to: data.email
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      return true;
+    } catch (err) {
+      return false;
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -266,20 +288,9 @@ export default function ContactForm() {
         metadata: collectMetadata()
       };
 
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest',
-        },
-        body: JSON.stringify(sanitizedData),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'שגיאה בשליחת הטופס');
-      }
+      // Send to EmailJS
+      const emailSent = await sendEmailJS(formData);
+      if (!emailSent) throw new Error('Error sending email');
 
       // Update rate limiting
       setSubmitCount(prev => prev + 1);
@@ -297,7 +308,7 @@ export default function ContactForm() {
 
     } catch (error) {
       setSubmitStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'אירעה שגיאה. אנא נסה שוב');
+      setErrorMessage(error instanceof Error ? error.message : 'An error occurred. Please try again');
     } finally {
       setIsSubmitting(false);
     }
@@ -309,10 +320,10 @@ export default function ContactForm() {
         <div className="text-center mb-12">
           <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            צור קשר
+            Contact Us
           </h2>
           <p className="text-xl text-gray-600">
-            מוכנים לחזק את האבטחה הדיגיטלית שלכם? בואו נתחיל
+            Ready to strengthen your digital security? Let's get started
           </p>
         </div>
 
@@ -332,7 +343,7 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                שם מלא *
+                Full Name *
               </label>
               <input
                 type="text"
@@ -342,14 +353,14 @@ export default function ContactForm() {
                 required
                 maxLength={100}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="הזן את שמך המלא"
+                placeholder="Enter your full name"
                 autoComplete="name"
               />
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                כתובת מייל *
+                Email Address *
               </label>
               <input
                 type="email"
@@ -366,7 +377,7 @@ export default function ContactForm() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                טלפון
+                Phone
               </label>
               <input
                 type="tel"
@@ -382,7 +393,7 @@ export default function ContactForm() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                חברה/ארגון
+                Company/Organization
               </label>
               <input
                 type="text"
@@ -391,7 +402,7 @@ export default function ContactForm() {
                 onChange={handleInputChange}
                 maxLength={200}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="שם החברה שלך"
+                placeholder="Your company name"
                 autoComplete="organization"
               />
             </div>
@@ -399,7 +410,7 @@ export default function ContactForm() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              הודעה *
+              Message *
             </label>
             <textarea
               name="message"
@@ -410,7 +421,7 @@ export default function ContactForm() {
               minLength={10}
               maxLength={2000}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical"
-              placeholder="ספר לנו על האתגרים שלך באבטחת מידע..."
+              placeholder="Tell us about your cybersecurity challenges..."
             />
             <div className="text-right text-sm text-gray-500 mt-1">
               {formData.message.length}/2000 characters
@@ -428,7 +439,7 @@ export default function ContactForm() {
             <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg">
               <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
               <span className="text-green-700">
-                תודה! ההודעה נשלחה בהצלחה. נחזור אליך בהקדם
+                Thank you! Your message has been sent successfully. We will get back to you soon.
               </span>
             </div>
           )}
@@ -441,22 +452,22 @@ export default function ContactForm() {
             {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                שולח הודעה...
+                Sending message...
               </>
             ) : (
               <>
                 <Send className="h-5 w-5" />
-                שלח הודעה
+                Send Message
               </>
             )}
           </button>
 
           <div className="text-center">
             <p className="text-sm text-gray-500">
-              * שדות חובה. המידע שלך מוגן ולא יועבר לצדדים שלישיים.
+              * Required fields. Your information is protected and will not be shared with third parties.
             </p>
             <p className="text-xs text-gray-400 mt-2">
-              מוגן על ידי אמצעי אבטחה מתקדמים כולל זיהוי ספאם ומגבלת קצב.
+              Protected by advanced security measures including spam detection and rate limiting.
             </p>
           </div>
         </form>

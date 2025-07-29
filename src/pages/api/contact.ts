@@ -4,15 +4,13 @@ import slowDown from 'express-slow-down';
 import crypto from 'crypto';
 import helmet from 'helmet';
 
-// Enhanced rate limiting with multiple layers
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 3, // Reduced from 5 to 3
+  windowMs: 15 * 60 * 1000,
+  max: 3,
   message: { error: 'Too many requests. Please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,
   keyGenerator: (req) => {
-    // Use multiple identifiers for better tracking
     const forwarded = req.headers['x-forwarded-for'];
     const ip = forwarded ? forwarded.toString().split(',')[0] : req.connection.remoteAddress;
     const userAgent = req.headers['user-agent'] || 'unknown';
@@ -22,20 +20,17 @@ const limiter = rateLimit({
   skipFailedRequests: false,
 });
 
-// Enhanced speed limiting
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000,
-  delayAfter: 1, // Start slowing after first request
-  delayMs: 1000, // Increased delay
-  maxDelayMs: 30000, // Maximum delay of 30 seconds
+  delayAfter: 1,
+  delayMs: 1000,
+  maxDelayMs: 30000,
 });
 
-// IP whitelist for testing (remove in production)
 const ALLOWED_IPS = process.env.NODE_ENV === 'development' 
   ? ['127.0.0.1', '::1'] 
   : [];
 
-// Enhanced security headers
 const securityHeaders = {
   'X-Content-Type-Options': 'nosniff',
   'X-Frame-Options': 'DENY',
@@ -112,24 +107,21 @@ class AdvancedSecurityValidator {
   }
 
   static validateEmail(email: string): boolean {
-    // More strict email validation
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     
     if (!emailRegex.test(email) || email.length > 254) return false;
-    
-    // Check for suspicious patterns in email
     const suspiciousEmailPatterns = [
-      /\d{10,}/, // Too many consecutive digits
-      /[.]{2,}/, // Multiple consecutive dots
-      /@.*@/, // Multiple @ symbols
-      /^[.]|[.]$/, // Starting or ending with dot
+      /\d{10,}/,
+      /[.]{2,}/,
+      /@.*@/,
+      /^[.]|[.]$/,
     ];
     
     return !suspiciousEmailPatterns.some(pattern => pattern.test(email));
   }
 
   static validatePhone(phone: string): boolean {
-    if (!phone) return true; // Optional field
+    if (!phone) return true;
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     const cleaned = phone.replace(/[\s\-\(\)]/g, '');
     return phoneRegex.test(cleaned) && cleaned.length >= 7 && cleaned.length <= 16;
@@ -324,13 +316,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Invalid content type' });
     }
     const bodySize = JSON.stringify(req.body).length;
-    if (bodySize > 10000) { // 10KB limit
+    if (bodySize > 10000) {
       return res.status(413).json({ error: 'Request too large' });
     }
 
     const rawData = req.body as ContactFormData;
     const now = Date.now();
-    if (!rawData.timestamp || Math.abs(now - rawData.timestamp) > 300000) { // 5 minutes
+    if (!rawData.timestamp || Math.abs(now - rawData.timestamp) > 300000) {
       return res.status(400).json({ error: 'Invalid or expired timestamp' });
     }
 

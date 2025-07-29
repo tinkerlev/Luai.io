@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, ChevronDown, Globe } from 'lucide-react';
-import { useTranslation } from '../hooks/useTranslation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

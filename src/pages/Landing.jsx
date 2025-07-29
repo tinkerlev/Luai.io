@@ -16,7 +16,6 @@ import {
   TextArea,
 } from '../components/DesignSystem';
 import '../index.css';
-import { useTranslation } from '../hooks/useTranslation';
 
 function sanitizeInput(value, fieldType) {
   const temp = String(value)

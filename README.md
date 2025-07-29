@@ -369,7 +369,7 @@ This project is protected under **PROPRIETARY LICENSE** - see the [LICENSE](LICE
 
 ---
 
-![Footer Banner](public/Luai-logo.svg)
+![Footer Banner](public/symbol.svg)
 
 **Last Updated: July 2025**
 
