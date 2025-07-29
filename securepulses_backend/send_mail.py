@@ -11,11 +11,16 @@ def send_admin_email(name, email, message, company):
     msg['From'] = MAIL_USERNAME
     msg['To'] = MAIL_USERNAME
 
-    with smtplib.SMTP(MAIL_SERVER, MAIL_PORT) as server:
-        if MAIL_USE_TLS:
-            server.starttls()
-        server.login(MAIL_USERNAME, MAIL_PASSWORD)
-        server.sendmail(MAIL_USERNAME, [MAIL_USERNAME], msg.as_string())
+    if MAIL_USE_SSL:
+        with smtplib.SMTP_SSL(MAIL_SERVER, MAIL_PORT) as server:
+            server.login(MAIL_USERNAME, MAIL_PASSWORD)
+            server.sendmail(MAIL_USERNAME, [MAIL_USERNAME], msg.as_string())
+    else:
+        with smtplib.SMTP(MAIL_SERVER, MAIL_PORT) as server:
+            if MAIL_USE_TLS:
+                server.starttls()
+            server.login(MAIL_USERNAME, MAIL_PASSWORD)
+            server.sendmail(MAIL_USERNAME, [MAIL_USERNAME], msg.as_string())
 
 def send_user_email(name, email, message, company):
     subject = "We received your request"
@@ -25,8 +30,13 @@ def send_user_email(name, email, message, company):
     msg['From'] = MAIL_USERNAME
     msg['To'] = email
 
-    with smtplib.SMTP(MAIL_SERVER, MAIL_PORT) as server:
-        if MAIL_USE_TLS:
-            server.starttls()
-        server.login(MAIL_USERNAME, MAIL_PASSWORD)
-        server.sendmail(MAIL_USERNAME, [email], msg.as_string())
+    if MAIL_USE_SSL:
+        with smtplib.SMTP_SSL(MAIL_SERVER, MAIL_PORT) as server:
+            server.login(MAIL_USERNAME, MAIL_PASSWORD)
+            server.sendmail(MAIL_USERNAME, [email], msg.as_string())
+    else:
+        with smtplib.SMTP(MAIL_SERVER, MAIL_PORT) as server:
+            if MAIL_USE_TLS:
+                server.starttls()
+            server.login(MAIL_USERNAME, MAIL_PASSWORD)
+            server.sendmail(MAIL_USERNAME, [email], msg.as_string())

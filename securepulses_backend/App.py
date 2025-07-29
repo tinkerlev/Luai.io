@@ -10,10 +10,7 @@ def contact():
     email = data.get('email')
     message = data.get('message')
     company = data.get('company', '')
-
-    # שלח למנהל
     send_admin_email(name, email, message, company)
-    # שלח ללקוח
     send_user_email(name, email, message, company)
 
     return jsonify({'success': True})
