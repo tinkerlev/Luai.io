@@ -8,12 +8,6 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const location = useLocation();
-  const { t, currentLanguage, changeLanguage } = useTranslation();
-
-  // בדוק את הערכים:
-  console.log('Current language:', currentLanguage);
-  console.log('getStarted translation:', t('getStarted'));
-  console.log('home translation:', t('home'));
 
   useEffect(() => {
     const handleScroll = () => {
