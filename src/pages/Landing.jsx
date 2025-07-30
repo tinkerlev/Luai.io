@@ -353,7 +353,13 @@ const Landing = () => {
         body: JSON.stringify(sanitizedData),
       });
 
-      if (!res.ok) throw new Error('Failed to send');
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("🎉 Message sent successfully! Expect my response within 2 days.");
+      } else {
+        setStatus("❌ Failed to send your message. Please try again later.");
+      }
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });

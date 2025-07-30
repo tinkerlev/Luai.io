@@ -402,18 +402,14 @@ Message: ${sanitizedData.message}
     };
 
     try {
-      await transporter.sendMail(mailOptions);
-    } catch (mailError) {
-      console.error('Mail send error (info@luai.io):', mailError);
-      // החזר הודעת שגיאה מפורטת בסביבת פיתוח
-      return res.status(500).json({ 
-        error: process.env.NODE_ENV === 'development' 
-          ? `Failed to send email to info@luai.io: ${mailError.message}` 
-          : 'Failed to send email. Please try again later.' 
-      });
+      await transporter.sendMail(adminMailOptions);
+      await userTransport.sendMail(userMailOptions);
+      return true;
+    } catch (error) {
+      logger.error("❌ Email sending failed", error);
+      throw new Error("Failed to send emails");
     }
 
-    // שליחת מייל אוטומטי למשתמש עם כתובת no-reply@luai.io
     let htmlTemplate = '';
     try {
       const templatePath = path.join(process.cwd(), 'EmailTem.html');
