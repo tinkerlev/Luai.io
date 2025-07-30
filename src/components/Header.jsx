@@ -33,32 +33,32 @@ const Header = () => {
 
   const navigationItems = [
     {
-      name: t('home'),
+      name: 'Home',
       action: () => scrollToSection('home'),
       isSection: true
     },
     {
-      name: t('services'),
+      name: 'Services',
       action: () => scrollToSection('services'),
       isSection: true,
       hasDropdown: true,
       dropdownItems: [
-        { name: t('penetrationTesting'), action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
+        { name: 'Penetration Testing', action: () => { window.location.href = '/services/penetration-testing'; handleLinkClick(); } },
         { name: 'Security Audits', action: () => { window.location.href = '/services/security-audits'; handleLinkClick(); } },
-        { name: t('vulnerabilityAssessment'), action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
+        { name: 'Vulnerability Assessment', action: () => { window.location.href = '/services/vulnerability-assessments'; handleLinkClick(); } },
         { name: 'Red Team Operations', action: () => { window.location.href = '/services/red-team-operations'; handleLinkClick(); } },
         { name: 'Compliance Consulting', action: () => { window.location.href = '/services/compliance-consulting'; handleLinkClick(); } },
-        { name: t('incidentResponse'), action: () => { window.location.href = '/services/incident-response'; handleLinkClick(); } },
-        { name: t('securityTraining'), action: () => { window.location.href = '/services/security-training'; handleLinkClick(); } }
+        { name: 'Incident Response', action: () => { window.location.href = '/services/incident-response'; handleLinkClick(); } },
+        { name: 'Security Training', action: () => { window.location.href = '/services/security-training'; handleLinkClick(); } }
       ]
     },
     {
-      name: t('about'),
+      name: 'About',
       action: () => scrollToSection('about'),
       isSection: true
     },
     {
-      name: t('contact'),
+      name: 'Contact',
       action: () => scrollToSection('contact'),
       isSection: true
     }
@@ -139,7 +139,7 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ml-2"
             >
-              {t('getStarted')}
+              Get Started
             </button>
           </nav>
           <button
@@ -183,7 +183,7 @@ const Header = () => {
                 onClick={() => scrollToSection('contact')}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
-                {t('getStarted')}
+                Get Started
               </button>
             </div>
           </div>
