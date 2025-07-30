@@ -3,6 +3,9 @@ import rateLimit from 'express-rate-limit';
 import slowDown from 'express-slow-down';
 import crypto from 'crypto';
 import helmet from 'helmet';
+import nodemailer from 'nodemailer';
+import fs from 'fs';
+import path from 'path';
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -371,6 +374,80 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       metadata: sanitizedData.metadata
     });
+
+    // אחרי כל הבדיקות והסניטיזציה:
+    // --- שליחת מייל ל-Zoho ---
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.zoho.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.ZOHO_USER, // כתובת המייל שלך ב-Zoho
+        pass: process.env.ZOHO_PASS  // הסיסמה/סיסמת אפליקציה
+      }
+    });
+
+    const mailOptions = {
+      from: `"${sanitizedData.name}" <${sanitizedData.email}>`,
+      to: process.env.ZOHO_USER, // כתובת המייל שלך לקבלת הפניות
+      subject: `New Contact Form Submission from ${sanitizedData.name}`,
+      text: `
+Name: ${sanitizedData.name}
+Email: ${sanitizedData.email}
+Phone: ${sanitizedData.phone || ''}
+Company: ${sanitizedData.company || ''}
+Message: ${sanitizedData.message}
+      `,
+      replyTo: sanitizedData.email
+    };
+
+    try {
+      await transporter.sendMail(mailOptions);
+    } catch (mailError) {
+      console.error('Mail send error (info@luai.io):', mailError);
+      // החזר הודעת שגיאה מפורטת בסביבת פיתוח
+      return res.status(500).json({ 
+        error: process.env.NODE_ENV === 'development' 
+          ? `Failed to send email to info@luai.io: ${mailError.message}` 
+          : 'Failed to send email. Please try again later.' 
+      });
+    }
+
+    // שליחת מייל אוטומטי למשתמש עם כתובת no-reply@luai.io
+    let htmlTemplate = '';
+    try {
+      const templatePath = path.join(process.cwd(), 'EmailTem.html');
+      htmlTemplate = fs.readFileSync(templatePath, 'utf8');
+    } catch (err) {
+      console.error('Failed to load EmailTem.html:', err);
+    }
+
+    if (htmlTemplate) {
+      let personalizedHtml = htmlTemplate
+        .replace(/{{\s*name\s*}}/gi, sanitizedData.name)
+        .replace(/{{\s*company\s*}}/gi, sanitizedData.company || '');
+
+      try {
+        const noreplyTransporter = nodemailer.createTransport({
+          host: 'smtp.zoho.com',
+          port: 465,
+          secure: true,
+          auth: {
+            user: process.env.ZOHO_NOREPLY_USER,
+            pass: process.env.ZOHO_NOREPLY_PASS
+          }
+        });
+
+        await noreplyTransporter.sendMail({
+          from: process.env.ZOHO_NOREPLY_USER,
+          to: sanitizedData.email,
+          subject: 'Thank you for contacting us!',
+          html: personalizedHtml,
+        });
+      } catch (mailError) {
+        console.error('Auto-reply mail send error (no-reply@luai.io):', mailError);
+      }
+    }
 
     await new Promise(resolve => setTimeout(resolve, Math.random() * 1000 + 500));
 
