@@ -18,7 +18,6 @@ import './index.css';
 function App() {
   return (
     <HelmetProvider>
-      <LanguageProvider>
         <Router>
           <div className="App">
             <Routes>
@@ -36,7 +35,6 @@ function App() {
             </Routes>
           </div>
         </Router>
-      </LanguageProvider>
     </HelmetProvider>
   );
 }
