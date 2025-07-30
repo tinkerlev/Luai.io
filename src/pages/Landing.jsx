@@ -4,6 +4,7 @@ import { Shield, AlertTriangle, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import emailjs from '@emailjs/browser';
 import {
   GradientHeading,
   PrimaryButton,
@@ -316,9 +317,14 @@ const Landing = () => {
     }
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const sanitizedData = {
       name: sanitizeInput(formData.name, 'name'),
       email: sanitizeInput(formData.email, 'email'),
@@ -334,7 +340,6 @@ const Landing = () => {
     };
 
     const hasErrors = Object.values(newErrors).some(error => error !== '');
-
     if (hasErrors) {
       setErrors(newErrors);
       setFormData(sanitizedData);
@@ -343,35 +348,35 @@ const Landing = () => {
 
     setIsSubmitting(true);
     setSubmitStatus('');
+    setErrors({});
+
+    const templateParams = {
+      from_name: sanitizedData.name,
+      from_email: sanitizedData.email,
+      company: sanitizedData.company,
+      message: sanitizedData.message,
+    };
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(sanitizedData),
-      });
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      const result = await response.json();
+    if (!serviceId || !templateId || !publicKey) {
+      throw new Error("EmailJS keys are not configured in .env.local file.");
+    }
 
-      if (response.ok) {
-        setStatus("🎉 Message sent successfully! Expect my response within 2 days.");
-      } else {
-        setStatus("❌ Failed to send your message. Please try again later.");
-      }
-
+    await emailjs.send(serviceId, templateId, templateParams, publicKey);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', company: '', message: '' });
-      setErrors({});
+
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error('FAILED to send message with EmailJS...', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
-
 
   const handleGetEvaluation = () => {
     console.log('Get Evaluation clicked!');
