@@ -222,7 +222,6 @@ const Landing = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
-  const { t } = useTranslation();
   const validateName = (name) => {
     const nameRegex = /^[a-zA-Z\u0590-\u05FF\s]+$/;
     if (!name.trim()) return 'Name is required';
