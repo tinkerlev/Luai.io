@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { Shield, AlertTriangle, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
@@ -344,7 +345,7 @@ const Landing = () => {
     setSubmitStatus('');
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

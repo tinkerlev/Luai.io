@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { Helmet } from 'react-helmet-async';
 import { Shield, Eye, Lock, Globe, Users, Database, FileText, AlertCircle } from 'lucide-react';
 import Header from '../components/Header';

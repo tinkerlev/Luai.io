@@ -1,5 +1,6 @@
 // NotFound.jsx
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, Home, Search, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';

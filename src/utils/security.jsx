@@ -1,4 +1,5 @@
 import CryptoJS from 'crypto-js'
+import { Analytics } from "@vercel/analytics/react"
 
 // Simple hash function for client-side use
 function simpleHash(str) {
