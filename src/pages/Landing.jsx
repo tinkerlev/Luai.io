@@ -356,16 +356,22 @@ const Landing = () => {
       message: sanitizedData.message,
     };
 
+    console.log("SENDING PARAMS:", JSON.stringify(templateParams, null, 2));
     try {
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const mainServiceId = import.meta.env.VITE_EMAILJS_MAIN_SERVICE_ID;
+    const noReplyServiceId = import.meta.env.VITE_EMAILJS_NOREPLY_SERVICE_ID;
+    const notificationTemplateId = import.meta.env.VITE_EMAILJS_NOTIFICATION_TEMPLATE_ID;
+    const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    if (!serviceId || !templateId || !publicKey) {
-      throw new Error("EmailJS keys are not configured in .env.local file.");
+    if (!mainServiceId || !noReplyServiceId || !notificationTemplateId || !autoReplyTemplateId || !publicKey) {
+        throw new Error("EmailJS environment variables are not fully configured.");
     }
 
-    await emailjs.send(serviceId, templateId, templateParams, publicKey);
+    const notificationPromise = emailjs.send(mainServiceId, notificationTemplateId, templateParams, publicKey);
+    const autoReplyPromise = emailjs.send(noReplyServiceId, autoReplyTemplateId, templateParams, publicKey);
+    
+    await Promise.all([notificationPromise, autoReplyPromise]);
     setSubmitStatus('success');
     setFormData({ name: '', email: '', company: '', message: '' });
 
