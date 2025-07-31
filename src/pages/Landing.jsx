@@ -327,14 +327,14 @@ const Landing = () => {
     e.preventDefault();
     const sanitizedData = {
       name: sanitizeInput(formData.name, 'name'),
-      email: sanitizeInput(formData.email, 'email'),
+      reply_to: sanitizeInput(formData.email, 'email'),
       company: sanitizeInput(formData.company, 'company'),
       message: sanitizeInput(formData.message, 'message')
     };
 
     const newErrors = {
       name: validateName(sanitizedData.name),
-      email: validateEmail(sanitizedData.email),
+      email: validateEmail(sanitizedData.reply_to),
       company: validateCompany(sanitizedData.company),
       message: validateMessage(sanitizedData.message)
     };
@@ -342,7 +342,6 @@ const Landing = () => {
     const hasErrors = Object.values(newErrors).some(error => error !== '');
     if (hasErrors) {
       setErrors(newErrors);
-      setFormData(sanitizedData);
       return;
     }
 
@@ -351,8 +350,8 @@ const Landing = () => {
     setErrors({});
 
     const templateParams = {
-      from_name: sanitizedData.name,
-      from_email: sanitizedData.email,
+      name: sanitizedData.name,
+      reply_to: sanitizedData.reply_to,
       company: sanitizedData.company,
       message: sanitizedData.message,
     };
@@ -367,8 +366,8 @@ const Landing = () => {
     }
 
     await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', message: '' });
+    setSubmitStatus('success');
+    setFormData({ name: '', email: '', company: '', message: '' });
 
     } catch (error) {
       console.error('FAILED to send message with EmailJS...', error);
