@@ -169,19 +169,13 @@ const AnimatedMailIcon = () => (
   <div className="relative w-12 h-12 group">
     <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-400 rounded-lg shadow-lg shadow-blue-500/50 group-hover:shadow-xl group-hover:shadow-blue-500/70 transition-all duration-300 group-hover:-translate-y-0.5"></div>
     <div className="absolute inset-1 bg-gradient-to-br from-blue-300 via-indigo-400 to-purple-300 rounded-lg flex items-center justify-center">
-      {/* Open Envelope Icon */}
       <div className="relative w-8 h-6">
-        {/* Envelope base */}
         <div className="absolute inset-0 bg-white/90 rounded-sm border border-white/70"></div>
-        {/* Envelope flap (open and tilted) */}
         <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-4 bg-white/85 border border-white/70 rounded-t-sm origin-bottom rotate-12 shadow-sm"></div>
-        {/* Letter/Paper inside */}
         <div className="absolute top-0.5 left-0.5 w-7 h-4 bg-blue-100/90 rounded-sm animate-pulse"></div>
-        {/* Text lines on the letter */}
         <div className="absolute top-1.5 left-1 w-5 h-0.5 bg-blue-400/70 rounded animate-pulse delay-100"></div>
         <div className="absolute top-2.5 left-1 w-4 h-0.5 bg-blue-400/50 rounded animate-pulse delay-200"></div>
         <div className="absolute top-3.5 left-1 w-3 h-0.5 bg-blue-400/40 rounded animate-pulse delay-300"></div>
-        {/* Shadow under flap */}
         <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-blue-500/20 rounded-sm blur-sm"></div>
       </div>
     </div>
@@ -192,21 +186,15 @@ const AnimatedPhoneIcon = () => (
   <div className="relative w-12 h-12 group">
     <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-400 rounded-2xl shadow-lg shadow-green-500/50 group-hover:shadow-xl group-hover:shadow-green-500/70 transition-all duration-300 group-hover:animate-bounce"></div>
     <div className="absolute inset-1 bg-gradient-to-br from-green-300 via-emerald-400 to-teal-300 rounded-2xl flex items-center justify-center">
-      {/* Message Bubble Icon */}
       <div className="relative w-8 h-6">
-        {/* Main message bubble */}
         <div className="absolute inset-0 bg-white/95 rounded-2xl shadow-sm"></div>
-        {/* Message bubble tail */}
         <div className="absolute -bottom-1 left-1 w-2 h-2 bg-white/95 transform rotate-45 rounded-br-sm"></div>
-        {/* WhatsApp checkmarks */}
         <div className="absolute top-1.5 right-1 flex space-x-0.5">
           <div className="w-1 h-0.5 border-b border-r border-green-600 transform rotate-45 animate-pulse"></div>
           <div className="w-1 h-0.5 border-b border-r border-green-600 transform rotate-45 animate-pulse delay-100"></div>
         </div>
-        {/* Message text lines */}
         <div className="absolute top-1 left-1 w-4 h-0.5 bg-green-500/60 rounded animate-pulse delay-200"></div>
         <div className="absolute top-2 left-1 w-3 h-0.5 bg-green-500/40 rounded animate-pulse delay-300"></div>
-        {/* Online indicator dot */}
         <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
         <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
       </div>
@@ -325,6 +313,7 @@ const Landing = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("--- SUBMIT TRIGGERED ON VERCEL ---");
     const sanitizedData = {
       name: sanitizeInput(formData.name, 'name'),
       reply_to: sanitizeInput(formData.email, 'email'),
@@ -364,9 +353,20 @@ const Landing = () => {
     const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    console.log("1. Environment Variables Check:");
+    console.log("   - VITE_EMAILJS_MAIN_SERVICE_ID:", mainServiceId ? "OK" : "!!! FAILED TO LOAD !!!");
+    console.log("   - VITE_EMAILJS_NOREPLY_SERVICE_ID:", noReplyServiceId ? "OK" : "!!! FAILED TO LOAD !!!");
+    console.log("   - VITE_EMAILJS_NOTIFICATION_TEMPLATE_ID:", notificationTemplateId ? "OK" : "!!! FAILED TO LOAD !!!");
+    console.log("   - VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID:", autoReplyTemplateId ? "OK" : "!!! FAILED TO LOAD !!!");
+    console.log("   - VITE_EMAILJS_PUBLIC_KEY:", publicKey ? "OK" : "!!! FAILED TO LOAD !!!");
+
     if (!mainServiceId || !noReplyServiceId || !notificationTemplateId || !autoReplyTemplateId || !publicKey) {
-        throw new Error("EmailJS environment variables are not fully configured.");
+        console.error("STOPPING: One or more environment variables are missing.");
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
     }
+    console.log("2. All variables loaded. Proceeding with validation...");
 
     const notificationPromise = emailjs.send(mainServiceId, notificationTemplateId, templateParams, publicKey);
     const autoReplyPromise = emailjs.send(noReplyServiceId, autoReplyTemplateId, templateParams, publicKey);
