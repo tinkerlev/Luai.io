@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import { motion } from 'framer-motion';
 import { Shield, Menu, X } from 'lucide-react';
 import { Link, useLocation, Outlet } from 'react-router-dom';
