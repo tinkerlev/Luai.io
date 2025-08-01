@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
-      {/* Matrix-style background animation */}
       <div className="fixed inset-0 opacity-10 w-full">
         <motion.div
           initial={{ backgroundPosition: '0% 0%' }}

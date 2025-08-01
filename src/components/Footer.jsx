@@ -3,14 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const location = useLocation();
-
-  // Function to handle navigation to home page sections
   const scrollToSection = (sectionId) => {
     if (location.pathname !== '/') {
-      // If not on home page, navigate to home with hash
       window.location.href = `/#${sectionId}`;
     } else {
-      // If on home page, scroll to section
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -22,7 +18,6 @@ const Footer = () => {
     <footer className="w-full py-12 relative z-20 border-t border-slate-700/50 bg-black bg-opacity-60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Luai</h3>
             <p className="text-gray-400 leading-relaxed mb-4">
@@ -35,7 +30,6 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Services */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
             <div className="space-y-2 text-gray-400">
@@ -49,7 +43,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Industries & Compliance */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Industries & Standards</h3>
             <div className="space-y-2 text-gray-400 text-sm">
@@ -66,8 +59,7 @@ const Footer = () => {
               <div>• OWASP • MITRE ATT&CK</div>
             </div>
           </div>
-          
-          {/* Legal & Quick Links */}
+
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Legal & Resources</h3>
             <div className="space-y-2">
@@ -94,8 +86,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
-        {/* Bottom section with certifications and legal */}
+
         <div className="border-t border-slate-700/50 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-center lg:text-left">
@@ -116,8 +107,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          
-          {/* Certifications badges */}
+
           <div className="mt-6 text-center">
             <p className="text-gray-500 text-xs mb-2">Certified by leading security organizations:</p>
             <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">

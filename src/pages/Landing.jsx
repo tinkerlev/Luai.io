@@ -313,7 +313,6 @@ const Landing = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("--- SUBMIT TRIGGERED ON VERCEL ---");
     const sanitizedData = {
       name: sanitizeInput(formData.name, 'name'),
       reply_to: sanitizeInput(formData.email, 'email'),
@@ -345,7 +344,6 @@ const Landing = () => {
       message: sanitizedData.message,
     };
 
-    console.log("SENDING PARAMS:", JSON.stringify(templateParams, null, 2));
     try {
     const mainServiceId = import.meta.env.VITE_EMAILJS_MAIN_SERVICE_ID;
     const noReplyServiceId = import.meta.env.VITE_EMAILJS_NOREPLY_SERVICE_ID;
@@ -353,20 +351,9 @@ const Landing = () => {
     const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    console.log("1. Environment Variables Check:");
-    console.log("   - VITE_EMAILJS_MAIN_SERVICE_ID:", mainServiceId ? "OK" : "!!! FAILED TO LOAD !!!");
-    console.log("   - VITE_EMAILJS_NOREPLY_SERVICE_ID:", noReplyServiceId ? "OK" : "!!! FAILED TO LOAD !!!");
-    console.log("   - VITE_EMAILJS_NOTIFICATION_TEMPLATE_ID:", notificationTemplateId ? "OK" : "!!! FAILED TO LOAD !!!");
-    console.log("   - VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID:", autoReplyTemplateId ? "OK" : "!!! FAILED TO LOAD !!!");
-    console.log("   - VITE_EMAILJS_PUBLIC_KEY:", publicKey ? "OK" : "!!! FAILED TO LOAD !!!");
-
     if (!mainServiceId || !noReplyServiceId || !notificationTemplateId || !autoReplyTemplateId || !publicKey) {
-        console.error("STOPPING: One or more environment variables are missing.");
-        setSubmitStatus('error');
-        setIsSubmitting(false);
-        return;
+        throw new Error("EmailJS environment variables are not fully configured.");
     }
-    console.log("2. All variables loaded. Proceeding with validation...");
 
     const notificationPromise = emailjs.send(mainServiceId, notificationTemplateId, templateParams, publicKey);
     const autoReplyPromise = emailjs.send(noReplyServiceId, autoReplyTemplateId, templateParams, publicKey);
@@ -1124,7 +1111,7 @@ const Landing = () => {
                             <AnimatedMailIcon />
                             <div className="text-left">
                               <p className="text-lg font-semibold text-white">info@Luai.io</p>
-                              <p className="text-sm text-gray-400">Response within 2 hours</p>
+                              <p className="text-sm text-gray-400">Response within 2 days</p>
                             </div>
                           </div>
                           <div 
@@ -1147,6 +1134,7 @@ const Landing = () => {
                       </div>
                     </div>
                   </div>
+                  <form onSubmit={handleSubmit}>
                   <div>
                     <div className="space-y-6 relative z-10">
                       <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-4 border border-blue-500/30 mb-6">
@@ -1161,7 +1149,7 @@ const Landing = () => {
 
                       {submitStatus === 'success' && (
                         <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-4 text-center">
-                          <p className="text-green-300">🎉 <strong>Message sent successfully!</strong> Expect my response within 2 hours. Check your email for confirmation.</p>
+                          <p className="text-green-300">🎉 <strong>Message sent successfully!</strong> Expect my response within 2 days. Check your email for confirmation.</p>
                         </div>
                       )}
                       
@@ -1234,7 +1222,7 @@ const Landing = () => {
                       
                       <button
                         type="submit"
-                        onClick={handleSubmit}
+                     // onClick={handleSubmit}
                         disabled={isSubmitting}
                         className="w-full px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-red-600 to-purple-600 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 relative z-20 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       >
@@ -1252,6 +1240,7 @@ const Landing = () => {
                       </p>
                     </div>
                   </div>
+                  </form>
                 </div>
               </div>
             </div>

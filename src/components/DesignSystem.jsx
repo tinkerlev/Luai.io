@@ -10,7 +10,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
-import '../index.css'; // Ensure styles are applied
+import '../index.css';
 
 export const Colors = {
   primaryGradientFrom: "from-blue-600",
@@ -20,7 +20,6 @@ export const Colors = {
   sectionBackground: "bg-slate-800",
 };
 
-// Typography components
 export const GradientHeading = ({ children }) => (
   <h2
     className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-red-500 to-purple-600 text-transparent bg-clip-text drop-shadow-md"
@@ -37,7 +36,6 @@ export const SectionSubtext = ({ children }) => (
   <p className="text-slate-300 text-xl text-pretty mb-4">{children}</p>
 );
 
-// Button components
 export const PrimaryButton = ({ children, full, ...props }) => (
   <button
     {...props}
@@ -56,24 +54,20 @@ export const SecondaryButton = ({ children, ...props }) => (
   </button>
 );
 
-// Wrapper for icons
 export const GradientIconWrapper = ({ children }) => (
   <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500">
     {children}
   </div>
 );
 
-// Card-style container
 export const CardContainer = ({ children }) => (
   <div className="bg-slate-800 p-6 rounded-xl shadow-md text-white">
     {children}
   </div>
 );
 
-// Icon + title + text combo
 export const IconTitleText = ({ icon: Icon, title, text }) => {
-  if (!Icon) return null;  // Add safety check
-  
+  if (!Icon) return null;
   return (
     <div className="flex flex-col items-start gap-2">
       <GradientIconWrapper>
@@ -85,7 +79,6 @@ export const IconTitleText = ({ icon: Icon, title, text }) => {
   );
 };
 
-// Inputs
 export const TextInput = ({ ...props }) => (
   <input
     {...props}
@@ -100,7 +93,6 @@ export const TextArea = ({ ...props }) => (
   />
 );
 
-// Optional: export icons if needed elsewhere
 export const Icons = {
   Github,
   Star,
