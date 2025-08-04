@@ -49,7 +49,7 @@ const TermsOfService = () => {
             
             <div className="mt-6 text-gray-400">
               <p><strong>Last Updated:</strong> December 2024</p>
-              <p><strong>Effective Date:</strong> December 2024</p>
+              <p><strong>Effective Date:</strong> December 2027</p>
             </div>
           </div>
 

@@ -1470,7 +1470,7 @@ const Landing = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
                   <div className="text-center lg:text-left">
                     <p className="text-gray-400 text-sm">
-                      © 2024 Luai Ltd. All rights reserved. 
+                      © {new Date().getFullYear()} Luai Ltd. All rights reserved. 
                     </p>
                     <p className="text-gray-400 text-xs mt-1">
                       Registered cybersecurity consulting firm • Licensed penetration testing services
