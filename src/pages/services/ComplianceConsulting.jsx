@@ -16,7 +16,7 @@ const ComplianceConsulting = () => {
         <title>Compliance Consulting Services - ISO 27001, SOC 2, PCI DSS | Luai</title>
         <meta name="description" content="Expert compliance consulting for ISO 27001, SOC 2, PCI DSS, GDPR, and HIPAA. Navigate complex regulations and pass audits with confidence." />
         <meta name="keywords" content="compliance consulting, ISO 27001, SOC 2, PCI DSS, GDPR compliance, HIPAA compliance, regulatory compliance" />
-        <link rel="canonical" href="https://Luai.luai.io/services/compliance-consulting" />
+        <link rel="canonical" href="https://luai.io/services/compliance-consulting" />
       </Helmet>
 
       <Header />

@@ -14,7 +14,7 @@
 
 *Advanced Cybersecurity Solutions for the Modern Digital Landscape*
 
-[🔴 **Live Platform**](https://Luai.luai.io) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
+[🔴 **Live Platform**](https://luai.io) | [📋 **Documentation**](#documentation) | [🛠️ **Setup Guide**](#installation)
 
 </div>
 

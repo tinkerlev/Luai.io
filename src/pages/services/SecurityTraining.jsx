@@ -16,7 +16,7 @@ const SecurityTraining = () => {
         <title>Cybersecurity Training & Security Awareness Programs | Luai</title>
         <meta name="description" content="Professional cybersecurity training programs. Security awareness training, technical workshops, phishing simulations. Expert-led training for all skill levels." />
         <meta name="keywords" content="cybersecurity training, security awareness, phishing simulation, security workshops, cyber training, security education" />
-        <link rel="canonical" href="https://Luai.luai.io/services/security-training" />
+        <link rel="canonical" href="https://luai.io/services/security-training" />
       </Helmet>
 
       <Header />

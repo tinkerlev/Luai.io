@@ -22,7 +22,7 @@ const NotFound = () => {
         <title>Page Not Found - Luai Cybersecurity</title>
         <meta name="description" content="The page you're looking for doesn't exist. Get back to Luai cybersecurity services and protect your business from cyber threats." />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://Luai.luai.io/404" />
+        <link rel="canonical" href="https://luai.io/404" />
       </Helmet>
 
       <Header />

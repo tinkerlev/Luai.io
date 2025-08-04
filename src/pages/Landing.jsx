@@ -456,8 +456,8 @@ const Landing = () => {
         <meta property="og:title" content="Luai - Professional Cybersecurity Services" />
         <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://Luai.luai.io" />
-        <meta property="og:image" content="https://Luai.luai.io/assets/Luai-logo.png" />
+        <meta property="og:url" content="https://luai.io" />
+        <meta property="og:image" content="https://luai.io/assets/Luai-logo.png" />
         <meta property="og:site_name" content="Luai" />
         <meta property="og:locale" content="en_US" />
         
@@ -465,7 +465,7 @@ const Landing = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luai - Cybersecurity Expert Services" />
         <meta name="twitter:description" content="Professional penetration testing and security consulting services. Protect your business from cyber threats." />
-        <meta name="twitter:image" content="https://Luai.luai.io/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://luai.io/twitter-image.jpg" />
         <meta name="twitter:site" content="@luai" />
                 
         {/* Google Search Console Verification */}
@@ -477,8 +477,8 @@ const Landing = () => {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Luai",
-            "url": "https://Luai.luai.io",
-            "logo": "https://Luai.luai.io/assets/Luai-logo.png",
+            "url": "https://luai.io",
+            "logo": "https://luai.io/assets/Luai-logo.png",
             "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
             "founder": {
               "@type": "Person",
@@ -504,7 +504,7 @@ const Landing = () => {
         <meta name="ICBM" content="31.0461, 34.8516" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://Luai.luai.io" />
+        <link rel="canonical" href="https://luai.io" />
         
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />

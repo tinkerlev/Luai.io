@@ -16,7 +16,7 @@ const SecurityAudits = () => {
         <title>Professional Security Audits & Compliance Assessment | Luai</title>
         <meta name="description" content="Comprehensive security audits and compliance assessments. ISO 27001, PCI DSS, SOC 2, HIPAA compliance auditing. Expert cybersecurity audit services." />
         <meta name="keywords" content="security audit, compliance assessment, ISO 27001, PCI DSS, SOC 2, HIPAA, cybersecurity audit, security compliance" />
-        <link rel="canonical" href="https://Luai.luai.io/services/security-audits" />
+        <link rel="canonical" href="https://luai.io/services/security-audits" />
       </Helmet>
 
       <Header />
