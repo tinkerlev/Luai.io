@@ -538,7 +538,7 @@ const Landing = () => {
             <div className="inline-flex items-center bg-red-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8 hover:bg-red-500/30 transition-all duration-300 backdrop-blur-sm">
               <AnimatedWarningIcon />
               <span className="text-red-300 ml-2 font-semibold">
-                <strong>Did you know?</strong>Hackers don’t only go after big companies! they also look at small and local businesses because it's easier to attack
+                <strong>Did you know? </strong> Hackers don’t only go after big companies! they also scan small and local businesses because it’s easier to break in
               </span>
             </div>
 
@@ -554,13 +554,13 @@ const Landing = () => {
             {/* Subheadline with Hook */}
             <div className="mb-12">
               <SectionSubtext>
-                <strong className="text-white">Did you know? Every 11 seconds, a business gets hacked.</strong>
+                <strong className="text-white">Did you know? Every 11 seconds, a business is hacked worldwide </strong>
                 <br />
-                At Luai.io, we show you where the weak points are and how to fix them,
+                At <span className="text-red-400 font-semibold">Luai.io</span> we show you where the weak points are and how to fix them,
                 <br />
-                so you can keep working without stress.
+                so you can focus on your business without stress
                 <br /><br />
-                <strong className="text-red-400">The question isn't IF you'll be targeted - it's WHEN! so Stay safe. Stay focused </strong>
+                <strong className="text-red-400">It’s not about fear! it’s about being prepared. Stay safe! Stay focused. </strong>
               </SectionSubtext>
             </div>
 
