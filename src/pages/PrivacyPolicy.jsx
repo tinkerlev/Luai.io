@@ -6,8 +6,6 @@ import Footer from '../components/Footer';
 import PageSEO from '../components/PageSEO';
 
 const SITE_URL = 'https://luai.io';
-
-
 const PrivacyPolicy = () => {
   return (
     <>
@@ -26,23 +24,6 @@ const PrivacyPolicy = () => {
           mainEntityOfPage:{ "@type":"WebPage", "@id":`${SITE_URL}/privacy-policy` }
         }}
       />
-
-        title="Red Team Operations – Advanced Adversary Simulation | Luai"
-        description="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses."
-        image={`${SITE_URL}/assets/og/red-team-operations.jpg`}
-        type="article"
-        url={`${SITE_URL}/services/red-team-operations`}
-        schema={{
-          "@context":"https://schema.org",
-          "@type":"Service",
-          name:"Red Team Operations",
-          serviceType:"Red Teaming / Adversary Simulation",
-          provider:{ "@type":"Organization", name:"Luai", url:SITE_URL },
-          areaServed:"Worldwide",
-          audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
-        }}
-      />
-
       <Header />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden pt-16">
