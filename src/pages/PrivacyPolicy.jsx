@@ -1,20 +1,47 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { Helmet } from 'react-helmet-async';
 import { Shield, Eye, Lock, Globe, Users, Database, FileText, AlertCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageSEO from '../../components/PageSEO';
+
+const SITE_URL = 'https://luai.io';
+
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy - Luai GDPR & Multi-Jurisdictional Compliance</title>
-        <meta name="description" content="Comprehensive Privacy Policy for Luai. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards." />
-        <meta name="keywords" content="privacy policy, GDPR compliance, data protection, Israeli privacy law, CCPA, cybersecurity privacy, data processing" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://luai.io/privacy-policy" />
-      </Helmet>
+      <PageSEO
+        title="Privacy Policy - Luai"
+        description="Comprehensive Privacy Policy for Luai. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards."
+        image={`${SITE_URL}/assets/og/privacy-policy.jpg`}
+        type="article"
+        url={`${SITE_URL}/privacy-policy`}
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          name:"Privacy Policy - Luai",
+          description:"Comprehensive Privacy Policy for Luai. Full GDPR compliance, Israeli Privacy Law compliance, CCPA compliance, and international data protection standards.",
+          publisher:{ "@type":"Organization", name:"Luai", url:SITE_URL },
+          mainEntityOfPage:{ "@type":"WebPage", "@id":`${SITE_URL}/privacy-policy` }
+        }}
+      />
+
+        title="Red Team Operations – Advanced Adversary Simulation | Luai"
+        description="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses."
+        image={`${SITE_URL}/assets/og/red-team-operations.jpg`}
+        type="article"
+        url={`${SITE_URL}/services/red-team-operations`}
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"Service",
+          name:"Red Team Operations",
+          serviceType:"Red Teaming / Adversary Simulation",
+          provider:{ "@type":"Organization", name:"Luai", url:SITE_URL },
+          areaServed:"Worldwide",
+          audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
+        }}
+      />
 
       <Header />
 

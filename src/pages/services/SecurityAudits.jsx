@@ -1,9 +1,11 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { Helmet } from 'react-helmet-async';
 import { Shield, CheckCircle, Search, FileText, Award, Lock } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import PageSEO from '../../components/PageSEO';
+
+const SITE_URL = 'https://luai.io';
 
 const SecurityAudits = () => {
   const handleGetEvaluation = () => {
@@ -12,12 +14,22 @@ const SecurityAudits = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Professional Security Audits & Compliance Assessment | Luai</title>
-        <meta name="description" content="Comprehensive security audits and compliance assessments. ISO 27001, PCI DSS, SOC 2, HIPAA compliance auditing. Expert cybersecurity audit services." />
-        <meta name="keywords" content="security audit, compliance assessment, ISO 27001, PCI DSS, SOC 2, HIPAA, cybersecurity audit, security compliance" />
-        <link rel="canonical" href="https://luai.io/services/security-audits" />
-      </Helmet>
+      <PageSEO
+        title="Red Team Operations – Advanced Adversary Simulation | Luai"
+        description="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses."
+        image={`${SITE_URL}/assets/og/red-team-operations.jpg`}
+        type="article"
+        url={`${SITE_URL}/services/red-team-operations`}
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"Service",
+          name:"Red Team Operations",
+          serviceType:"Red Teaming / Adversary Simulation",
+          provider:{ "@type":"Organization", name:"Luai", url:SITE_URL },
+          areaServed:"Worldwide",
+          audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
+        }}
+      />
 
       <Header />
 

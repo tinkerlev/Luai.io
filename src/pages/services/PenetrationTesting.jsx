@@ -1,20 +1,29 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, CheckCircle, Clock, Target, Lock } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import PageSEO from '../../components/PageSEO';
+const SITE_URL = 'https://luai.io';
 
-const PenetrationTesting = () => {
+function PenetrationTesting() {
   return (
     <>
-      <Helmet>
-        <title>Penetration Testing Services - Professional Ethical Hacking | Luai</title>
-        <meta name="description" content="Professional penetration testing services by certified ethical hackers. Comprehensive security testing to find vulnerabilities before attackers do. OWASP, NIST compliant." />
-        <meta name="keywords" content="penetration testing, ethical hacking, pentest, security testing, vulnerability testing, OWASP testing, web app security" />
-        <link rel="canonical" href="https://luai.io/services/penetration-testing" />
-      </Helmet>
-
+      <PageSEO
+        title="Penetration Testing Services | Luai"
+        description="Identify, exploit, and fix critical vulnerabilities before attackers do. Web, API, mobile, and infrastructure pentests by elite experts."
+        image={`${SITE_URL}/assets/og/penetration-testing.jpg`}
+        type="article"
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Penetration Testing",
+          "serviceType":"Penetration Testing",
+          "provider":{"@type":"Organization","name":"Luai","url":SITE_URL},
+          "areaServed":"Worldwide",
+          "audience":{"@type":"Audience","audienceType":"SMB, Enterprise, Startup"}
+        }}
+      />
       <Header />
 
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-red-900 to-black relative overflow-hidden pt-16">

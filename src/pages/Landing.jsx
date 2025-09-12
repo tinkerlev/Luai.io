@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { Shield, AlertTriangle, TrendingUp } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
@@ -443,71 +442,41 @@ const Landing = () => {
   return (
     <>
       <Helmet>
-        {/* Basic SEO Meta Tags */}
         <title>Luai - Cybersecurity Expert & Penetration Testing Services</title>
-        <meta name="description" content="Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats with Luai." />
-        <meta name="keywords" content="cybersecurity, penetration testing, security audit, vulnerability assessment, ethical hacking, web security, API security, OWASP, NIST, ISO 27001" />
-        <meta name="author" content="Eliran Loai Deeb - Luai" />
+        <meta name="description" content="Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments." />
         <meta name="robots" content="index, follow" />
-        <meta name="language" content="en" />
-        <meta name="revisit-after" content="7 days" />
-        
-        {/* Open Graph Meta Tags for Social Media */}
-        <meta property="og:title" content="Luai - Professional Cybersecurity Services" />
-        <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments. Protect your business from cyber threats." />
+        <link rel="canonical" href="https://luai.io/" />
+
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://luai.io" />
-        <meta property="og:image" content="https://luai.io/assets/Luai-logo.png" />
-        <meta property="og:site_name" content="Luai" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter Card Meta Tags */}
+        <meta property="og:url" content="https://luai.io/" />
+        <meta property="og:site_name" content="Luai.io" />
+        <meta property="og:title" content="Luai - Professional Cybersecurity Services" />
+        <meta property="og:description" content="Expert cybersecurity consultant providing penetration testing, security audits, and vulnerability assessments." />
+        <meta property="og:image" content="https://luai.io/assets/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Luai.io – Cybersecurity Services" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Luai - Cybersecurity Expert Services" />
-        <meta name="twitter:description" content="Professional penetration testing and security consulting services. Protect your business from cyber threats." />
-        <meta name="twitter:image" content="https://luai.io/twitter-image.jpg" />
-        <meta name="twitter:site" content="@luai" />
-                
-        {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_CODE" />
-        
-        {/* Structured Data for Search Engines */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Luai",
-            "url": "https://luai.io",
-            "logo": "https://luai.io/assets/Luai-logo.png",
-            "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
-            "founder": {
-              "@type": "Person",
-              "name": "Eliran Loai Deeb"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+54-9-11-24828429",
-              "contactType": "Customer Service",
-              "email": "info@Luai.io"
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/Luai",
-              "https://twitter.com/Luai"
-            ]
-          })}
-        </script>
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="geo.region" content="IL" />
-        <meta name="geo.placename" content="Israel" />
-        <meta name="geo.position" content="31.0461;34.8516" />
-        <meta name="ICBM" content="31.0461, 34.8516" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://luai.io" />
-        
-        {/* Favicon */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="twitter:description" content="Professional penetration testing and security consulting services." />
+        <meta name="twitter:image" content="https://luai.io/assets/og-image.jpg" />
+
+        {/* JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context":"https://schema.org",
+          "@type":"Organization",
+          name:"Luai",
+          url:"https://luai.io",
+          logo:"https://luai.io/assets/luai-logo.png",
+          contactPoint:{ "@type":"ContactPoint", telephone:"+54-9-11-24828429", contactType:"Customer Service", email:"info@Luai.io" },
+          sameAs:["https://www.linkedin.com/company/Luai","https://twitter.com/Luai"]
+        })}</script>
+
+        {/* Favicon set — כפי שכבר יש לך */}
+        <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

@@ -1,20 +1,31 @@
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, Scale, Globe, FileText, Lock } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageSEO from '../../components/PageSEO';
+
+const SITE_URL = 'https://luai.io';
 
 const TermsOfService = () => {
   return (
     <>
-      <Helmet>
-        <title>Terms of Service - Luai Cybersecurity Services</title>
-        <meta name="description" content="Comprehensive Terms of Service for Luai cybersecurity consulting services. GDPR compliant, Israeli Privacy Law compliant, and US privacy regulations compliant." />
-        <meta name="keywords" content="terms of service, cybersecurity, privacy policy, GDPR, Israeli privacy law, legal terms, penetration testing" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://luai.io/terms-of-service" />
-      </Helmet>
+      <PageSEO
+        title="Red Team Operations – Advanced Adversary Simulation | Luai"
+        description="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses."
+        image={`${SITE_URL}/assets/og/red-team-operations.jpg`}
+        type="article"
+        url={`${SITE_URL}/services/red-team-operations`}
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"Service",
+          name:"Red Team Operations",
+          serviceType:"Red Teaming / Adversary Simulation",
+          provider:{ "@type":"Organization", name:"Luai", url:SITE_URL },
+          areaServed:"Worldwide",
+          audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
+        }}
+      />
 
       <Header />
 

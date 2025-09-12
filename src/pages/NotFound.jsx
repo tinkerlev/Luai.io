@@ -1,11 +1,13 @@
 // NotFound.jsx
 import React from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { Helmet } from 'react-helmet-async';
 import { Shield, AlertTriangle, Home, Search, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import PageSEO from '../../components/PageSEO';
+
+const SITE_URL = 'https://luai.io';
 
 const NotFound = () => {
   const handleGoHome = () => {
@@ -18,12 +20,22 @@ const NotFound = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Page Not Found - Luai Cybersecurity</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Get back to Luai cybersecurity services and protect your business from cyber threats." />
-        <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href="https://luai.io/404" />
-      </Helmet>
+      <PageSEO
+        title="Red Team Operations – Advanced Adversary Simulation | Luai"
+        description="Professional Red Team operations and advanced persistent threat simulation. Real-world attack scenarios to test your defenses."
+        image={`${SITE_URL}/assets/og/red-team-operations.jpg`}
+        type="article"
+        url={`${SITE_URL}/services/red-team-operations`}
+        schema={{
+          "@context":"https://schema.org",
+          "@type":"Service",
+          name:"Red Team Operations",
+          serviceType:"Red Teaming / Adversary Simulation",
+          provider:{ "@type":"Organization", name:"Luai", url:SITE_URL },
+          areaServed:"Worldwide",
+          audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
+        }}
+      />
 
       <Header />
 
