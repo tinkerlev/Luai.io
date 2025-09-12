@@ -640,7 +640,7 @@ const Landing = () => {
               <p className="text-xl text-gray-300 mb-4">
                 <strong className="text-white">"I thought our business was secure until Eliran showed me 47 vulnerabilities in our first meeting."</strong>
               </p>
-              <p className="text-gray-400">— David Cohen, CEO TechFlow Solutions</p>
+              <p className="text-gray-400">David Cohen, CEO TechFlow Solutions</p>
             </div>
 
             {/* Risk Stats - Enhanced */}
@@ -990,7 +990,7 @@ const Landing = () => {
                   <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
-                  <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/assets/partners/UNSTA.jpg" alt="Partner 5" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Logo-Kavak-Deportes.svg" alt="Partner 2" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
@@ -1002,7 +1002,7 @@ const Landing = () => {
                   <img src="/assets/partners/logo.svg" alt="Partner 4" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
-                  <img src="/assets/partners/Dazlogo-e1674934830878.png" alt="Partner 1" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/assets/partners/UNSTA.jpg" alt="Partner 5" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/Logo-Kavak-Deportes.svg" alt="Partner 2" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
@@ -1061,7 +1061,7 @@ const Landing = () => {
               <p className="text-xl text-gray-300 mb-4">
                 <strong className="text-white">"Other consultants found 3 vulnerabilities. Eliran found 23. That's when I realized how exposed we really were."</strong>
               </p>
-              <p className="text-gray-400">— Sarah Martinez, CTO FinanceSecure</p>
+              <p className="text-gray-400">Sarah Martinez, CTO FinanceSecure</p>
             </div>
           </section>
 
