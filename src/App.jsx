@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import DefaultSEO from './components/DefaultSEO';
+import DefaultSEO from './DefaultSEO';
 import Landing from './pages/Landing';
 import VulnerabilityAssessments from './pages/services/VulnerabilityAssessments';
 import PenetrationTesting from './pages/services/PenetrationTesting';
