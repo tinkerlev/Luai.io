@@ -20,8 +20,8 @@ import './index.css';
 function App() {
   return (
     <HelmetProvider>
-      <DefaultSEO />
       <Router>
+        <DefaultSEO />
         <div className="App">
           <Routes>
             <Route path="/" element={<Landing />} />
