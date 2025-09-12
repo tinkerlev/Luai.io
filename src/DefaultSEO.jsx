@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 const SITE_URL = 'https://luai.io';
@@ -6,10 +5,10 @@ const DEFAULT_TITLE = 'Luai - Cybersecurity Expert & Penetration Testing Service
 const DEFAULT_DESC = 'Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.';
 const DEFAULT_OG = `${SITE_URL}/assets/og-image.jpg`;
 const TWITTER_HANDLE = '@Luai_io';
-
 export default function DefaultSEO() {
   const { pathname, search } = useLocation();
   const currentUrl = `${SITE_URL}${pathname}${search ?? ''}`;
+  
   return (
     <Helmet prioritizeSeoTags>
       <html lang="en" />
@@ -32,24 +31,47 @@ export default function DefaultSEO() {
       <meta name="twitter:title" content={DEFAULT_TITLE} />
       <meta name="twitter:description" content={DEFAULT_DESC} />
       <meta name="twitter:image" content={DEFAULT_OG} />
-      <script type="application/ld+json">{JSON.stringify({
-        "@context":"https://schema.org",
-        "@type":"Organization",
-        "name":"Luai",
-        "url": SITE_URL,
-        "logo": `${SITE_URL}/assets/luai-logo.png`,
-        "contactPoint": [{
-          "@type":"ContactPoint",
-          "telephone":"+5491124828429",
-          "contactType":"Customer Service",
-          "email":"info@Luai.io"
-        }],
-        "sameAs":[
-          "https://www.linkedin.com/company/Luai-io",
-          "https://twitter.com/Luai_io",
-          "https://www.instagram.com/Luai.io/"
-        ]
-      })}</script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": ["Organization", "ProfessionalService"],
+          "name": "Luai",
+          "url": SITE_URL,
+          "logo": `${SITE_URL}/assets/logo-luaiNoColor.png`,
+          "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
+          "founder": {
+            "@type": "Person",
+            "name": "Eliran Loai Deeb"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+54-9-11-24828429",
+            "contactType": "Customer Service",
+            "email": "info@luai.io"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/luai-io",
+            "https://twitter.com/Luai_io",
+            "https://www.instagram.com/luai.io/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tucumán",
+            "addressCountry": "AR",
+            "postalCode": "4000",
+            "streetAddress": "Av. Mitre 500"
+          },
+          "serviceType": [
+            "Penetration Testing",
+            "Vulnerability Assessment", 
+            "Security Audit",
+            "Incident Response",
+            "Red Team Operations",
+            "Compliance Consulting",
+            "Security Training"
+          ]
+        })}
+      </script>
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
