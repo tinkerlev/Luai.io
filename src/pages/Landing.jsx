@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
 import PageSEO from '../components/PageSEO';
+import { Helmet } from 'react-helmet-async';
 import {
   GradientHeading,
   PrimaryButton,
@@ -475,8 +476,6 @@ const Landing = () => {
           contactPoint:{ "@type":"ContactPoint", telephone:"+54-9-11-24828429", contactType:"Customer Service", email:"info@Luai.io" },
           sameAs:["https://www.linkedin.com/company/Luai","https://twitter.com/Luai"]
         })}</script>
-
-        {/* Favicon set — כפי שכבר יש לך */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
