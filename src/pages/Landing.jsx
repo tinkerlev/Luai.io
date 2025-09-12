@@ -1005,7 +1005,7 @@ const Landing = () => {
                   <img src="/assets/partners/UNSTA.jpg" alt="Partner 5" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
-                  <img src="/assets/partners/Logo-Kavak-Deportes.svg" alt="Partner 2" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <img src="/assets/partners/YB.png" alt="Partner 6" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="flex-shrink-0 w-48 h-32 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg">
                   <img src="/assets/partners/bugcrowd-logo-b90c52e691ace97f54db4d459c246639e26907e862b4c58b39173d2fac146fd0.svg" alt="Partner 3" className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
