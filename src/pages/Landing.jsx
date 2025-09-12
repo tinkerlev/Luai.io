@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import emailjs from '@emailjs/browser';
 import PageSEO from '../components/PageSEO';
-import { Helmet } from 'react-helmet-async';
 import {
   GradientHeading,
   PrimaryButton,
