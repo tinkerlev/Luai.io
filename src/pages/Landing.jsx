@@ -444,6 +444,8 @@ const Landing = () => {
   return (
     <>
       <Helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <title>Luai - Cybersecurity Expert & Penetration Testing Services</title>
         <meta name="description" content="Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments." />
         <meta name="robots" content="index, follow" />
