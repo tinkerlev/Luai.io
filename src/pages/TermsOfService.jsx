@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { Shield, AlertTriangle, Scale, Globe, FileText, Lock } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import PageSEO from '../../components/PageSEO';
+import PageSEO from '../components/PageSEO';
 
 const SITE_URL = 'https://luai.io';
 
@@ -26,7 +26,6 @@ const TermsOfService = () => {
           audience:{ "@type":"Audience", audienceType:"SMB, Enterprise, Startup" }
         }}
       />
-
       <Header />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden pt-16">

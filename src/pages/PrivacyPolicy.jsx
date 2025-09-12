@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { Shield, Eye, Lock, Globe, Users, Database, FileText, AlertCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import PageSEO from '../../components/PageSEO';
+import PageSEO from '../components/PageSEO';
 
 const SITE_URL = 'https://luai.io';
 
