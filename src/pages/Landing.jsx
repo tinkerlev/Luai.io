@@ -538,29 +538,29 @@ const Landing = () => {
             <div className="inline-flex items-center bg-red-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8 hover:bg-red-500/30 transition-all duration-300 backdrop-blur-sm">
               <AnimatedWarningIcon />
               <span className="text-red-300 ml-2 font-semibold">
-                <strong>URGENT REALITY CHECK:</strong> Right now, hackers are scanning for businesses like yours
+                <strong>Did you know? </strong> Hackers don’t only go after big companies. they also scan small and local businesses because it’s easier to break in.
               </span>
             </div>
 
             {/* Main Headline - More Direct and Fear-Based */}
             <div className="mb-8">
               <GradientHeading>
-                Your Business Is Under Attack
+                That means your business could be at risk
                 <br /> 
-                <span className="text-white">You Just Don't Know It Yet</span>
+                <span className="text-white">But here’s the good news: you can protect it</span>
               </GradientHeading>
             </div>
 
             {/* Subheadline with Hook */}
             <div className="mb-12">
               <SectionSubtext>
-                <strong className="text-white">Every 11 seconds, a business gets hacked.</strong>
+                <strong className="text-white">Every 11 seconds, a business is hacked worldwide </strong>
                 <br />
-                While you're reading this, cybercriminals are already probing your defenses, 
+                At <span className="text-red-400 font-semibold">Luai.io</span> we show you where the weak points are and how to fix them,
                 <br />
-                testing your weak points, and planning their attack.
+                so you can focus on your business without stress
                 <br /><br />
-                <strong className="text-red-400">The question isn't IF you'll be targeted - it's WHEN.</strong>
+                <strong className="text-red-400">It’s not about fear. it’s about being prepared. <br />Stay safe! Stay focused. </strong>
               </SectionSubtext>
             </div>
 
