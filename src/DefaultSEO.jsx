@@ -21,6 +21,7 @@ export default function DefaultSEO() {
       <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={DEFAULT_TITLE} />
       <meta property="og:description" content={DEFAULT_DESC} />
+      <meta property="og:image" content={DEFAULT_OG} />
       <meta property="og:image:secure_url" content={DEFAULT_OG} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
