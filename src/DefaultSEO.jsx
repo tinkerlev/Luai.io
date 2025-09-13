@@ -21,7 +21,7 @@ export default function DefaultSEO() {
       <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={DEFAULT_TITLE} />
       <meta property="og:description" content={DEFAULT_DESC} />
-      <meta property="og:image" content={DEFAULT_OG} />
+      <meta property="og:image:secure_url" content={DEFAULT_OG} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Luai.io – Cybersecurity Services" />
@@ -37,7 +37,7 @@ export default function DefaultSEO() {
           "@type": ["Organization", "ProfessionalService"],
           "name": "Luai",
           "url": SITE_URL,
-          "logo": `${SITE_URL}/assets/logo-luaiNoColor.png`,
+          "logo": `${SITE_URL}/assets/og-image.jpg`,
           "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
           "founder": {
             "@type": "Person",
