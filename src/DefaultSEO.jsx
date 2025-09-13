@@ -41,8 +41,8 @@ export default function DefaultSEO() {
           "logo": `${SITE_URL}/assets/og-image.jpg`,
           "description": "Professional cybersecurity services including penetration testing, security audits, and vulnerability assessments.",
           "founder": {
-            "@type": "Person",
-            "name": "Eliran Loai Deeb"
+          "@type": "Person",
+          "name": "Eliran Loai Deeb"
           },
           "contactPoint": {
             "@type": "ContactPoint",
